@@ -226,7 +226,7 @@ if __name__ == "__main__":
 
 	except KeyboardInterrupt, Exception:
 			sock.close()
-			exit()
+			exit_gracefully()
 			#console.shutdown = True
 			#console.join()
 
