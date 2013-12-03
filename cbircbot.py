@@ -94,7 +94,10 @@ def sendMessage(message, channel=None,*args,**kwargs):
 				send("PRIVMSG {0} :{1}".format(c,message))
 
 
-	
+
+def sendMessageTo(message,person,*args,**kwargs):
+	if message and person:
+		send("PRIVMSG {0} :{1}".format(person,message))
 
 
 
@@ -132,7 +135,7 @@ def parseChannelCmd(user,cmd):
 	if command.find("exit") != -1:
 		if(user["nick"] == 'ryonagana'):
 		
-			sendMessage("Goodbye Cruel World - Pink Foyd",user['channel'])
+			sendMessage("Goodbye Cruel World",user['channel'])
 			time.sleep(1) # i need at least 0.03ms to send message before close socket 1sec its a lot of time
 			exit_gracefully()
 		else:
@@ -179,6 +182,16 @@ def detectNicknameQuote(user,message):
 			sendMessage("Oi {0}!".format(user['nick']))
 
 
+def detectPrivateMessage(user,message):
+	if not (user['channel'].startswith('#')):
+		callPrivateMessage(user,message)
+
+
+
+def callPrivateMessage(user,message):
+	sendMessageTo("Hey i dont like private messages", user['nick'])
+	return
+
 def parseServer(data, *args, **kwargs):
 
 	nick = ""
@@ -188,8 +201,10 @@ def parseServer(data, *args, **kwargs):
 
 	cleandata = data.replace('\r\n','') # cleaning string
 
+	reg = re.search("^:(.+[aA-zZ0-0])!(.*) PRIVMSG (.+?) :(.+[aA-zZ0-9])$", cleandata )
+
 	if data.find("PRIVMSG") != -1: #is a simple message
-		reg = re.search("^:(.+[aA-zZ0-0])!(.*) PRIVMSG (.+?) :(.+[aA-zZ0-9])$", cleandata )
+		
 		
 		if(reg):
 			nick = reg.groups()[0] #store nickname
@@ -201,9 +216,9 @@ def parseServer(data, *args, **kwargs):
 
 			isCommand(userdata, message); #SEND A array with  sender data 
 			detectNicknameQuote(userdata, message)
+			detectPrivateMessage(userdata,message)
 
 			print "<{0}:{1}> {2}".format(nick,channel,message)
-
 
 
 
