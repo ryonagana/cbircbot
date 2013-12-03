@@ -16,6 +16,8 @@ mainthread = False
 isConnected = False
 isJoined = False
 
+DEBUG_MODE = True
+
 
 def format(data): #all irc messages must carry \r\n  and received data comes with \r\n too  to parse must be removed \r\n using split()
 	return "{0}\r\n".format(data)
@@ -170,6 +172,12 @@ def isCommand(user, data):
 		parseChannelCmd(user,command)
 
 
+def detectNicknameQuote(user,message):
+
+	if(message.find(conf.option['nick']) != -1):
+		if message.find("oi") != -1:
+			sendMessage("Oi {0}!".format(user['nick']))
+
 
 def parseServer(data, *args, **kwargs):
 
@@ -189,7 +197,10 @@ def parseServer(data, *args, **kwargs):
 			channel = reg.groups()[2] # store channel
 			message = reg.groups()[3] # store typed message
 			
-			isCommand({"nick":nick, "identd":identd,"channel":channel}, message); #SEND A array with  sender data 
+			userdata = {"nick":nick, "identd":identd,"channel":channel}
+
+			isCommand(userdata, message); #SEND A array with  sender data 
+			detectNicknameQuote(userdata, message)
 
 			print "<{0}:{1}> {2}".format(nick,channel,message)
 
@@ -220,6 +231,8 @@ if __name__ == "__main__":
 				isJoined = False
 
 
+			if DEBUG_MODE:
+				print "Server: ", data
 			parseServer(data)
 			checkPingPong(data)
 			time.sleep(0.030)	
