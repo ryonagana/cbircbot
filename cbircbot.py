@@ -8,6 +8,13 @@ import config
 import datetime
 import time
 import re
+import logging
+
+
+logging.basicConfig(filename='chat.log',level=10)
+
+logger = logging.getLogger(__name__)
+
 
 conf = config.Config()
 sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -18,6 +25,41 @@ isJoined = False
 
 DEBUG_MODE = True
 
+RESPONSE_FILENAME = "response.txt"
+RESPONSE_DATA = ""
+
+RESP_QUESTION = []
+RESP_ANSWER = []
+
+
+
+def openResponse():
+	global RESPONSE_DATA
+	global RESP_QUESTION
+	global RESP_ANSWER
+
+
+	try:
+		with open(RESPONSE_FILENAME,"rb") as f:
+			for line in f.readlines():
+
+				linestrip = line.replace('\r\n','')
+
+				if(linestrip.startswith(">")):
+					RESP_QUESTION.append(linestrip.replace(">",''))
+				elif(linestrip.startswith("-")):
+					RESP_ANSWER.append(linestrip.replace("-",''))
+			#RESPONSE_DATA = f.readlines();
+
+
+		#print RESP_QUESTION,RESP_ANSWER
+
+
+
+	except Exception, msg:
+		print msg
+
+	print RESPONSE_DATA
 
 def format(data): #all irc messages must carry \r\n  and received data comes with \r\n too  to parse must be removed \r\n using split()
 	return "{0}\r\n".format(data)
@@ -40,6 +82,8 @@ def join(channel): #join in any server  with or without #
 	else:
 		send("JOIN #{0}".format(channel))
 
+	#logger.info("-------------------- JOINED {0} --------------------".format(channel))
+
 
 def joinChannel(*args,**kwargs): #this function must be called once when connected to the server and must not be used
 
@@ -49,6 +93,7 @@ def joinChannel(*args,**kwargs): #this function must be called once when connect
 	if chans:
 		for c in chans:
 			join(c)
+			
 	else:
 		join(conf.option['channels'])
 
@@ -177,9 +222,41 @@ def isCommand(user, data):
 
 def detectNicknameQuote(user,message):
 
+	global RESP_ANSWER
+	global RESP_QUESTION
+
+	msg = message.replace('é','')
+
 	if(message.find(conf.option['nick']) != -1):
-		if message.find("oi") != -1:
-			sendMessage("Oi {0}!".format(user['nick']))
+		
+		for q in range(len(RESP_QUESTION)):
+
+
+
+			if( message.find(RESP_QUESTION[q]) != -1):
+
+				answer = RESP_ANSWER[q]
+
+				match = re.match("{(.+[aA-zZ0-9])}", answer)
+
+				if(match):
+
+					if(match.groups()[0].find("nick") != -1):
+						nickname = match.groups()[0]
+						answer.format(nick=nickname)
+						sendMessage(answer,user['channel'])
+				else:
+					sendMessage(answer,user['channel'])
+				
+
+
+				
+
+
+
+
+
+		
 
 
 def detectPrivateMessage(user,message):
@@ -189,7 +266,10 @@ def detectPrivateMessage(user,message):
 
 
 def callPrivateMessage(user,message):
-	sendMessageTo("Hey i dont like private messages", user['nick'])
+	format = "{0} says (pvt): {1}".format(user['nick'], message)
+	logger.info(format)
+
+		#sendMessageTo("Hey i dont like private messages", user['nick'])
 	return
 
 def parseServer(data, *args, **kwargs):
@@ -210,14 +290,16 @@ def parseServer(data, *args, **kwargs):
 			nick = reg.groups()[0] #store nickname
 			identd = reg.groups()[1] # store ip identd
 			channel = reg.groups()[2] # store channel
-			message = reg.groups()[3] # store typed message
+			message = reg.groups()[3].replace("\r\n",'') # store typed message
 			
 			userdata = {"nick":nick, "identd":identd,"channel":channel}
 
 			isCommand(userdata, message); #SEND A array with  sender data 
 			detectNicknameQuote(userdata, message)
 			detectPrivateMessage(userdata,message)
-
+			
+			fmt = "<{0}:{1}>: {2}".format(nick, channel,  message)
+			logger.info(fmt)
 			print "<{0}:{1}> {2}".format(nick,channel,message)
 
 
@@ -228,9 +310,10 @@ if __name__ == "__main__":
 	initConnection()
 
 	auth()
-
+	openResponse()
 	#console = threading.Thread(target=command)
 	#console.start()
+
 
 	try:
 		while  True:
@@ -260,6 +343,7 @@ if __name__ == "__main__":
 
 	#console.shutdown = True
 	#console.join()
+
 	exit_gracefully()
 
 #-----------------------------------------------------------------------------------------
