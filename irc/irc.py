@@ -19,6 +19,7 @@ class IrcClient(object):
 
 		self.isRunning = True
 		self.data = ""
+		self.hasJoined = False
 
 		self.conf = config.Config()
 		self.sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -29,8 +30,8 @@ class IrcClient(object):
 	def isClientRunning(self):
 		return self.isRunning
 
-	def isNotReceivingData():
-		if not data:
+	def isNotReceivingData(self):
+		if not self.data:
 			return False
 		return True
 
@@ -174,7 +175,7 @@ class IrcClient(object):
 		sock.close()
 		sys.exit(0)
 
-	def checkIsConnected(data):
+	def checkIsConnected(self,data):
 		m = re.match('IP MODE', data, re.M | re.I)
 
 		if m:
@@ -184,9 +185,9 @@ class IrcClient(object):
 
 	#irc server always check if you are online send a PING and you  must respond with PONG  + ident
 	def checkPingPong(self,data):
-		if(data.find("PING") != -1):
+		if(self.data.find("PING") != -1):
 			print "PING!"
-			send("PONG {0}".format(data.split()[1]))
+			self.send("PONG {0}".format(data.split()[1]))
 			print "!PONG"
 
 
@@ -201,3 +202,16 @@ class IrcClient(object):
 			self.send("JOIN #{0}".format(channel))
 
 	#logger.info("-------------------- JOINED {0} --------------------".format(channel))
+
+
+	def joinChannel(self,*args,**kwargs): #this function must be called once when connected to the server and must not be used
+
+
+		chans = self.conf.option['channels'].split(';')
+		#print "Chans: ", chans
+		if chans:
+			for c in chans:
+				self.join(c)
+			
+		else:
+			self.join(conf.option['channels'])

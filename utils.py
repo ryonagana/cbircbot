@@ -10,4 +10,4 @@ def sanitize(data):
 	if(data.find("\r") or data.find('\n')):
 		return data.split("\r\n")
 	elif(data.find('\r\n')):
-		return return data.split("\r\n")
+		return data.split("\r\n")

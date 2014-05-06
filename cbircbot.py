@@ -1,7 +1,7 @@
 import irc
 from irc import irc
 from irc import config
-
+import utils
 
 if __name__ == "__main__":
 	
@@ -15,10 +15,14 @@ if __name__ == "__main__":
 
 			data = client.ServerData()
 
-			if(client.isNotReceivingData):
+			if(client.isNotReceivingData()):
 				break
 
-			if config.DEBUG_MODE:
+			if not client.hasJoined and client.checkIsConnected(data):
+				client.joinChannel()
+				client.hasJoined = True
+
+			if utils.DEBUG_MODE:
 				print "[Server] " + data
 			client.parseServer(data)
 			client.checkPingPong(data)
