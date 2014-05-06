@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*- 
 
+#system libraries
 import socket
 import sys
 import os
 import threading
-import config
 import datetime
 import time
 import re
 
+#my library
 import utils
-
-
+import config
+import response
 
 
 class IrcClient(object):
@@ -20,6 +21,7 @@ class IrcClient(object):
 		self.isRunning = True
 		self.data = ""
 		self.hasJoined = False
+		self.response = response.Response("response.txt")
 
 		self.conf = config.Config()
 		self.sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -65,8 +67,8 @@ class IrcClient(object):
 		if channel != None:
 			self.send("PRIVMSG {0} :{1}".format(channel,message))
 		else:
-			if not isinstance( conf.option['channels'], (list,tuple) ):
-				self.send("PRIVMSG {0} :{1}".format(conf.option['channels'],message))
+			if not isinstance( self.conf.option['channels'], (list,tuple) ):
+				self.send("PRIVMSG {0} :{1}".format(self.conf.option['channels'],message))
 			else:
 				for c in channelList():
 					self.send("PRIVMSG {0} :{1}".format(c,message))
@@ -114,10 +116,25 @@ class IrcClient(object):
 
 
 	def detectNicknameQuote(self,user,message):
+		
+		if(message.find(self.conf.option['nick']) != -1):
+			
+			for question_pos in range(len(self.response.question)):
+				answer = self.response.answer[question_pos]
 
-		if(message.find(conf.option['nick']) != -1):
-			if message.find("oi") != -1:
-				self.sendMessage("Oi {0}!".format(user['nick']))
+				match =  re.match("{(.+[aA-zZ0-9])}", answer)
+
+				if(match):
+					if(match.groups()[0].find("nick") != -1):
+						nickname = match.groups()[0]
+						answer.format(nick=nickname)
+						self.sendMessage(answer,user['channel'])
+						
+				else:
+					self.sendMessage(answer,user['channel'])
+
+		#	if message.find("oi") != -1:
+		#		self.sendMessage("Oi {0}!".format(user['nick']))
 
 
 	def detectPrivateMessage(self,user,message):
@@ -127,7 +144,7 @@ class IrcClient(object):
 
 
 	def callPrivateMessage(self,user,message):
-		sendMessageTo("Hey i dont like private messages", user['nick'])
+		self.sendMessageTo("Hey i dont like private messages {0} fuck you!".format(user['nick']) , user['nick'])
 		return
 
 	def parseChannelCmd(self,user,cmd):
@@ -137,16 +154,16 @@ class IrcClient(object):
 		if command.find("exit") != -1:
 			if(user["nick"] == 'ryonagana'):
 		
-				sendMessage("Goodbye Cruel World",user['channel'])
+				self.sendMessage("Goodbye Cruel World",user['channel'])
 				time.sleep(1) # i need at least 0.03ms to send message before close socket 1sec its a lot of time
-				exit_gracefully()
+				self.exit_gracefully()
 			else:
 				sendMessage('You are not my Master!! i just obey ryonagana')
 				return
 
 		if command.find("time") != -1:
 			actualtime = datetime.datetime.now().__str__()
-			sendMessage("Time is: {0}".format(actualtime), user['channel'])
+			self.sendMessage("Time is: {0}".format(actualtime), user['channel'])
 			return
 
 
@@ -171,8 +188,8 @@ class IrcClient(object):
 
 
 	def exit_gracefully(self):
-		sock.shutdown(socket.SHUT_RDWR)
-		sock.close()
+		self.sock.shutdown(socket.SHUT_RDWR)
+		self.sock.close()
 		sys.exit(0)
 
 	def checkIsConnected(self,data):

@@ -1,6 +1,7 @@
 import irc
 from irc import irc
 from irc import config
+from irc import ircevents
 import utils
 
 if __name__ == "__main__":
@@ -18,9 +19,12 @@ if __name__ == "__main__":
 			if(client.isNotReceivingData()):
 				break
 
-			if not client.hasJoined and client.checkIsConnected(data):
-				client.joinChannel()
-				client.hasJoined = True
+			if ircevents.IrcisConnected(data):
+				print "---------------------------------- MOTD END ---------------------------------- "
+
+				if not client.hasJoined:
+					client.joinChannel()
+					client.hasJoined = True
 
 			if utils.DEBUG_MODE:
 				print "[Server] " + data
