@@ -11,3 +11,6 @@ def sanitize(data):
 		return data.split("\r\n")
 	elif(data.find('\r\n')):
 		return data.split("\r\n")
+
+def convertToAscii(message):
+	return message.encode('ascii', 'ignore')

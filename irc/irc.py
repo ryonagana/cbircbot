@@ -116,7 +116,32 @@ class IrcClient(object):
 
 
 	def detectNicknameQuote(self,user,message):
+
+		if(message.find(self.conf.option['nick']) != -1):
+
+			for question_pos in range(len(self.response.question)):
+				if(message.find(self.response.question[question_pos]) != -1 ):
+					answer =  self.response.answer[question_pos]
+
+					if utils.DEBUG_MODE:
+						print "Answer is: " + answer
+
+					self.sendMessage(answer,user['channel'])
+
+					#match =  re.match("{(.+[aA-zZ0-9])}", answer)
+
+					#if(match):
+					#	if(match.groups()[0].find("nick") != -1):
+					#		nickname = match.groups()[0]
+					#		answer.format(nick=nickname)
+					#		self.sendMessage(answer,user['channel'])
+
+						
+						
+					
+
 		
+		'''
 		if(message.find(self.conf.option['nick']) != -1):
 			
 			for question_pos in range(len(self.response.question)):
@@ -129,12 +154,14 @@ class IrcClient(object):
 						nickname = match.groups()[0]
 						answer.format(nick=nickname)
 						self.sendMessage(answer,user['channel'])
-						
+
 				else:
 					self.sendMessage(answer,user['channel'])
+				break
 
 		#	if message.find("oi") != -1:
 		#		self.sendMessage("Oi {0}!".format(user['nick']))
+		'''
 
 
 	def detectPrivateMessage(self,user,message):

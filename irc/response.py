@@ -31,4 +31,4 @@ class Response:
 				self.question.append(linestripped.replace(">",''))
 			
 			elif linestripped.startswith("-"):
-				self.answer.append(linestripped.replace(">",''))
+				self.answer.append(linestripped.replace("-",''))
