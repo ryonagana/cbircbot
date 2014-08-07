@@ -14,7 +14,9 @@ if __name__ == "__main__":
 	try:
 		while client.isClientRunning():
 
+
 			data = client.ServerData()
+			client.checkPingPong(data)
 
 			if(client.isNotReceivingData()):
 				break
@@ -29,7 +31,7 @@ if __name__ == "__main__":
 			if utils.DEBUG_MODE:
 				print "[Server] " + data
 			client.parseServer(data)
-			client.checkPingPong(data)
+			
 			client.wait()
 	except KeyboardInterrupt, Exception:
 			client.disconnect()

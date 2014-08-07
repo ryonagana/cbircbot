@@ -62,7 +62,7 @@ class IrcClient(object):
 	#if channel is omitted  will send to all channels that bot is connected
 	#if is ommited and the channel is not an array will send to  same channel in config.cfg
 	#if channel is not ommited will send to channel in argument
-	def sendMessage(self,message, channel=None,*args,**kwargs):
+	def sendMessage(self,message, channel=None, *args,**kwargs):
 
 		if channel != None:
 			self.send("PRIVMSG {0} :{1}".format(channel,message))
@@ -185,32 +185,16 @@ class IrcClient(object):
 				time.sleep(1) # i need at least 0.03ms to send message before close socket 1sec its a lot of time
 				self.exit_gracefully()
 			else:
-				sendMessage('You are not my Master!! i just obey ryonagana')
+				self.sendMessage('You are not my Master!! i just obey ryonagana')
 				return
 
-		if command.find("time") != -1:
+		elif command.find("time") != -1:
 			actualtime = datetime.datetime.now().__str__()
 			self.sendMessage("Time is: {0}".format(actualtime), user['channel'])
 			return
 
 
-		'''add your commands here
-		#example: command !helloworld
-		'''
 
-		if command.find('helloworld'):   #no character '!' please cause its already parsed and automatically detected
-			#user['nickname'] =  the nick of the person who typed !helloword
-			#user['channel'] = the channel of the  invoked command
-			#user['identd'] = ident of the person
-
-			#i just want to reply own the same channel where the command was invoked
-
-			#this functions has 3 way  to operate
-			#if channel is omitted  will send to all channels that bot is connected
-			#if is ommited and the channel is not an array will send to  same channel in config.cfg
-			#if channel is not ommited will send to channel in argument
-			self.sendMessage("Hello World!", user['channel'])  
-			return
 
 
 
