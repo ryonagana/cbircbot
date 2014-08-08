@@ -5,3 +5,5 @@ import sys
 import minicbircbot
 
 
+if __name__ == "__main__":
+	minicbircbot.init_bot()
