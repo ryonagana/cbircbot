@@ -27,7 +27,7 @@ class ConfigJson(object):
 					'chans': '#python',
 					'nickname' : 'mrTest',
 					'identd' : 'HUE',
-
+					'console' : False,
 					'modules' : {}
 					
 

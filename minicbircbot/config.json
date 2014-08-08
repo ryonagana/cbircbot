@@ -1,8 +1,9 @@
 {
-    "address": "irc.falai.org", 
-    "chans": "#python", 
-    "identd": "HUE", 
-    "modules": {}, 
-    "nickname": "mrTest", 
+    "address": "irc.falai.org",
+    "chans": "#python",
+    "console": false,
+    "identd": "HUE",
+    "modules": {},
+    "nickname": "mrTest",
     "port": 6667
 }

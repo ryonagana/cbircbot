@@ -30,14 +30,14 @@ class IrcSocket:
 		return
 		
 	def send(self, message):
-		self.sock.send( bytes(format(message), "utf-8") )
+		self.sock.send( str.encode(message))
 		return
 
 	def recv(self, size):
 
 		if type(size) == int:
 			data =	self.sock.recv(size)
-			return str(data)
+			return data
 		else:
 			raise Exception("Error")
 

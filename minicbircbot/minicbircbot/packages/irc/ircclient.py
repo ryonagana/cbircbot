@@ -8,10 +8,11 @@ import re
 
 from minicbircbot.packages.config.config_json import ConfigJson
 from minicbircbot.packages.sockets.sockethandler import IrcSocket
-from minicbircbot.utils import format
-
+from minicbircbot.utils import format, clean_str
+from minicbircbot.packages.irc.irceventhandler import IrcEventhandler, IrcMessage, IrcPrivateMessage
 
 logger = logging.getLogger(__name__)
+
 
 
 class ircClient:
@@ -23,6 +24,10 @@ class ircClient:
 
 		self.isRunning = False
 		self.isJoined = False
+
+
+		if self.config.get("console"):
+			self.Console = IrcConsoleCommands(self)
 		
 
 		#teste
@@ -66,15 +71,28 @@ class ircClient:
 
 
 	def detectEndMOTD(self, data):
-		if data.find('396') != -1:
+
+		msg = data.decode('utf8')
+
+		if msg.find('396') != -1:
 			return True
 		return False
 
 	def receiveData(self):
-		return self.ircsocket.recv(4096);
+
+		data = self.ircsocket.recv(4096);
+		return data
+
+	def receiveAsString(self):
+
+		data = receiveData()
+		return data.decode("utf-8")
+
 
 	def PingPong(self, message):
-		if message.find("PING") != -1:
+
+		msg = message.decode("utf-8")
+		if msg.find("PING") != -1:
 			print ("SERVER: PING!")
 			self.ircSend("PONG {0}".format(message.split()[1]))
 			print("CLIENT: PONG!")
@@ -84,11 +102,15 @@ class ircClient:
 	def ircEventHandler(self, data):
 
 		self.PingPong(data)
-
 		if self.detectEndMOTD(data):
 			if not self.isJoined:
 				self.JoinChannels(self.config.get("chans"))
 				self.isJoined = True
+				
+				if self.config.get("console"):
+					self.Console.start()
+
+		self.parseServerData(data)
 
 
 
@@ -111,11 +133,42 @@ class ircClient:
 
 	def parseServerData(self, message):
 		
-		server_msg = clean_str(message)
+		server_msg = clean_str(message.decode("utf-8"))
 
-		data  = re.search("^:(.+[aA-zZ0-0])!(.*) PRIVMSG (.+?) :(.+[aA-zZ0-9])$", server_msg)
 
 		
+		if server_msg.find("PRIVMSG") != -1:
+			is_message  = re.search("^:(.+[aA-zZ0-0])!(.*) PRIVMSG (.+?) :(.+[aA-zZ0-9])$", server_msg)
+
+			if is_message:
+
+				data = {
+
+					'sender'    : is_message.groups()[0], #sender's nickname
+					'ident'		: is_message.groups()[1], #ident
+					'channel'   : is_message.groups()[2], #channel
+					'message'   : is_message.groups()[3], #message
+				}
+				
+				if data['channel'].startswith("#") == -1:
+					message_received = IrcPrivateMessage.register(data)
+				else:
+					message_received = IrcMessage.register(data)
+
+				self.ReceivedMessages(message_received)
+		
+				
+
+
+		
+
+
+	def ReceivedMessages(self, msg):
+		print(msg)
+
+
+
+
 
 
 

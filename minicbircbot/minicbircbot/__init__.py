@@ -26,7 +26,7 @@ def init_bot():
 		try:
 			data = irc.receiveData()
 			irc.isServerRunning(data)
-			print (data)
+			#print (data)
 		except (KeyboardInterrupt):
 			irc.exit_gracefully()
 
