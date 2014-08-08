@@ -4,6 +4,7 @@ import os
 import sys
 import time
 import logging
+import re
 
 from minicbircbot.packages.config.config_json import ConfigJson
 from minicbircbot.packages.sockets.sockethandler import IrcSocket
@@ -108,7 +109,13 @@ class ircClient:
 		logger.info("Socket Closed With Success!")
 
 
+	def parseServerData(self, message):
+		
+		server_msg = clean_str(message)
 
+		data  = re.search("^:(.+[aA-zZ0-0])!(.*) PRIVMSG (.+?) :(.+[aA-zZ0-9])$", server_msg)
+
+		
 
 
 
