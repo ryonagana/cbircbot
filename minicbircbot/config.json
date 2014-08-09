@@ -3,7 +3,7 @@
     "chans": "#python",
     "console": false,
     "identd": "HUE",
-    "modules": {},
+    "modules": ["HelloWorld", "Teste2"],
     "nickname": "mrTest",
     "port": 6667
 }

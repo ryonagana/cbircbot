@@ -8,8 +8,9 @@ import re
 
 from minicbircbot.packages.config.config_json import ConfigJson
 from minicbircbot.packages.sockets.sockethandler import IrcSocket
-from minicbircbot.utils import format, clean_str
+from minicbircbot.utils import format, clean_str, DEBUG_MODE, MODULES_LOADED
 from minicbircbot.packages.irc.irceventhandler import IrcEventhandler, IrcMessage, IrcPrivateMessage
+from minicbircbot.bot import *
 
 logger = logging.getLogger(__name__)
 
@@ -20,6 +21,14 @@ class ircClient:
 	def __init__(self):
 		self.config = ConfigJson("config.json")
 		self.config.load()
+		self.initModules()
+
+		if DEBUG_MODE:
+			print("Loading Modules: ")
+			print(self.config.get("modules"))
+			print (MODULES_LOADED)
+			print("------------------------")
+
 		self.ircsocket = IrcSocket(self.config.get("address") , self.config.get("port"))
 
 		self.isRunning = False
@@ -36,6 +45,48 @@ class ircClient:
 	#def ServerMessages(self, data):
 
 
+	def initModules(self):
+		global MODULES_LOADED
+		
+		for mod in self.config.get("modules"):
+			#Who's bad?
+
+			#i'm so evil that i'm using eval
+			#the devil of programming 
+			# >=)
+			try:
+				MODULES_LOADED[mod] = self.instantiateModule(mod)
+
+			except Exception as ex:
+				print(ex)
+				#print("-------------------------------------------------")
+				#print("MODULE \"{0}\" doesnt exists. and will be ignored".format(mod))
+				#print("-------------------------------------------------")
+				#print("")
+				continue
+			
+		print ("Instance -------------------------------------------:")
+		print (MODULES_LOADED)
+		print ("-----------------------------------------------------")
+
+
+
+	def instantiateModule(self, module):
+
+		inst = None
+
+		try:
+			inst =  module()
+			return inst
+		except Exception:
+			print("ERROR: Cannot Instantiate {0}".format(module))
+			return inst
+
+
+
+
+
+
 	def auth(self):
 			self.ircSend("NICK {0}".format(self.config.get("nickname")))
 			self.ircSend("USER {0} {1} {2} :{3}".format( self.config.get("nickname"), self.config.get("address"), self.config.get("identd"), 'Test'))
@@ -49,6 +100,16 @@ class ircClient:
 	def ircSend(self, message):
 		self.ircsocket.send(format(message))
 
+
+	def ircSendMessageTo(self, sender, receiver, message):
+		self.ircSend("PRIVMSG {0} :{1}".format(receiver, message ))
+
+
+	def ircSendMessage(self, channel, message):
+		self.ircSend("PRIVMSG {0} :{1}".format(channel, message))
+
+
+
 	def ircJoin(self, channel):
 		if type(channel) == str:
 
@@ -56,6 +117,8 @@ class ircClient:
 				self.ircSend("JOIN {0}".format(channel))
 			else:
 				self.ircSend("JOIN #{0}".format(channel))
+
+
 			
 
 	def JoinChannels(self, channels):
@@ -142,20 +205,36 @@ class ircClient:
 
 			if is_message:
 
+
 				data = {
 
 					'sender'    : is_message.groups()[0], #sender's nickname
 					'ident'		: is_message.groups()[1], #ident
-					'channel'   : is_message.groups()[2], #channel
+					'receiver'   : is_message.groups()[2], #channel or receiver's nickname
 					'message'   : is_message.groups()[3], #message
 				}
+
+				print ('DATA DEBUG: ')
+				print(data)
 				
-				if data['channel'].startswith("#") == -1:
-					message_received = IrcPrivateMessage.register(data)
+
+				
+				if data['receiver'].startswith("#"): 
+				
+					#means you are sending message directly to a channel
+					message_received = IrcMessage.register(**data)
+					self.ReceivedMessageChannel(message_received)
 				else:
-					message_received = IrcMessage.register(data)
+					
+					#means you are sending message directly to someone
+					message_received = IrcPrivateMessage.register(**data)
+					self.ReceivedPrivateMessages(message_received)
+					
 
-				self.ReceivedMessages(message_received)
+				
+
+
+		print(server_msg)
 		
 				
 
@@ -163,8 +242,14 @@ class ircClient:
 		
 
 
-	def ReceivedMessages(self, msg):
-		print(msg)
+	def ReceivedMessageChannel(self, msghandler):
+		pass
+		#print(msghandler)
+
+	def ReceivedPrivateMessages(self, msghandler):
+		self.ircSendMessage(self.config.get("chans"), "{0}: {1}".format(msghandler.sender, "hey dont send me pvt's")  )
+		#self.ircSendMessage(msghandler.receiver, )
+		#self.ircSendMessageTo(msghandler.sender, msghandler.receiver, "Dont Send me Pvts dumbfuck")
 
 
 
