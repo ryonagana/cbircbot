@@ -24,7 +24,8 @@ class HelloWorld(IrcBotInterface):
 		#irchandler.ircSendMessage("#python", "message in Channel")
 
 	def onReceivedPrivateMessage(self, irchandler, messagehandler):
-		irchandler.ircSendMessage("#python", "HelloWorld!!! from Plugin")
+		pass
+		#irchandler.ircSendMessage("#python", "HelloWorld!!! from Plugin")
 
 
 	def doHelloWorld(self, handlers):

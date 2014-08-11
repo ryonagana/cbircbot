@@ -110,8 +110,9 @@ class ircClient:
 		self.ircsocket.send(format(message))
 
 
-	def ircSendMessageTo(self, sender, receiver, message):
-		self.ircSend("PRIVMSG {0} :{1}".format(receiver, message ))
+	def ircSendMessageTo(self, receiver, message):
+		if not receiver.startswith("#"):
+			self.ircSend("PRIVMSG {0} :{1}".format(receiver, message ))
 
 
 	def ircSendMessage(self, channel, message):
