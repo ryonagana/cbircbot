@@ -8,16 +8,14 @@ class HelloWorld(IrcBotInterface):
 		
 	def onReceivedChannelMessage(self, irchandler, messagehandler):
 		
-		args = self.args(messagehandler.message)
-		prefix = args[0]
-		command = args[1]
-		count = len(args[1])
+		prefix, command  = self.args(messagehandler.message)
 
-	
+		count = len(command)
 
 		if count == 1:
+			#pass
 			#if  self.isCommand(args[1],args[0]):
-			self.exec_cmd(args[1], irchandler)
+			self.exec_cmd(command[0], irchandler)
 
 
 

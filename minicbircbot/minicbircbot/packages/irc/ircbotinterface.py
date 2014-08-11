@@ -46,8 +46,9 @@ class IrcBotInterface:
 			self.reg_command[cmd] = (prefix, func_callback)
 
 	def exec_cmd(self,command, irchandler, *args, **kwargs):
-		cmd = command[0]
-		self.reg_command[cmd][1](irchandler)
+		
+		if command in self.reg_command:
+			self.reg_command[command][1](irchandler)
 
 
 	def onReceivedPrivateMessage(self, irchandler, messagehandler):
