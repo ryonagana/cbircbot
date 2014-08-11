@@ -223,8 +223,9 @@ class ircClient:
 					'message'   : is_message.groups()[3], #message
 				}
 
-				print ('DATA DEBUG: ')
-				print(data)
+				if DEBUG_MODE:
+					print ('DATA DEBUG: ')
+					print(data)
 				
 
 				
@@ -256,13 +257,11 @@ class ircClient:
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
 				MODULES_LOADED[mod].onReceivedChannelMessage(self,msghandler)
-		#print(msghandler)onReceivedChannelMessage
+
 
 	def ReceivedPrivateMessages(self, msghandler):
 
-		#print("DEBUG HelloWorld")
-		#print( dir(MODULES_LOADED['HelloWorld']))
-		
+
 		
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
