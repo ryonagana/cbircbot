@@ -252,8 +252,11 @@ class ircClient:
 
 
 	def ReceivedMessageChannel(self, msghandler):
-		pass
-		#print(msghandler)
+		
+		for mod in MODULES_LOADED:
+			if MODULES_LOADED[mod]:
+				MODULES_LOADED[mod].onReceivedChannelMessage(self,msghandler)
+		#print(msghandler)onReceivedChannelMessage
 
 	def ReceivedPrivateMessages(self, msghandler):
 
