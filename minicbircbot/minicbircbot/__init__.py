@@ -28,6 +28,10 @@ def init_bot():
 			irc.isServerRunning(data)
 			#print (data)
 		except (KeyboardInterrupt):
+			print("Waiting 2 seconds")
+			print("Closing Sockets")
+			logger.info("Desconnecting Socket")
 			irc.exit_gracefully()
+			logger.info("Successfully Closed")
 
 	

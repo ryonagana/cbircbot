@@ -5,12 +5,15 @@ import sys
 import time
 import logging
 import re
+import importlib
+
+
 
 from minicbircbot.packages.config.config_json import ConfigJson
 from minicbircbot.packages.sockets.sockethandler import IrcSocket
 from minicbircbot.utils import format, clean_str, DEBUG_MODE, MODULES_LOADED
 from minicbircbot.packages.irc.irceventhandler import IrcEventhandler, IrcMessage, IrcPrivateMessage
-from minicbircbot.bot import *
+import minicbircbot.bot
 
 logger = logging.getLogger(__name__)
 
@@ -55,7 +58,9 @@ class ircClient:
 			#the devil of programming 
 			# >=)
 			try:
-				MODULES_LOADED[mod] = self.instantiateModule(mod)
+				module_loaded = self.instantiateModule(mod)
+				MODULES_LOADED[mod] = module_loaded()
+
 
 			except Exception as ex:
 				print(ex)
@@ -71,15 +76,19 @@ class ircClient:
 
 
 
-	def instantiateModule(self, module):
+	def instantiateModule(self, module_name):
 
+		namespace = "minicbircbot.bot."
 		inst = None
+		module = None
 
 		try:
-			inst =  module()
-			return inst
-		except Exception:
+			inst =  __import__(namespace + module_name, fromlist=module_name) #importlib.import_module(namespace + module_name, module_name)
+			return getattr(inst, module_name)
+		
+		except Exception as ex:
 			print("ERROR: Cannot Instantiate {0}".format(module))
+			print("Exception: {0}".format(str(ex)))
 			return inst
 
 
@@ -247,7 +256,17 @@ class ircClient:
 		#print(msghandler)
 
 	def ReceivedPrivateMessages(self, msghandler):
-		self.ircSendMessage(self.config.get("chans"), "{0}: {1}".format(msghandler.sender, "hey dont send me pvt's")  )
+
+		#print("DEBUG HelloWorld")
+		#print( dir(MODULES_LOADED['HelloWorld']))
+		
+		
+		for mod in MODULES_LOADED:
+			if MODULES_LOADED[mod]:
+				MODULES_LOADED[mod].onReceivedPrivateMessage(self,msghandler)
+		
+
+		#self.ircSendMessage(self.config.get("chans"), "{0}: {1}".format(msghandler.sender, "hey dont send me pvt's")  )
 		#self.ircSendMessage(msghandler.receiver, )
 		#self.ircSendMessageTo(msghandler.sender, msghandler.receiver, "Dont Send me Pvts dumbfuck")
 
