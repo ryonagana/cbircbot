@@ -3,11 +3,23 @@
 import os
 import sys
 
+
+#run permissions
+BOT_RUN_NONE = 1
+BOT_RUN_USER = 2
+BOT_RUN_VOICE = 4
+BOT_RUN_OP = 8 
+BOT_RUN_ALL = 16
+
+
 class IrcBotInterface:
 
 
 	def __init__(self):
-		pass
+		self.owner = "" #owner of the bot  if you want to retrict a command run by only one person
+		self.version = "" #version
+		self.author = "" #author name
+		self.permissions = BOT_RUN_ALL # permissions
 		
 
 

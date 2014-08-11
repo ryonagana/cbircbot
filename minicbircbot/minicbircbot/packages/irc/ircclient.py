@@ -266,10 +266,6 @@ class ircClient:
 				MODULES_LOADED[mod].onReceivedPrivateMessage(self,msghandler)
 		
 
-		#self.ircSendMessage(self.config.get("chans"), "{0}: {1}".format(msghandler.sender, "hey dont send me pvt's")  )
-		#self.ircSendMessage(msghandler.receiver, )
-		#self.ircSendMessageTo(msghandler.sender, msghandler.receiver, "Dont Send me Pvts dumbfuck")
-
 
 
 

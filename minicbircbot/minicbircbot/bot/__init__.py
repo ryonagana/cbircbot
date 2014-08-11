@@ -1,1 +1,1 @@
-from minicbircbot.bot.HelloWorld import HelloWorld
+from minicbircbot.bot import *
