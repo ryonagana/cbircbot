@@ -1,0 +1,2 @@
+
+TESTE = "CONS.PY"

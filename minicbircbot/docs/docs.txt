@@ -1,0 +1,41 @@
+minicbircbot - Simple Usage
+Warning:  connecting using SSL not tested
+
+Chapter 1 - Show Some Funcionalities
+config.json :
+	
+	address - host you want to connect to
+	chans - channels your bot want  to join in  you can use a simple string  or list for multiple channels ["#channel1","#channel2"] 
+	console - terminal console  (needs pyside for QThread)  experimental  i dont recommend the use.  when false  pyside is not required
+	identd - your identity on IRC Server
+	modules - a list with modules names.  must be a list read chapter 2
+	nickname - your bot nickname
+	port  - server port you want to connect 
+	
+	
+Chapter 2 - Setup
+
+	2.1 -	Creating a new module just create a folder with your module name (must not have any space or special characters),
+			create a script called __init__.py  and inside  and the class must have the same name of the folder
+			
+			e.g:
+				MyModule/__init__.py
+				class MyModule
+				
+			all module must have  this library  loaded 
+				from minicbircbot.packages.irc.ircbotinterface import IrcBotInterface
+				
+			and all modules must inherit from IrcBotInterface
+			e.g:
+				class MyModule(IrcBotInterface)
+				
+			virtual event functions:
+				onReceivedPrivateMessage(self, irchandler, messagehandler) - When the bot receive a private message
+				onReceivedChannelMessage(self, irchandler, messagehandler) - when bot receives any message from  the channel
+				onPart(self, irchandler, messagehandler) - when someone part in the channel (not implemented)
+				onJoined(self, irchandler, messagehandler) - when someone join in the channel (not implemented)
+				onNickChanged(self, irchandler, messagehandler) - when someone changes his nick (not implemented)
+
+				
+			
+	

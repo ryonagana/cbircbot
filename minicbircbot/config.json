@@ -3,7 +3,7 @@
     "chans": "#python",
     "console": false,
     "identd": "HUE",
-    "modules": ["HelloWorld", "AutoResponse"],
+    "modules": ["HelloWorld", "AutoResponse", "PvtConsole"],
     "nickname": "mrTest",
     "port": 6667
 }
