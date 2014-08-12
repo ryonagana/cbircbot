@@ -6,6 +6,10 @@ import os
 import sys
 import copy
 
+"""
+abstract class to pass the same handler to all events
+"""
+
 
 class IrcEventhandler:
 
