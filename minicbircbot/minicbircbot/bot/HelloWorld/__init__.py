@@ -18,6 +18,9 @@ class HelloWorld(IrcBotInterface):
 
 		count = len(command)
 
+		#tests purpose
+		irchandler.ircSendMessageQuote(messagehandler.sender, messagehandler.receiver, "Yo s'up?" )
+
 
 		self.exec_cmd(command[0], (irchandler, messagehandler) )
 

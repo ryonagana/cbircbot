@@ -146,6 +146,17 @@ class ircClient:
 		if not receiver.startswith("#"):
 			self.ircSend("PRIVMSG {0} :{1}".format(receiver, message ))
 
+	def ircSendMessageQuote(self, sender, receiver,  message ):
+		""" Sends a message to the channel call the name of the receiver """
+		if not sender or not message:
+			return
+
+		self.ircSend("PRIVMSG {0} :{1}".format(
+
+												receiver,
+												"{0}: {1}".format(sender, message)
+			))
+
 
 	def ircSendMessage(self, channel, message):
 		""" send a message directly to a channel """
