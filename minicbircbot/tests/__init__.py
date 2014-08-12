@@ -10,11 +10,13 @@ class A:
 
 
 	def methA(self):
-		print ("Method A Loaded from Class A")
+		print ("Method A Loaded from Class A -- Dad")
+		pass
 		
 
 	def methB(self):
-		print ("Method A Loaded from Class A")
+		print ("Method A Loaded from Class A -- Dad")
+		pass
 		
 
 
@@ -25,10 +27,12 @@ class B(A):
 		super().__init__()
 
 	def methA(self):
-		print ("Callin Method A from Class B")
+		super().methA()
+		print ("Callin Method A from Class B - Child")
 
 	def methB(self):
-		print ("Callin Method B from Class B")
+		super().methB()
+		print ("Callin Method B from Class B -- Child")
 
 
 if __name__ == "__main__":

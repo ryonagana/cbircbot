@@ -14,12 +14,12 @@ class HelloWorld(IrcBotInterface):
 		
 	def onReceivedChannelMessage(self, irchandler, messagehandler):
 		
-		prefix, command  = self.args(messagehandler.message)
+		prefix, command, count  = self.args(messagehandler.message)
 
-		count = len(command)
+		
 
 		#tests purpose
-		irchandler.ircSendMessageQuote(messagehandler.sender, messagehandler.receiver, "Yo s'up?" )
+		#irchandler.ircSendMessageQuote(messagehandler.sender, messagehandler.receiver, "Yo s'up?" )
 
 
 		self.exec_cmd(command[0], (irchandler, messagehandler) )
@@ -36,8 +36,8 @@ class HelloWorld(IrcBotInterface):
 	def doHelloWorld(self, handlers):
 
 		irc, msg = handlers
-		prefix, command = self.args(msg.message)
-		c = len(command)
+		prefix, command, c = self.args(msg.message)
+	
 
 		if(c != 1):
 			irc.ircSendMessage(msg.receiver, "Invalid Parameters")
@@ -48,8 +48,8 @@ class HelloWorld(IrcBotInterface):
 	def showTime(self, handlers):
 
 		irc, msg = handlers
-		prefix, command = self.args(msg.message)
-		c = len(command)
+		prefix, command, c = self.args(msg.message)
+	
 
 		if c == 2:
 			if( command[1].find("now") != -1):

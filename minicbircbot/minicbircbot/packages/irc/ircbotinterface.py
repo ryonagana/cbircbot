@@ -11,12 +11,6 @@ This Class is an Abstract Class to make all modules with the  same class signatu
 """
 
 
-#run permissions
-BOT_RUN_NONE = 1
-BOT_RUN_USER = 2
-BOT_RUN_VOICE = 4
-BOT_RUN_OP = 8 
-BOT_RUN_ALL = 16
 
 
 
@@ -30,15 +24,36 @@ __credits__ = """Guido van Rossum, for an excellent programming language.
 """
 
 
+CMD_MESSAGE = 2
+CMD_PVT     = 4
+CMD_BOTH    = 6
+		
+
+
 class IrcBotInterface:
+
+	#run permissions
+	BOT_RUN_NONE = 1
+	BOT_RUN_USER = 2
+	BOT_RUN_VOICE = 4
+	BOT_RUN_OP = 8 
+	BOT_RUN_ALL = 16
+
+
+
 
 
 	def __init__(self):
 		self.owner = "" #owner of the bot  if you want to retrict a command being run by only one person
 		self.version = "" #version
 		self.author = "" #author name
-		self.permissions = BOT_RUN_ALL # permissions
+		self.permissions = self.BOT_RUN_ALL # permissions
 		self.reg_command = {}
+
+
+		self.CMD_TYPE_MESSAGE = 2
+		self.CMD_TYPE_PVT     = 4
+		self.CMD_TYPE_BOTH    = 6
 		
 
 
@@ -47,7 +62,8 @@ class IrcBotInterface:
 		prefix = args[:1]
 		command = args[1:].split(' ')
 
-		return (prefix, command)
+
+		return (prefix, command, len(command[1:]))
 		#return args.split()
 
 	def  getMessageArgs(self, args):
@@ -63,9 +79,10 @@ class IrcBotInterface:
 
 		
 
-	def register_command(self, command, func_callback):
+	def register_command(self, command, func_callback, access = 2):
 		""" Register new command in the module
 			All commands names mus be unique. im trying to figure how to not conflict names
+			
 	    """
 
 
@@ -77,7 +94,13 @@ class IrcBotInterface:
 			prefix = command[:1]
 			cmd = command[1:]
 
-			self.reg_command[cmd] = (prefix, func_callback)
+			self.reg_command[cmd] = (prefix, func_callback, access)
+
+
+	def getCommandAccess(self, cmd):
+		if cmd in self.reg_command:
+			return self.reg_command[cmd][2]
+		return None
 
 	def exec_cmd(self,command, handlers, *args, **kwargs):
 		""" execute  the command when called  it doesnt run in array
@@ -86,10 +109,21 @@ class IrcBotInterface:
 		"""
 		if command in self.reg_command:
 			self.reg_command[command][1](handlers)
+			
+
+
+
 
 
 	def onReceivedPrivateMessage(self, irchandler, messagehandler):
 		""" abstract method when  the bot receives a private message """
+		prefix, command, count  = self.args(messagehandler.message)
+
+		access = self.getCommandAccess(command[0])
+
+		if access == self.CMD_TYPE_PVT or access == self.CMD_TYPE_BOTH:
+			self.exec_cmd(command[0], (irchandler, messagehandler))
+
 		pass
 
 	def onReceivedChannelMessage(self, irchandler, messagehandler):
@@ -97,6 +131,12 @@ class IrcBotInterface:
 			it captures all messages in channel no exceptions.  you must program the module
 			how to filter  the content in the channel
 		"""
+		prefix, command, count  = self.args(messagehandler.message)
+		access = self.getCommandAccess(command[0])
+
+		if access == self.CMD_TYPE_MESSAGE or access == self.CMD_TYPE_BOTH:
+			self.exec_cmd(command[0], (irchandler, messagehandler))
+
 		pass
 
 	def onPart(self, irchandler, messagehandler):

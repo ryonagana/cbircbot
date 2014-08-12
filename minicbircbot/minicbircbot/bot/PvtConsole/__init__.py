@@ -14,15 +14,21 @@ class PvtConsole(IrcBotInterface):
 	def __init__(self):
 		super().__init__()
 
-		self.owner = ["vagrant"]
-		self.register_command("!say", self.sayToChannel)
-		self.register_command("!reload", self.reloadModules)
+		self.owner = ["vagrant", "ryonagana"]
+		self.register_command("!say", self.sayToChannel, self.CMD_TYPE_PVT)
+		self.register_command("!reload", self.reloadModules, self.CMD_TYPE_PVT)
+		self.register_command("!op", self.giveOp, self.CMD_TYPE_BOTH)
+
 
 
 	def onReceivedPrivateMessage(self, irchandler, messagehandler):
+		super().onReceivedPrivateMessage(irchandler, messagehandler)
 
-		prefix, command  = self.args(messagehandler.message)
-		self.exec_cmd(command[0], (irchandler, messagehandler) )
+		
+
+
+	def onReceivedChannelMessage(self, irchandler, messagehandler):
+		super().onReceivedChannelMessage(irchandler, messagehandler)
 
 
 	def usage(self, irchandler, msghandler):
@@ -39,6 +45,26 @@ class PvtConsole(IrcBotInterface):
 
 
 
+	def giveOp(self, handlers):
+		irc, msghandler = handlers
+		prefix, cmd, count_args = self.getMessageArgs(msghandler.message)
+		
+
+		
+		if count_args >= 2:
+			irc.ircSetMode(cmd[1], "o", *cmd[2:])
+	
+		#if not msghandler.sender in self.owner:
+		#	irc.ircSendMessageTo(msghandler.sender, "[Denied]")
+
+		#irc.ircSetMode(cmd[1], "o", cmd[2] )
+
+
+
+
+
+
+
 
 		
 	def reloadModules(self, handlers):
@@ -46,10 +72,10 @@ class PvtConsole(IrcBotInterface):
 
 		irc, msghandler = handlers
 
-		prefix, cmd = self.args(msghandler.message)
+		prefix, cmd, c = self.args(msghandler.message)
 
 
-		if len(cmd) == 1 and msghandler.sender in self.owner:
+		if  c == 1 and msghandler.sender in self.owner:
 			chans = irc.config.get("chans")
 			#this doesnt work :( modules still the same  i just want to reload them runtime but nothing happens
 			#FIX ME
@@ -62,7 +88,7 @@ class PvtConsole(IrcBotInterface):
 	def sayToChannel(self, handlers):
 
 		irc, msghandler = handlers
-		prefix, command = self.args(msghandler.message)
+		prefix, command, count = self.args(msghandler.message)
 
 
 		

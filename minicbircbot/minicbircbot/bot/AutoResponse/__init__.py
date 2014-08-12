@@ -11,13 +11,13 @@ class AutoResponse(IrcBotInterface):
 
 	def onReceivedChannelMessage(self, irchandler, messagehandler):
 
-		prefix, command  = self.args(messagehandler.message)
+		prefix, command, count  = self.args(messagehandler.message)
 		count = len(command)
 		self.exec_cmd(command[0], (irchandler, messagehandler) )
 
 
 	def doRegister(self, handlers):
 
-		irc, msg = handlers
+		irc, msg, count = handlers
 		prefix, command = self.args(msg.message)
 		irc.ircSendMessage(msg.receiver, "Register From Auto Response")

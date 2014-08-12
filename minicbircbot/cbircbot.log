@@ -864,3 +864,205 @@ INFO:minicbircbot.packages.irc.ircclient:Auth Sent
 INFO:minicbircbot:Desconnecting Socket
 INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
 INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+WARNING:minicbircbot.packages.irc.ircclient:ircSendMessage failed mrTest is not a valid channel
+WARNING:minicbircbot.packages.irc.ircclient:ircSendMessage failed mrTest is not a valid channel
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+WARNING:minicbircbot.packages.irc.ircclient:ircSendMessage failed mrTest is not a valid channel
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+WARNING:minicbircbot.packages.irc.ircclient:ircSendMessage failed mrTest is not a valid channel
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+WARNING:minicbircbot.packages.irc.ircclient:ircSendMessage failed mrTest is not a valid channel
+WARNING:minicbircbot.packages.irc.ircclient:ircSendMessage failed mrTest is not a valid channel
+WARNING:minicbircbot.packages.irc.ircclient:ircSendMessage failed mrTest is not a valid channel
+WARNING:minicbircbot.packages.irc.ircclient:ircSendMessage failed mrTest is not a valid channel
+WARNING:minicbircbot.packages.irc.ircclient:ircSendMessage failed mrTest is not a valid channel
+WARNING:minicbircbot.packages.irc.ircclient:ircSendMessage failed mrTest is not a valid channel
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+WARNING:minicbircbot.packages.irc.ircclient:ircSendMessage failed mrTest is not a valid channel
+WARNING:minicbircbot.packages.irc.ircclient:ircSendMessage failed mrTest is not a valid channel
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed

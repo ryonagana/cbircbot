@@ -162,6 +162,44 @@ class ircClient:
 		""" send a message directly to a channel """
 		self.ircSend("PRIVMSG {0} :{1}".format(channel, message))
 
+	def ircSetMode(self, channel, mode, *parameter):
+		count = len(parameter)
+
+		if not channel.startswith("#"):
+			logger.warning("ircSendMessage failed {0} is not a valid channel".format(channel))
+			return
+
+		#makes the mode repeat  e.g :  count = 3.   mode_str = "ooo"
+		mode_str = "+" + (mode * count)
+
+		print ("MODE {0} {1} {2} ".format(		
+								channel,
+								mode_str,
+								" ".join(parameter)
+		))
+
+		"""
+		self.ircSend("MODE {0} {1} {2} ".format(		
+								channel,
+								mode_str,
+								" ".join(parameter)
+
+		))
+		"""
+
+		#print("<{0}> set {1} {2}".format())
+
+	def ircPart(self, channel):
+		""" just makes the bot leaves  the channel """
+		temp_message = "cbircbot - rooling  da teats"
+
+		if not channel.startswith("#"):
+			self.ircSend("PART #{0} :{1}".format(channel, temp_message) )
+
+		self.ircSend("PART {0} :{1}".format(channel, temp_message) )
+
+
+
 
 
 	def ircJoin(self, channel):
