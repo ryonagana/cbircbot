@@ -3,7 +3,7 @@
 #pyside only to treat threads. cause python multithreading support its too complicated for simple things
 #QThread has pefect support for thread
 #only votedown is  dependencies of pyside
-
+import sphinx.ext.autodoc
 import PySide
 from PySide import QtCore as _qc
 

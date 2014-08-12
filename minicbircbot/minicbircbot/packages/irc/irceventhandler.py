@@ -12,6 +12,9 @@ abstract class to pass the same handler to all events
 
 
 class IrcEventhandler:
+	""" abstract class to pass all events with the same class signature  """
+	
+	
 
 	sender = ""
 	receiver = ""
@@ -39,6 +42,7 @@ class IrcEventhandler:
 
 	@staticmethod
 	def register(*args, **kwargs):
+		""" Register new command to a module """
 		event = IrcEventhandler()
 
 		#print(kwargs)
@@ -58,18 +62,19 @@ class IrcEventhandler:
 
 class IrcMessage(IrcEventhandler):
 
+	""" Event Handler for All Messages """	
 
 
 
 	def __init__(self):
-
+		""" adds new attribute  message"""
 		self.events['message'] = ''
 		super().__init__()
 
 
 
 class IrcPrivateMessage(IrcMessage):
-
+	""" Event Handler for Private Messages """	
 	receiver = ""
 
 	def __init__(self):
