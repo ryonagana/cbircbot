@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-
+import sphinx.ext.autodoc
 import os
 import sys
+from minicbircbot.utils import MODULES_LOADED
 
 """
 This Class is an Abstract Class to make all modules with the  same class signature
@@ -60,13 +61,22 @@ class IrcBotInterface:
 			return True
 		return False
 
+		
+
 	def register_command(self, command, func_callback):
 		""" Register new command in the module
 			All commands names mus be unique. im trying to figure how to not conflict names
 	    """
+
+
+
+
 		if command and func_callback:
+
+
 			prefix = command[:1]
 			cmd = command[1:]
+
 			self.reg_command[cmd] = (prefix, func_callback)
 
 	def exec_cmd(self,command, handlers, *args, **kwargs):

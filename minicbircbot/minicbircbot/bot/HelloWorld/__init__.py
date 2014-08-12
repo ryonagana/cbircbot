@@ -9,6 +9,8 @@ class HelloWorld(IrcBotInterface):
 		super().__init__()
 		self.register_command("!hello", self.doHelloWorld )
 		self.register_command("!time", self.showTime)
+
+		self.register_command("!time", self.doHelloWorld)
 		
 	def onReceivedChannelMessage(self, irchandler, messagehandler):
 		

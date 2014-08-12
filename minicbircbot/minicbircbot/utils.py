@@ -46,8 +46,10 @@ def clean_str(data):
 def load_extra_paths():
 	fake_root_path = os.getcwd()
 	bot_path = os.path.join(fake_root_path, 'bot')
+	mini = os.bot_path.join(fake_root_path, 'minicbircbot')
 	
 	sys.path.append(bot_path)
+	sys.bot_path.append(mini)
 
 	#print(sys.modules)
 

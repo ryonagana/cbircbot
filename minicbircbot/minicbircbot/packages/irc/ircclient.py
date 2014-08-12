@@ -6,7 +6,7 @@ import time
 import logging
 import re
 import importlib
-
+import sphinx.ext.autodoc
 
 """
 This Class has all irc handlers  and is intended  to create methods for IRC only
