@@ -24,6 +24,7 @@ irc Package
     :members:
     :undoc-members:
     :show-inheritance:
+	
 
 :mod:`ircconsole` Module
 ------------------------
@@ -32,6 +33,7 @@ irc Package
     :members:
     :undoc-members:
     :show-inheritance:
+	
 
 :mod:`irceventhandler` Module
 -----------------------------
