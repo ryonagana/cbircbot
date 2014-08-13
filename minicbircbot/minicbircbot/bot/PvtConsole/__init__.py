@@ -18,8 +18,21 @@ class PvtConsole(IrcBotInterface):
 		self.register_command("!say", self.sayToChannel, self.CMD_TYPE_PVT)
 		self.register_command("!reload", self.reloadModules, self.CMD_TYPE_PVT)
 		self.register_command("!op", self.giveOp, self.CMD_TYPE_BOTH)
+		self.register_command("!disconnect", self.disconnectBot, self.CMD_TYPE_PVT)
+		self.register_command("!join", self.joinBot, self.CMD_TYPE_PVT)
 
 
+	def onChannelJoined(self, irchandler, messagehandler):
+		super().onChannelJoined(irchandler, messagehandler)
+		
+
+		#example of greeting
+		irchandler.ircSendMessage(messagehandler.channel_joined, "Oi {0} Seja Bem Vindo ao {1}".format(messagehandler.sender, messagehandler.channel_joined ) )
+
+
+	def onChannelPart(self, irchandler, messagehandler):
+		super().onChannelPart(irchandler, messagehandler)
+		print("SAIU")
 
 	def onReceivedPrivateMessage(self, irchandler, messagehandler):
 		super().onReceivedPrivateMessage(irchandler, messagehandler)
@@ -103,3 +116,42 @@ class PvtConsole(IrcBotInterface):
 		irc.ircSendMessage(channel, msg)
 			
 		#print(prefix, msg)
+
+
+	def disconnectBot(self, handlers):
+
+
+
+		irc, msghandler = handlers
+		prefix, command, count = self.CMD_Args(msghandler.message)
+
+		chans = irc.config.get("chans")
+
+
+		if count == 1 and command[1] == "all" and msghandler.sender in self.owner  :
+			if type(chans) is (list, tuple):
+
+				for c in chans:
+					irc.ircDisconnect(c)
+					print("Part {0}".format(c))
+					irc.ircSendMessage(msghandler.sender, "Disconnected from {0} with success".format(c))
+
+
+			if type(chans) is str:
+				irc.ircDisconnect(chans)
+				print("Part {0}".format(chans))
+				irc.ircSendMessage(msghandler.sender, "Disconnected from {0} with success".format(chans))
+		else:
+			return
+			#irc.ircSendMessage(msghandler.sender, "[Command Failed]")
+
+
+	def joinBot(self, handlers):
+
+		irc, msghandler = handlers
+		prefix, command, count = self.CMD_Args(msghandler.message)
+
+		chans = irc.config.get("chans")
+
+		if count == 1 and command[1].find("#") != -1 and msghandler.sender in self.owner:
+			irc.JoinChannels(chans)

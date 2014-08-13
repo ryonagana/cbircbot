@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import sphinx.ext.autodoc
+
 import os
 import sys
 from minicbircbot.utils import MODULES_LOADED
@@ -9,11 +9,6 @@ This Class is an Abstract Class to make all modules with the  same class signatu
 
 
 """
-
-
-
-
-
 
 __author__ = "Nicholas Oliveira <ryonagana@gmail.com>"
 __date__ = "12 August 2014"
@@ -44,6 +39,7 @@ class IrcBotInterface:
 
 
 	def __init__(self):
+		self.module_name = ""
 		self.owner = "" #owner of the bot  if you want to retrict a command being run by only one person
 		self.version = "" #version
 		self.author = "" #author name
@@ -51,11 +47,16 @@ class IrcBotInterface:
 		self.reg_command = {}
 
 
-		self.CMD_TYPE_MESSAGE = 2
-		self.CMD_TYPE_PVT     = 4
-		self.CMD_TYPE_BOTH    = 6
+		self.CMD_TYPE_MESSAGE	= 2
+		self.CMD_TYPE_PVT		= 4
+		self.CMD_TYPE_BOTH		= 6
+		self.CMD_TYPE_JOIN		= 8
+		self.CMD_TYPE_PART		= 10
 		
 
+
+	def generate_help():
+		pass
 
 	def args(self, args):
 		""" gets the irc message  and split into  command and arguments """
@@ -68,6 +69,9 @@ class IrcBotInterface:
 
 	def  getMessageArgs(self, args):
 		""" same of args with better name  cause args is too generic and clunky name """
+		return self.args(args)
+
+	def CMD_Args(self, args):
 		return self.args(args)
 
 	def isCommand(self,msg, prefix):
@@ -84,10 +88,6 @@ class IrcBotInterface:
 			All commands names mus be unique. im trying to figure how to not conflict names
 			
 	    """
-
-
-
-
 		if command and func_callback:
 
 
@@ -139,16 +139,28 @@ class IrcBotInterface:
 
 		pass
 
-	def onPart(self, irchandler, messagehandler):
+	def onChannelPart(self, irchandler, messagehandler):
 		"""
 		abstract method when someone parts the channel trigger  this event
 		"""
+
+		prefix, command, count  = self.args(messagehandler.message)
+		access = self.getCommandAccess(command[0])
+
+		if access == self.CMD_TYPE_PART:
+			self.exec_cmd(command[0], (irchandler, messagehandler))
 		pass
 
-	def onJoined(self, irchandler, messagehandler):
+	def onChannelJoined(self, irchandler, messagehandler):
 		"""
 		abstract method when someone join the channel   this event is triggered
 		"""
+
+		prefix, command, count  = self.args(messagehandler.message)
+		access = self.getCommandAccess(command[0])
+
+		if access == self.CMD_TYPE_JOIN:
+			self.exec_cmd(command[0], (irchandler, messagehandler))
 		pass
 
 	def onNickChanged(self, irchandler, messagehandler):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import sphinx.ext.autodoc
+
 
 import os
 import sys
@@ -21,7 +21,18 @@ class IrcEventhandler:
 	ident = ""
 	message = ""
 
-	def __init__(self):
+	def __init__(self, *args, **kwargs):
+
+		if "sender" in kwargs:
+			self.sender = kwargs['sender']
+		if "receiver" in kwargs:
+			self.receiver  = kwargs['receiver']
+		if "ident" in kwargs:
+			self.ident = kwargs['ident'] 
+		if "message" in kwargs:
+			self.message = kwargs['message']
+
+
 		pass
 
 	def __str__(self):
@@ -60,7 +71,7 @@ class IrcEventhandler:
 
 
 
-class IrcMessage(IrcEventhandler):
+class IrcMessageEvent(IrcEventhandler):
 
 	""" Event Handler for All Messages """	
 
@@ -68,14 +79,39 @@ class IrcMessage(IrcEventhandler):
 
 	def __init__(self):
 		""" adds new attribute  message"""
-		self.events['message'] = ''
 		super().__init__()
 
 
 
-class IrcPrivateMessage(IrcMessage):
+class IrcPrivateMessageEvent(IrcMessageEvent):
 	""" Event Handler for Private Messages """	
 	receiver = ""
 
 	def __init__(self):
 		super().__init__()
+
+
+
+
+class IrcJoinEvent(IrcEventhandler):
+
+	channel_joined  = ""
+
+	def __init__(self, **data):
+		super().__init__(**data)
+		self.channel_joined = data['channel_joined']
+
+
+
+
+
+class IrcPartEvent(IrcEventhandler):
+
+	quit_msg = ""
+	channel_part = ""
+
+	def __init__(self, **data):
+		super().__init__(**data)
+
+		self.quit_msg = data['quit_msg']
+		self.channel_part = data['channel_part']

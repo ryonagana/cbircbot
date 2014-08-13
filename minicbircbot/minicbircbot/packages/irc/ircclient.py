@@ -6,7 +6,6 @@ import time
 import logging
 import re
 import importlib
-import sphinx.ext.autodoc
 
 """
 This Class has all irc handlers  and is intended  to create methods for IRC only
@@ -29,7 +28,7 @@ __credits__ = """Guido van Rossum, for an excellent programming language.
 from minicbircbot.packages.config.config_json import ConfigJson
 from minicbircbot.packages.sockets.sockethandler import IrcSocket
 from minicbircbot.utils import format, clean_str, DEBUG_MODE, MODULES_LOADED
-from minicbircbot.packages.irc.irceventhandler import IrcEventhandler, IrcMessage, IrcPrivateMessage
+from minicbircbot.packages.irc.irceventhandler import IrcEventhandler, IrcMessageEvent, IrcPrivateMessageEvent, IrcJoinEvent, IrcPartEvent
 import minicbircbot.bot
 
 logger = logging.getLogger(__name__)
@@ -212,7 +211,11 @@ class ircClient:
 				self.ircSend("JOIN #{0}".format(channel))
 
 
-			
+	def ircDisconnect(self, channel):
+
+			if  channel.find("#") != -1:
+				self.ircSend("PART {0} :\"Running with Scissors\"".format(channel))
+
 
 	def JoinChannels(self, channels):
 		""" join the bot in all channels in config.json  if just a simple string make a join, if channels is  a list 
@@ -336,22 +339,62 @@ class ircClient:
 				if data['receiver'].startswith("#"): 
 				
 					#means you are sending message directly to a channel
-					message_received = IrcMessage.register(**data)
+					message_received = IrcMessageEvent.register(**data)
 					self.ReceivedMessageChannel(message_received)
 				else:
 					
 					#means you are sending message directly to someone
-					message_received = IrcPrivateMessage.register(**data)
+					message_received = IrcPrivateMessageEvent.register(**data)
 					self.ReceivedPrivateMessages(message_received)
-					
 
-				
+
+
+		if server_msg.find("JOIN") != -1: #join event?
+
+			#message example
+			#:ryonagana!vagrant@gsu.dbo.107.177.IP JOIN :#python
+			is_join = re.search(":(.+[aA-zZ0-0])!(.*) JOIN :(.+?)$", server_msg)
+
+			if is_join:
+
+				data =  {
+
+					'sender'   		 : is_join.groups()[0],
+					'ident'    		 : is_join.groups()[1],
+					'channel_joined' : is_join.groups()[2],
+				}
+
+
+				join_event = IrcJoinEvent(**data)
+				self.ReceivedJoinEvent(join_event)
+
+
+		if server_msg.find("PART") != -1: #join event?
+
+			is_part = re.search(":(.+[aA-zZ0-0])!(.*) PART (.+?) :\"(.+[aA-zZ0-9])\"$", server_msg)
+
+
+			if is_part:
+
+				data =  {
+
+					'sender'   		 : is_part.groups()[0],
+					'ident'    		 : is_part.groups()[1],
+					'channel_part'   : is_part.groups()[2],
+					'quit_msg'		 : is_part.groups()[3], 
+				}
+
+				part_event = IrcPartEvent(**data)
+				self.ReceivedPartEvent(part_event)
+
+
 
 
 		print(server_msg)
 		
 				
 
+	#def  getModuleEvent(self)
 
 		
 
@@ -367,13 +410,25 @@ class ircClient:
 	#send  event triggered to all modules loaded ReceivedPrivateMessages
 	def ReceivedPrivateMessages(self, msghandler):
 
-
-		
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
 				MODULES_LOADED[mod].onReceivedPrivateMessage(self,msghandler)
-		
 
+
+	def ReceivedJoinEvent(self, msghandler):
+		
+		for mod in MODULES_LOADED:
+			if MODULES_LOADED[mod]:
+				MODULES_LOADED[mod].onChannelJoined(self,msghandler)
+
+
+	def ReceivedPartEvent(self, msghandler):
+		for mod in MODULES_LOADED:
+			if MODULES_LOADED[mod]:
+				MODULES_LOADED[mod].onChannelPart(self,msghandler)
+
+		
+		
 
 
 
