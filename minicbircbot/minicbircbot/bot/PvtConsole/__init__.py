@@ -15,11 +15,14 @@ class PvtConsole(IrcBotInterface):
 		super().__init__()
 
 		self.owner = ["vagrant", "ryonagana"]
-		self.register_command("!say", self.sayToChannel, self.CMD_TYPE_PVT)
-		self.register_command("!reload", self.reloadModules, self.CMD_TYPE_PVT)
-		self.register_command("!op", self.giveOp, self.CMD_TYPE_BOTH)
-		self.register_command("!disconnect", self.disconnectBot, self.CMD_TYPE_PVT)
-		self.register_command("!join", self.joinBot, self.CMD_TYPE_PVT)
+		
+		self.module_name = "PvtConsole"
+
+		self.register_command("!say", self.sayToChannel, self.CMD_TYPE_PVT, "say something in the channel")
+		self.register_command("!reload", self.reloadModules, self.CMD_TYPE_PVT, "reload all  external modules")
+		self.register_command("!op", self.giveOp, self.CMD_TYPE_BOTH, "give op")
+		self.register_command("!disconnect", self.disconnectBot, self.CMD_TYPE_PVT, "get of a channel")
+		self.register_command("!join", self.joinBot, self.CMD_TYPE_PVT, "enters in a channel")
 
 
 	def onChannelJoined(self, irchandler, messagehandler):
@@ -38,24 +41,8 @@ class PvtConsole(IrcBotInterface):
 		super().onReceivedPrivateMessage(irchandler, messagehandler)
 
 		
-
-
 	def onReceivedChannelMessage(self, irchandler, messagehandler):
 		super().onReceivedChannelMessage(irchandler, messagehandler)
-
-
-	def usage(self, irchandler, msghandler):
-		
-		s = "!say #channel message"
-		irchandler.ircSendMessageTo(msghandler.receiver, s)
-		time.sleep(500)
-		s = "!say message"
-		irchandler.ircSendMessageTo(msghandler.receiver, s)
-		time.sleep(500)
-		s = " will send to all channels"
-		irchandler.ircSendMessageTo(msghandler.receiver, s)
-
-
 
 
 	def giveOp(self, handlers):

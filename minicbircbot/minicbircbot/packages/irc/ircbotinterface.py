@@ -2,7 +2,9 @@
 
 import os
 import sys
+import time
 from minicbircbot.utils import MODULES_LOADED
+from minicbircbot.packages.irc.irccommand import IrcCommand
 
 """
 This Class is an Abstract Class to make all modules with the  same class signature
@@ -40,7 +42,7 @@ class IrcBotInterface:
 
 	def __init__(self):
 		self.module_name = ""
-		self.owner = "" #owner of the bot  if you want to retrict a command being run by only one person
+		self.owner = [] #owner of the bot  if you want to retrict a command being run by only one person
 		self.version = "" #version
 		self.author = "" #author name
 		self.permissions = self.BOT_RUN_ALL # permissions
@@ -52,11 +54,49 @@ class IrcBotInterface:
 		self.CMD_TYPE_BOTH		= 6
 		self.CMD_TYPE_JOIN		= 8
 		self.CMD_TYPE_PART		= 10
+
+		self.generateHelp()
+
+
+
+	def generateHelp(self):
+		#if self.module_name:
+		self.register_command("!help", self.module_usage, self.CMD_TYPE_PVT, "")
+
+
+	def module_usage(self, handlers):
+		irc, msghandler = handlers
+		prefix, cmd, count_args = self.getMessageArgs(msghandler.message)
+
 		
 
 
-	def generate_help():
+
+		if cmd[1].find(self.module_name) != -1 and count_args == 1 and msghandler.sender in self.owner:
+
+
+			help = "!help {0} ==============".format(self.module_name)
+			irc.ircSendMessageTo(msghandler.sender, help)
+
+			print ("USAGE CALLED")
+
+			for c in self.reg_command:
+				if c.find("help") == -1:
+					help_module = self.reg_command[c]
+					
+					print (help_module.prefix + c + " - " +  help_module.cmd_description)
+					m = "\t\t{0}{1} - {2}".format(help_module.prefix, c, help_module.cmd_description)
+					irc.ircSendMessageTo(msghandler.sender, m)
+					time.sleep(1)
+
+			help = "=========END OF HELP==========="
+			irc.ircSendMessageTo(msghandler.sender, help)
+		
 		pass
+
+
+
+
 
 	def args(self, args):
 		""" gets the irc message  and split into  command and arguments """
@@ -81,9 +121,12 @@ class IrcBotInterface:
 			return True
 		return False
 
+
+
+
 		
 
-	def register_command(self, command, func_callback, access = 2):
+	def register_command(self, command, func_callback, access = 2, description = ""):
 		""" Register new command in the module
 			All commands names mus be unique. im trying to figure how to not conflict names
 			
@@ -94,12 +137,25 @@ class IrcBotInterface:
 			prefix = command[:1]
 			cmd = command[1:]
 
-			self.reg_command[cmd] = (prefix, func_callback, access)
+
+			gather = {
+
+				'prefix' 			: prefix,
+				'func_callback' 	: func_callback,
+				'access'			: access,
+				'cmd_description'	: description
+
+			}
+
+			self.reg_command[cmd] = IrcCommand()
+			self.reg_command[cmd].load(**gather)
+
+			#self.reg_command[cmd] = (prefix, func_callback, access)
 
 
 	def getCommandAccess(self, cmd):
 		if cmd in self.reg_command:
-			return self.reg_command[cmd][2]
+			return self.reg_command[cmd].access
 		return None
 
 	def exec_cmd(self,command, handlers, *args, **kwargs):
@@ -108,8 +164,8 @@ class IrcBotInterface:
 
 		"""
 		if command in self.reg_command:
-			self.reg_command[command][1](handlers)
-			
+			#self.reg_command[command][1](handlers)
+			self.reg_command[command].run(handlers)
 
 
 
@@ -120,6 +176,8 @@ class IrcBotInterface:
 		prefix, command, count  = self.args(messagehandler.message)
 
 		access = self.getCommandAccess(command[0])
+
+		self.exec_cmd("help", (irchandler, messagehandler) )
 
 		if access == self.CMD_TYPE_PVT or access == self.CMD_TYPE_BOTH:
 			self.exec_cmd(command[0], (irchandler, messagehandler))
