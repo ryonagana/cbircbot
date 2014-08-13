@@ -83,13 +83,17 @@ class ircClient:
 				MODULES_LOADED[mod] = module_loaded()
 
 
+
+
 			except Exception as ex:
 				
 				print("-------------------------------------------------")
 				print("MODULE \"{0}\" doesnt exists. and will be ignored".format(mod))
 				print("Exception: {0}".format(ex))
 				print("-------------------------------------------------")
-				print("")
+				print("Please Check the Log")
+				logger.critical("Exception Occurred when tried  to load module: {0}. Please Check {1}/__init__.py - {2}".format(mod, mod, str(ex)  ))
+				
 				
 				continue
 			
@@ -115,6 +119,8 @@ class ircClient:
 		except Exception as ex:
 			print("ERROR: Cannot Instantiate {0}".format(module))
 			print("Exception: {0}".format(str(ex)))
+			print("Please Check the Log")
+			logger.critical("Exception Occurred when tried  instantiate a module: {0} - {1}".format(module_name, str(ex)))
 			return inst
 
 

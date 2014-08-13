@@ -36,7 +36,7 @@ class PvtConsole(IrcBotInterface):
 	def onChannelPart(self, irchandler, messagehandler):
 		super().onChannelPart(irchandler, messagehandler)
 		print("SAIU")
-
+		
 	def onReceivedPrivateMessage(self, irchandler, messagehandler):
 		super().onReceivedPrivateMessage(irchandler, messagehandler)
 
