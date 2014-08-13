@@ -4,7 +4,8 @@ from minicbircbot.packages.irc import ircClient
 
 
 import logging
-
+import colorama
+from colorama import Fore, Back, Style
 
 
 # logging
@@ -13,6 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 def init_bot():
+	colorama.init()
 	irc = ircClient()
 	irc.connect()
 	irc.auth()
@@ -28,8 +30,8 @@ def init_bot():
 			irc.isServerRunning(data)
 			#print (data)
 		except (KeyboardInterrupt):
-			print("Waiting 2 seconds")
-			print("Closing Sockets")
+			print(Fore.YELLOW + "Waiting 2 seconds")
+			print(Fore.RED + "Closing Sockets")
 			logger.info("Desconnecting Socket")
 			irc.exit_gracefully()
 			logger.info("Successfully Closed")

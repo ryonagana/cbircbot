@@ -71,26 +71,26 @@ class IrcBotInterface:
 		
 
 
+		if count_args == 1:
+			if cmd[1].find(self.module_name) != -1  and msghandler.sender in self.owner:
 
-		if cmd[1].find(self.module_name) != -1 and count_args == 1 and msghandler.sender in self.owner:
 
+				help = "!help {0} ==============".format(self.module_name)
+				irc.ircSendMessageTo(msghandler.sender, help)
 
-			help = "!help {0} ==============".format(self.module_name)
-			irc.ircSendMessageTo(msghandler.sender, help)
+				print ("USAGE CALLED")
 
-			print ("USAGE CALLED")
-
-			for c in self.reg_command:
-				if c.find("help") == -1:
-					help_module = self.reg_command[c]
+				for c in self.reg_command:
+					if c.find("help") == -1:
+						help_module = self.reg_command[c]
 					
-					print (help_module.prefix + c + " - " +  help_module.cmd_description)
-					m = "\t\t{0}{1} - {2}".format(help_module.prefix, c, help_module.cmd_description)
-					irc.ircSendMessageTo(msghandler.sender, m)
-					time.sleep(1)
+						print (help_module.prefix + c + " - " +  help_module.cmd_description)
+						m = "\t\t{0}{1} - {2}".format(help_module.prefix, c, help_module.cmd_description)
+						irc.ircSendMessageTo(msghandler.sender, m)
+						time.sleep(1)
 
-			help = "=========END OF HELP==========="
-			irc.ircSendMessageTo(msghandler.sender, help)
+				help = "=========END OF HELP==========="
+				irc.ircSendMessageTo(msghandler.sender, help)
 		
 		pass
 

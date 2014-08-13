@@ -7,6 +7,11 @@ import logging
 import re
 import importlib
 
+import colorama
+from colorama import Fore, Back, Style
+
+
+
 """
 This Class has all irc handlers  and is intended  to create methods for IRC only
 
@@ -27,7 +32,7 @@ __credits__ = """Guido van Rossum, for an excellent programming language.
 
 from minicbircbot.packages.config.config_json import ConfigJson
 from minicbircbot.packages.sockets.sockethandler import IrcSocket
-from minicbircbot.utils import format, clean_str, DEBUG_MODE, MODULES_LOADED
+from minicbircbot.utils import format, clean_str, DEBUG_MODE, MODULES_LOADED, resetColors
 from minicbircbot.packages.irc.irceventhandler import IrcEventhandler, IrcMessageEvent, IrcPrivateMessageEvent, IrcJoinEvent, IrcPartEvent
 import minicbircbot.bot
 
@@ -43,10 +48,11 @@ class ircClient:
 		self.initModules()
 
 		if DEBUG_MODE:
-			print("Loading Modules: ")
-			print(self.config.get("modules"))
-			print (MODULES_LOADED)
-			print("------------------------")
+			print( Fore.YELLOW + "Loading Modules: ")
+			print( Fore.YELLOW + self.config.get("modules"))
+			print (Fore.YELLOW + MODULES_LOADED)
+			print(Fore.YELLOW  + "------------------------")
+			resetColors()
 
 		self.ircsocket = IrcSocket(self.config.get("address") , self.config.get("port"))
 
@@ -87,13 +93,13 @@ class ircClient:
 
 			except Exception as ex:
 				
-				print("-------------------------------------------------")
-				print("MODULE \"{0}\" doesnt exists. and will be ignored".format(mod))
-				print("Exception: {0}".format(ex))
-				print("-------------------------------------------------")
-				print("Please Check the Log")
+				print( Fore.RED  + "-------------------------------------------------")
+				print( Fore.RED  +  "MODULE \"{0}\" doesnt exists. and will be ignored".format(mod))
+				print( Fore.RED  + "Exception: {0}".format(ex))
+				print(Fore.RED   + "-------------------------------------------------")
+				print(Fore.RED +  Style.BOLD + "Please Check the Log")
 				logger.critical("Exception Occurred when tried  to load module: {0}. Please Check {1}/__init__.py - {2}".format(mod, mod, str(ex)  ))
-				
+				resetColors()
 				
 				continue
 			
@@ -117,10 +123,11 @@ class ircClient:
 			return getattr(inst, module_name)
 		
 		except Exception as ex:
-			print("ERROR: Cannot Instantiate {0}".format(module))
-			print("Exception: {0}".format(str(ex)))
-			print("Please Check the Log")
+			print(Fore.RED + "ERROR: Cannot Instantiate {0}".format(module))
+			print(Fore.RED + "Exception: {0}".format(str(ex)))
+			print(Fore.RED + "Please Check the Log")
 			logger.critical("Exception Occurred when tried  instantiate a module: {0} - {1}".format(module_name, str(ex)))
+			resetColors()
 			return inst
 
 
@@ -347,12 +354,17 @@ class ircClient:
 					#means you are sending message directly to a channel
 					message_received = IrcMessageEvent.register(**data)
 					self.ReceivedMessageChannel(message_received)
+
+					print (Fore.BLUE + "<" + Fore.WHITE + data['receiver'] + "> " + Fore.CYAN + data["message"])
+
 				else:
 					
 					#means you are sending message directly to someone
 					message_received = IrcPrivateMessageEvent.register(**data)
 					self.ReceivedPrivateMessages(message_received)
 
+					print (Fore.BLUE + "<" + Fore.WHITE + data['sender'] + ": " + data["receiver"] + "> " + Fore.CYAN + data["message"])
+					resetColors()
 
 
 		if server_msg.find("JOIN") != -1: #join event?
@@ -374,6 +386,9 @@ class ircClient:
 				join_event = IrcJoinEvent(**data)
 				self.ReceivedJoinEvent(join_event)
 
+				print( Fore.YELLOW + "{0} Joined {1}".format(join_event.sender, join_event.channel_joined))
+				resetColors()
+
 
 		if server_msg.find("PART") != -1: #join event?
 
@@ -392,7 +407,8 @@ class ircClient:
 
 				part_event = IrcPartEvent(**data)
 				self.ReceivedPartEvent(part_event)
-
+				print( Fore.YELLOW + "{0} Part {1}".format(join_event.sender, join_event.channel_joined))
+				resetColors()
 
 
 

@@ -2,6 +2,8 @@
 
 import os
 import sys
+import colorama
+from colorama import Fore, Back, Style
 
 #constants
 
@@ -24,6 +26,8 @@ if not 'BOT_PATH' in globals():
 
 
 
+def resetColors():
+	print(Fore.RESET + Back.RESET + Style.RESET_ALL)
 
 
 
