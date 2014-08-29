@@ -86,7 +86,7 @@ class ircClient:
 			# >=)
 			try:
 				module_loaded = self.instantiateModule(mod)
-				MODULES_LOADED[mod] = module_loaded()
+				MODULES_LOADED[mod] = module_loaded(self)
 
 
 
@@ -95,7 +95,7 @@ class ircClient:
 				
 				print( Fore.RED  + "-------------------------------------------------")
 				print( Fore.RED  +  "MODULE \"{0}\" doesnt exists. and will be ignored".format(mod))
-				print( Fore.RED  + "Exception: {0}".format(ex))
+				print( Fore.RED  + "Exception: {0} - Line {1}".format(ex))
 				print(Fore.RED   + "-------------------------------------------------")
 				print(Fore.RED +  Style.BOLD + "Please Check the Log")
 				logger.critical("Exception Occurred when tried  to load module: {0}. Please Check {1}/__init__.py - {2}".format(mod, mod, str(ex)  ))
@@ -310,6 +310,12 @@ class ircClient:
 			wait one second to socket  finish and close createConnection
 
 		"""
+		
+
+		exit_handler = IrcEventhandler()
+		self.BotExitEvent(exit_handler)
+		
+
 		self.isRunning = False
 		time.sleep(1)
 		self.ircsocket.force_close()
@@ -427,6 +433,7 @@ class ircClient:
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
 				MODULES_LOADED[mod].onReceivedChannelMessage(self,msghandler)
+		pass
 
 
 	#send  event triggered to all modules loaded ReceivedPrivateMessages
@@ -435,6 +442,7 @@ class ircClient:
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
 				MODULES_LOADED[mod].onReceivedPrivateMessage(self,msghandler)
+		pass
 
 
 	def ReceivedJoinEvent(self, msghandler):
@@ -442,14 +450,26 @@ class ircClient:
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
 				MODULES_LOADED[mod].onChannelJoined(self,msghandler)
+		pass
 
 
 	def ReceivedPartEvent(self, msghandler):
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
 				MODULES_LOADED[mod].onChannelPart(self,msghandler)
+		pass
 
 		
+
+	def BotExitEvent(self, msghandler):
+
+		for mod in MODULES_LOADED:
+			if MODULES_LOADED[mod]:
+				MODULES_LOADED[mod].onExit(self, msghandler)
+		pass
+
+
+
 		
 
 

@@ -1,20 +1,8 @@
 INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: PvtConsole - name 'de' is not defined
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: PvtConsole - 'NoneType' object is not callable
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: PvtConsole - name 'de' is not defined
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: PvtConsole. Please Check PvtConsole/__init__.py - 'NoneType' object is not callable
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
 INFO:minicbircbot:Desconnecting Socket
@@ -35,9 +23,215 @@ INFO:minicbircbot:Successfully Closed
 INFO:root:Tried to load CFG
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: TwitterBot - expected an indented block (__init__.py, line 31)
+INFO:root:Tried to load CFG
+INFO:root:Tried to load CFG
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
 INFO:root:Tried to load CFG
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
+CRITICAL:minicbircbot.bot.TwitterBot:EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
+WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:root:CFG Saved
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:Config Key: oauth_token doesnt exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: oauth_secret doesnt exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: consumer_key doesnt exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: consumer_secret doesnt exists
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:root:CFG Saved
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:Config Key: oauth_token doesnt exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: oauth_secret doesnt exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: consumer_key doesnt exists
+WARNING:minicbircbot.packages.config.config_json:Config Key: consumer_secret doesnt exists
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:root:CFG Saved
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:root:CFG Saved
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:root:CFG Saved
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:root:CFG Saved
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
 INFO:root:Tried to load CFG
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent

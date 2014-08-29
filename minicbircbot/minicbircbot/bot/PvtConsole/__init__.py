@@ -10,9 +10,13 @@ from minicbircbot.packages.irc.ircbotinterface import IrcBotInterface
 from minicbircbot.utils import DEBUG_MODE, MODULES_LOADED
 
 class PvtConsole(IrcBotInterface):
+	"""
+		Main Controller of the bot. its not dependency if this module  is disables
+		wont serve any commands to control the bot.
+	"""
 
-	def __init__(self):
-		super().__init__()
+	def __init__(self, irc = None):
+		super().__init__(irc)
 
 		self.owner = ["vagrant", "ryonagana"]
 		
@@ -43,6 +47,13 @@ class PvtConsole(IrcBotInterface):
 		
 	def onReceivedChannelMessage(self, irchandler, messagehandler):
 		super().onReceivedChannelMessage(irchandler, messagehandler)
+
+	def onExit(self, irchandler, messagehandler):
+		super().onExit(irchandler,messagehandler)
+
+		channel = irchandler.config.get("chans")
+
+		irchandler.ircSend("PART {0} :Screw You Guys, I'm Going Home.. - CARTMAN,Eric".format(channel))
 
 
 	def giveOp(self, handlers):

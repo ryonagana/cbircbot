@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 
 class ConfigJson(object):
-
+	""" Class to read and parse json config """
 	DEFAULT_OPTS = {
 
 					'address' : 'irc.falai.org',
@@ -28,7 +28,7 @@ class ConfigJson(object):
 					'nickname' : 'mrTest',
 					'identd' : 'HUE',
 					'console' : False,
-					'modules' : {}
+					'modules' : []
 					
 
 					}
@@ -39,6 +39,20 @@ class ConfigJson(object):
 		self.opts = {}
 		self.usebase64  = use_base64
 
+
+
+	def setDefaultOpts(self, key, value):
+		if not key or not value:
+			return False
+
+		# to do not overwriting existent  config  she should not allow  insertion if already exists
+		if not key  in self.opts:
+			self.opts[key] = value
+			logger.info("Key {0}:{1} added".format(key, value))
+
+		else:
+			logger.info("Key {0} already exists".format(key))
+
 	
 	def encode(self,str):
 		return b64encode(str)
@@ -47,8 +61,9 @@ class ConfigJson(object):
 		return b64decode(str)
 
 	def load(self):
-		logging.info("Tried to load CFG")
+		
 		try:
+			logging.info("Tried to load CFG")
 			with open(self.cfg_path, mode="r", encoding="utf-8") as f:
 				
 
@@ -66,8 +81,10 @@ class ConfigJson(object):
 						
 						default_opts = copy(self.DEFAULT_OPTS)
 
-
-						json.dump(default_opts, f, indent=4, sort_keys=True)
+						#sorting keys will mess your config if you  wrote in manully 
+						#its better off
+						
+						json.dump(default_opts, f, indent=4, sort_keys=False)
 						#self.opts.clear()
 						self.opts = copy(default_opts)
 						#logger.warning("WRITING:  {0}".format(data) )
@@ -81,25 +98,46 @@ class ConfigJson(object):
 
 
 			json.dump(self.opts, f, indent=4, sort_keys=True)
+			logging.info("CFG Saved")
 			
 
 
 	
 	def edit(self, key, value):
+
+
+
 		if not key and not value:
-			return
+			return False
 
-		try:
+		old_key = key
+		old_value = value
+
+		if  not key in self.opts:
+			logger.warning("Config Key:{0} doesnt exists".format(key))
+			return False
+		else:
 			self.opts[key] = value
-		except:
-			logger.warning("{0} : Nao Existe".format(key))
+			logging.info("Key {0}:{1} was modified to {2}:{3}".format(old_key,old_value, key, value))
+			return True
 
-			#print ("{0} : Nao Existe".format(key))
+		return False
+
+
+
+
+
 
 	def get(self, key):
 
-			try:
-				return self.opts[key]
-			except Exception as msg:
-				logger.warning("config: get():|    Chave: {0} Nao Encontrada".format(key))
-				#print ("config: get():|    Chave: {0} Nao Encontrada".format(key))
+		if not key:
+			return None
+		
+		if  not key in self.opts:
+			logger.warning("Config Key: {0} doesnt exists. if required. please add them manully".format(key))
+			return None
+
+		else:
+			return self.opts[key]
+
+		return None

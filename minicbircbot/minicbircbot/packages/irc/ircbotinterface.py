@@ -40,13 +40,18 @@ class IrcBotInterface:
 
 
 
-	def __init__(self):
+	def __init__(self, irc = None):
 		self.module_name = ""
 		self.owner = [] #owner of the bot  if you want to retrict a command being run by only one person
 		self.version = "" #version
 		self.author = "" #author name
 		self.permissions = self.BOT_RUN_ALL # permissions
 		self.reg_command = {}
+		self.irc = None
+
+		if irc:
+			self.irc = irc
+
 
 
 		self.CMD_TYPE_MESSAGE	= 2
@@ -56,6 +61,7 @@ class IrcBotInterface:
 		self.CMD_TYPE_PART		= 10
 
 		self.generateHelp()
+
 
 
 
@@ -226,4 +232,19 @@ class IrcBotInterface:
 		when someone changes the nick in the channel the bot triggers this event
 		"""
 		pass
+
+
+
+	#Events not IRC Related but Bot Related below
+
+	def onExit(self, irchandler, messagehandler):
+		"""
+		Tnis Event is not IRC Related. its when the bot is triggered to close (^C or any signal to exit and trigger exit_gracefully() )
+		"""
+
+		prefix, command, count  = self.args(messagehandler.message)
+		access = self.getCommandAccess(command[0])
+		pass
+
+			#self.ircSend("PART {0} :\"Screw You Guys I'm Going Home - CARTMAN,Eric\"".format(channel))
 

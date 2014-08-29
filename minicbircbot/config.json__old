@@ -1,0 +1,12 @@
+{
+    "address": "irc.falai.org",
+    "chans": "#python",
+    "console": false,
+    "identd": "HUE",
+    "modules": ["PvtConsole", "TwitterBot"],
+    "nickname": "mrTest",
+    "port": 6667
+	
+	
+	
+}
