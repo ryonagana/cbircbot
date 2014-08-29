@@ -28,9 +28,7 @@ class  TwitterBot ( IrcBotInterface ):
 		if irc:
 			if not self.isAuth():
 
-				""" Adds temporarily as  default config """
-
-
+	
 				self.oauth_token     =  self.irc.config.get("oauth_token")
 				self.oauth_secret    =  self.irc.config.get("oauth_secret")
 				self.consumer_key    =  self.irc.config.get("consumer_key")
