@@ -98,13 +98,17 @@ class PvtConsole(IrcBotInterface):
 			irc.ircSendMessageTo(msghandler.sender, "syntax is: !names #channel")
 			return
 
-		cmd = "NAMES {0}".format(cmd[1])
-		print ("RUN: " + cmd)
-		irc.ircSend(cmd)
+		
+		
+		cmd_names = "NAMES {0}".format(cmd[1])
+		#print ("RUN: " + cmd)
+		irc.ircSend(cmd_names)
 
 		if self.data.find("NAMES") != -1:
-			print ("NAMES RODOU!")
-			print (data)
+			print ("Printing Data Names")
+			print (self.data)
+		#	print ("NAMES RODOU!")
+		#	print (data)
 
 
 

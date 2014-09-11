@@ -249,6 +249,7 @@ class IrcBotInterface:
 			#self.ircSend("PART {0} :\"Screw You Guys I'm Going Home - CARTMAN,Eric\"".format(channel))
 
 	def onDataSent(self, data, irchandler):
-		pass
+		print ("INTERFACE")
+		print (data)
 
 
