@@ -11,7 +11,7 @@ from minicbircbot.utils import DEBUG_MODE, MODULES_LOADED
 
 class PvtConsole(IrcBotInterface):
 	"""
-		Main Controller of the bot. its not dependency if this module  is disables
+		Main Controller of the bot. its not dependency if this module  is disabled
 		wont serve any commands to control the bot.
 	"""
 
@@ -27,6 +27,11 @@ class PvtConsole(IrcBotInterface):
 		self.register_command("!op", self.giveOp, self.CMD_TYPE_BOTH, "give op")
 		self.register_command("!disconnect", self.disconnectBot, self.CMD_TYPE_PVT, "get of a channel")
 		self.register_command("!join", self.joinBot, self.CMD_TYPE_PVT, "enters in a channel")
+		self.register_command("!names", self.showNames, self.CMD_TYPE_PVT, "show names")
+
+
+
+		self.data = ""
 
 
 	def onChannelJoined(self, irchandler, messagehandler):
@@ -56,6 +61,12 @@ class PvtConsole(IrcBotInterface):
 		irchandler.ircSend("PART {0} :Screw You Guys, I'm Going Home.. - CARTMAN,Eric".format(channel))
 
 
+	def onDataSent(self, data, msghandler):
+		super().onDataSent(self, data)
+		self.data = data
+
+
+
 	def giveOp(self, handlers):
 		irc, msghandler = handlers
 		prefix, cmd, count_args = self.getMessageArgs(msghandler.message)
@@ -74,6 +85,26 @@ class PvtConsole(IrcBotInterface):
 
 
 
+
+	def showNames(self, handlers):
+
+		irc, msghandler = handlers
+		prefix, cmd, count_args = self.args(msghandler.message)
+
+		print("===SHOW NAMES:===")
+
+		if not count_args == 1:
+			irc.ircSendMessageTo(msghandler.sender, "names: Invalid paramateres")
+			irc.ircSendMessageTo(msghandler.sender, "syntax is: !names #channel")
+			return
+
+		cmd = "NAMES {0}".format(cmd[1])
+		print ("RUN: " + cmd)
+		irc.ircSend(cmd)
+
+		if self.data.find("NAMES") != -1:
+			print ("NAMES RODOU!")
+			print (data)
 
 
 

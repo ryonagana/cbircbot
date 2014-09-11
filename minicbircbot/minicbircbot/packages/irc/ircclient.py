@@ -60,6 +60,8 @@ class ircClient:
 		self.isJoined = False
 
 
+
+
 		if self.config.get("console"):
 			self.Console = IrcConsoleCommands(self)
 		
@@ -334,6 +336,11 @@ class ircClient:
 		#PRIVMSG stand for 2 kinds of message, send to other person, or  regular message in the channel
 		#the difference is the receiver
 
+
+		if server_msg:
+			self.BotServerDataSent(server_msg, None)
+
+
 		if server_msg.find("PRIVMSG") != -1:  #is a message?
 
 			is_message  = re.search("^:(.+[aA-zZ0-0])!(.*) PRIVMSG (.+?) :(.+[aA-zZ0-9])$", server_msg) # strip all contents useful for me
@@ -417,6 +424,8 @@ class ircClient:
 				resetColors()
 
 
+		
+
 
 		print(server_msg)
 		
@@ -459,7 +468,15 @@ class ircClient:
 				MODULES_LOADED[mod].onChannelPart(self,msghandler)
 		pass
 
-		
+	
+
+
+	def BotServerDataSent(self, data, msghandler):
+		for mod in MODULES_LOADED:
+			if MODULES_LOADED[mod]:
+				MODULES_LOADED[mod].onDataSent(data, msghandler)
+		pass
+
 
 	def BotExitEvent(self, msghandler):
 
@@ -467,6 +484,9 @@ class ircClient:
 			if MODULES_LOADED[mod]:
 				MODULES_LOADED[mod].onExit(self, msghandler)
 		pass
+
+	#def getServerMessages(self, lines = 2, size = 4096 ):
+
 
 
 

@@ -105,6 +105,8 @@ class IrcJoinEvent(IrcEventhandler):
 
 
 
+
+
 class IrcPartEvent(IrcEventhandler):
 
 	quit_msg = ""
