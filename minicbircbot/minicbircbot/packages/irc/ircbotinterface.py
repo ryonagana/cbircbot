@@ -67,7 +67,7 @@ class IrcBotInterface:
 
 	def generateHelp(self):
 		#if self.module_name:
-		self.register_command("!help", self.module_usage, self.CMD_TYPE_PVT, "")
+		self.register_command("!help", self.module_usage, self.CMD_TYPE_PVT, "Show Module Help")
 
 
 	def module_usage(self, handlers):
@@ -81,7 +81,7 @@ class IrcBotInterface:
 			if cmd[1].find(self.module_name) != -1  and msghandler.sender in self.owner:
 
 
-				help = "!help {0} ==============".format(self.module_name)
+				help = "Module: {0} ==============".format(self.module_name)
 				irc.ircSendMessageTo(msghandler.sender, help)
 
 				print ("USAGE CALLED")
@@ -183,7 +183,7 @@ class IrcBotInterface:
 
 		access = self.getCommandAccess(command[0])
 
-		self.exec_cmd("help", (irchandler, messagehandler) )
+		
 
 		if access == self.CMD_TYPE_PVT or access == self.CMD_TYPE_BOTH:
 			self.exec_cmd(command[0], (irchandler, messagehandler))
