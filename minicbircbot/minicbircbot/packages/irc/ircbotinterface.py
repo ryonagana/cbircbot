@@ -246,10 +246,13 @@ class IrcBotInterface:
 		access = self.getCommandAccess(command[0])
 		pass
 
-			#self.ircSend("PART {0} :\"Screw You Guys I'm Going Home - CARTMAN,Eric\"".format(channel))
-
 	def onDataSent(self, data, irchandler):
 		print ("INTERFACE")
 		print (data)
+
+
+
+	def DestroyModule(self):
+		pass
 
 

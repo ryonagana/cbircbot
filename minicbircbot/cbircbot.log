@@ -522,3 +522,135 @@ INFO:minicbircbot.packages.irc.ircclient:Auth Sent
 INFO:minicbircbot:Desconnecting Socket
 INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
 INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.access:304 GET / (10.0.2.2) 4.43ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.62ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.25ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.98ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.08ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.56ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.47ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.52ms
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:tornado.access:304 GET / (10.0.2.2) 0.85ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.86ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.86ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.41ms
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed

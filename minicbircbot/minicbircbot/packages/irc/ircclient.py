@@ -307,6 +307,26 @@ class ircClient:
 		self.ircEventHandler(data)
 		return True
 
+	def deInitModules(self):
+		"""
+			theres no need  to create a module deinitializator
+			but im dealing with some asynchronous process
+			i need to kill threads inside modules before bots stops
+			or any ^C Signal is sent
+			thats the purpose of this function  and is purely optional
+			unless you use threads in your modules
+		"""
+		for mod in MODULES_LOADED:
+			try:
+				if MODULES_LOADED[mod]:
+					MODULES_LOADED[mod].destroyModule()
+			except Exception as ex:
+				msg = "{0} has not destroyModule(). ignoring. Please see the log".format(mod)
+				print(msg)
+				logger.warning(msg)
+				pass
+		pass
+
 	def exit_gracefully(self):
 		"""
 			this method just make sure will not corrupt socket file descriptor
@@ -318,10 +338,12 @@ class ircClient:
 
 		exit_handler = IrcEventhandler()
 		self.BotExitEvent(exit_handler)
-		
-
 		self.isRunning = False
-		time.sleep(1)
+		self.deInitModules()
+		time.sleep(2)
+
+
+
 		self.ircsocket.force_close()
 		logger.info("Socket Closed With Success!")
 

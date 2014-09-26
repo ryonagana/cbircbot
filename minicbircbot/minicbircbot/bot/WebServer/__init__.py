@@ -11,10 +11,14 @@ class WebServer(IrcBotInterface):
 		super().__init__(irc)
 
 		self.server = Server()
-		self.server.initServer()
-		self.server.run()
-		#self.server.setDaemon(True)
-		#self.server.start()
+		self.server.start()
+
+
+
+	def destroyModule(self):
+		print("Destroying Webserver")
+		self.server.stop()
+		#self.server.daemon = True
 
 
 
