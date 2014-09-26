@@ -10,7 +10,7 @@ class WebServer(IrcBotInterface):
 	def __init__(self, irc = None):
 		super().__init__(irc)
 
-		self.server = Server()
+		self.server = Server(irc)
 		self.server.start()
 
 

@@ -654,3 +654,90 @@ WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). 
 WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
 INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
 INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.access:200 GET / (10.0.2.2) 2.66ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.12ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.01ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.51ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.95ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.80ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.94ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.81ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.90ms
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: WebServer - invalid syntax (Server.py, line 44)
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: WebServer - invalid syntax (Server.py, line 44)
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.access:304 GET / (10.0.2.2) 2.22ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.52ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.05ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.96ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.01ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.42ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.01ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.08ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.01ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.96ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.39ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.87ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.65ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.91ms
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.access:200 GET / (10.0.2.2) 2.89ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.63ms
+INFO:tornado.access:200 GET / (10.0.2.2) 1.24ms
+WARNING:tornado.access:404 GET /favicon.ico (10.0.2.2) 39.30ms
+WARNING:tornado.access:404 GET /favicon.ico (10.0.2.2) 3.26ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.06ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.02ms
+INFO:tornado.access:304 GET / (10.0.2.2) 1.09ms
+INFO:tornado.access:304 GET / (10.0.2.2) 0.90ms
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
