@@ -268,6 +268,8 @@ class ircClient:
 
 	def PingPong(self, message):
 		""" method when servers send a ping the bot responds with PONG """
+		#message already comes in utf8 no need to convert again
+		#is giving some  weird exceptions  
 		msg = message.decode("utf-8")
 		if msg.find("PING") != -1:
 			print ("SERVER: PING!")
