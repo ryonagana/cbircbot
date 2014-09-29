@@ -10,8 +10,18 @@ class WebServer(IrcBotInterface):
 	def __init__(self, irc = None):
 		super().__init__(irc)
 
+		print("===================Starting webserver==============")
 		self.server = Server(irc)
 		self.server.start()
+
+
+
+
+	def onReceivedChannelMessage(self, irchandler, messagehandler):
+		super().onReceivedChannelMessage(irchandler, messagehandler)
+
+		
+		
 
 
 

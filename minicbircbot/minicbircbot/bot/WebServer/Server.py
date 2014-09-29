@@ -15,14 +15,19 @@ from threading import Thread
 
 STATIC_PATH= os.path.join(os.getcwd(), 'web')
 TEMPLATE_PATH = os.path.join(STATIC_PATH, 'templates')
-template = tornado.template.Loader(STATIC_PATH)
 
 class MainHandler(tornado.web.RequestHandler):
+    
+    def initialize(self, irc):
+    	self.irc = irc
+
     @asynchronous
     @gen.coroutine
-    def get(self):
+    def get(self, *args, **kwargs):
 
-    	self.render("index.html")
+    	s = "{0} : {1}".format( self.irc.config.get("address"), self.irc.config.get("port") )
+    	self.render("index.html", server=s)
+
 
 
 class MainHandler2(tornado.web.RequestHandler):
@@ -53,7 +58,7 @@ class Server(Thread):
 		}
 
 		handlers = [
-		(r'/', MainHandler),
+		(r'/', MainHandler, {'irc' : self.irc}),
 		(r'/otavio/', MainHandler2),
 
 

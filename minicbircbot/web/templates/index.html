@@ -1,0 +1,81 @@
+{% extends base.html %}
+
+	{% block jscript %}
+
+		var MAX_POSTS = 10;
+		
+		var POSTS = Array();
+
+		
+		var showMsg = function() {
+			
+			for (var i = 0; i < MAX_POSTS; i++){
+				
+				$("#mainpanel").append(POSTS[i]);
+
+			}
+
+
+		}
+
+		var postMsg = function(txt) {
+				
+				
+				if( POSTS.length > MAX_POSTS){
+					POSTS.shift();
+
+				}else {
+					
+					var div = '<div>' + txt + '</div>';
+					POSTS.push(div);
+
+
+			}
+			
+				
+		}
+
+	
+		
+		$(document).ready(function(){
+			
+
+
+
+
+
+			postMsg('TETSE');
+			postMsg('TETSE');
+			postMsg('TETSE');
+			postMsg('TETSE');
+			postMsg('TETSE');
+			postMsg('TETSE');
+			postMsg('TETSE');
+			postMsg('TETSE');
+			postMsg('TETAAA');
+			postMsg('TETOG');
+			postMsg('TERaa');
+
+		});
+
+
+		setTimeout(function(){
+
+		showMsg();
+
+		}, 500);
+		
+
+	{% end %}
+	
+
+
+	{% block conteudo %}
+		<h1>{{server}}</h1>
+
+		<div id="mainpanel">
+							
+
+		</div>
+
+	{% end %}

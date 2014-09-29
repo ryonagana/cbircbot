@@ -59,6 +59,8 @@ class ircClient:
 		self.isRunning = False
 		self.isJoined = False
 
+		self.server_message = []
+
 
 
 
@@ -449,8 +451,11 @@ class ircClient:
 
 
 		
-
-
+		if( len(self.server_message) <= 10):
+			self.server_message.append(server_msg)
+		else:
+			self.server_msg = self.server_message[1:]
+			
 		print(server_msg)
 		
 				

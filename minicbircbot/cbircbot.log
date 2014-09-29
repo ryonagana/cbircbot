@@ -1,650 +1,325 @@
 INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: TwitterBot - expected an indented block (__init__.py, line 31)
-INFO:root:Tried to load CFG
-INFO:root:Tried to load CFG
-INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
-INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
-INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
-CRITICAL:minicbircbot.bot.TwitterBot:EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_token Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: oauth_secret Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_key Nao Encontrada
-WARNING:minicbircbot.packages.config.config_json:config: get():|    Chave: consumer_secret Nao Encontrada
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: {0} doenst exists
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:root:CFG Saved
-INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:Config Key: oauth_token doesnt exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: oauth_secret doesnt exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: consumer_key doesnt exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: consumer_secret doesnt exists
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-INFO:root:CFG Saved
-INFO:root:Tried to load CFG
-WARNING:minicbircbot.packages.config.config_json:Config Key: oauth_token doesnt exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: oauth_secret doesnt exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: consumer_key doesnt exists
-WARNING:minicbircbot.packages.config.config_json:Config Key: consumer_secret doesnt exists
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:root:CFG Saved
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-INFO:root:CFG Saved
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:root:CFG Saved
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:root:CFG Saved
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: PvtConsole - invalid syntax (__init__.py, line 85)
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: PvtConsole - invalid syntax (__init__.py, line 106)
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.access:200 GET / (10.0.2.2) 45.04ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 20.95ms
+INFO:tornado.access:200 GET /static/js/jquery-1.11.js (10.0.2.2) 23.91ms
+INFO:tornado.access:304 GET / (10.0.2.2) 45.39ms
+INFO:tornado.access:304 GET /static/js/jquery-1.11.js (10.0.2.2) 16.72ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 11.74ms
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: WebServer - unindent does not match any outer indentation level (Server.py, line 21)
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: WebServer - inconsistent use of tabs and spaces in indentation (Server.py, line 18)
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: WebServer - unindent does not match any outer indentation level (Server.py, line 21)
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: WebServer - unindent does not match any outer indentation level (Server.py, line 21)
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:tornado.access:304 GET / (10.0.2.2) 4.43ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.62ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.25ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.98ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.08ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.56ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.47ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.52ms
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:tornado.access:304 GET / (10.0.2.2) 0.85ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.86ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.86ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.41ms
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: WebServer - invalid syntax (Server.py, line 24)
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+TypeError: initialize() got an unexpected keyword argument 'irc'
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+TypeError: initialize() got an unexpected keyword argument 'irc'
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+TypeError: initialize() got an unexpected keyword argument 'irc'
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+TypeError: initialize() got an unexpected keyword argument 'irc'
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+TypeError: initialize() got an unexpected keyword argument 'irc'
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+TypeError: initialize() got an unexpected keyword argument 'irc'
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+TypeError: initialize() got an unexpected keyword argument 'irc'
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+TypeError: initialize() got an unexpected keyword argument 'irc'
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+TypeError: initialize() got an unexpected keyword argument 'irc'
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+TypeError: initialize() got an unexpected keyword argument 'irc'
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.access:304 GET / (10.0.2.2) 33.47ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 19.34ms
+INFO:tornado.access:304 GET /static/js/jquery-1.11.js (10.0.2.2) 17.69ms
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.access:200 GET / (10.0.2.2) 47.65ms
+INFO:tornado.access:304 GET /static/js/jquery-1.11.js (10.0.2.2) 18.15ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 12.04ms
+INFO:tornado.access:200 GET / (10.0.2.2) 45.03ms
+INFO:tornado.access:304 GET /static/js/jquery-1.11.js (10.0.2.2) 17.60ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 12.37ms
+INFO:tornado.access:304 GET /static/js/jquery-1.11.js (10.0.2.2) 13.40ms
+INFO:tornado.access:200 GET / (10.0.2.2) 45.17ms
+INFO:tornado.access:304 GET / (10.0.2.2) 32.53ms
+INFO:tornado.access:304 GET /static/js/jquery-1.11.js (10.0.2.2) 18.47ms
+INFO:tornado.access:200 GET /static/css/template.css (10.0.2.2) 14.65ms
+INFO:tornado.access:304 GET /static/js/jquery-1.11.js (10.0.2.2) 13.30ms
+INFO:tornado.access:200 GET / (10.0.2.2) 37.33ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 13.76ms
+INFO:tornado.access:304 GET /static/js/jquery-1.11.js (10.0.2.2) 17.87ms
+INFO:tornado.access:304 GET /static/js/jquery-1.11.js (10.0.2.2) 12.25ms
+INFO:tornado.access:200 GET / (10.0.2.2) 34.81ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 10.91ms
+INFO:tornado.access:304 GET /static/js/jquery-1.11.js (10.0.2.2) 27.33ms
+INFO:tornado.access:200 GET / (10.0.2.2) 56.67ms
+INFO:tornado.access:304 GET / (10.0.2.2) 34.95ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 11.81ms
+INFO:tornado.access:200 GET / (10.0.2.2) 34.54ms
+INFO:tornado.access:200 GET / (10.0.2.2) 33.61ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 12.24ms
+INFO:tornado.access:200 GET / (10.0.2.2) 43.05ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 14.39ms
+INFO:tornado.access:304 GET / (10.0.2.2) 31.86ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 11.42ms
+INFO:tornado.access:304 GET / (10.0.2.2) 31.40ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 13.27ms
+INFO:tornado.access:304 GET / (10.0.2.2) 32.62ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 12.49ms
+INFO:tornado.access:304 GET / (10.0.2.2) 30.54ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 10.45ms
+INFO:tornado.access:200 GET / (10.0.2.2) 31.56ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 10.25ms
+INFO:tornado.access:200 GET / (10.0.2.2) 30.05ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 10.77ms
+INFO:tornado.access:200 GET / (10.0.2.2) 34.79ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 13.75ms
+INFO:tornado.access:200 GET / (10.0.2.2) 32.28ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 10.91ms
+INFO:tornado.access:200 GET / (10.0.2.2) 45.72ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 13.67ms
+INFO:tornado.access:200 GET / (10.0.2.2) 46.16ms
+INFO:tornado.access:200 GET / (10.0.2.2) 31.12ms
+INFO:tornado.access:304 GET / (10.0.2.2) 42.61ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 12.07ms
+INFO:tornado.access:200 GET / (10.0.2.2) 52.56ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 10.02ms
+INFO:tornado.access:200 GET / (10.0.2.2) 35.73ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 13.74ms
+INFO:tornado.access:304 GET / (10.0.2.2) 38.31ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 13.46ms
+INFO:tornado.access:200 GET / (10.0.2.2) 38.70ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 12.47ms
+INFO:tornado.access:200 GET / (10.0.2.2) 31.78ms
+INFO:tornado.access:200 GET / (10.0.2.2) 33.12ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 12.90ms
+INFO:tornado.access:304 GET / (10.0.2.2) 42.17ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 12.65ms
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/packages/irc/ircclient.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/packages/irc/ircclient.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/packages/irc/ircclient.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/packages/irc/ircclient.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/packages/irc/ircclient.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/packages/irc/ircclient.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/packages/irc/ircclient.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/packages/irc/ircclient.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
@@ -656,48 +331,30 @@ INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
 INFO:minicbircbot:Successfully Closed
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:tornado.access:200 GET / (10.0.2.2) 2.66ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.12ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.01ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.51ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.95ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.80ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.94ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.81ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.90ms
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: WebServer - invalid syntax (Server.py, line 44)
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: WebServer - invalid syntax (Server.py, line 44)
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:tornado.access:304 GET / (10.0.2.2) 2.22ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.52ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.05ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.96ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.01ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.42ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.01ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.08ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.01ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.96ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.39ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.87ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.65ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.91ms
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/http1connection.py", line 234, in _read_message
+    delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/httpserver.py", line 282, in finish
+    self.delegate.finish()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1884, in finish
+    self.execute()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1904, in execute
+    **self.handler_kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 180, in __init__
+    self.initialize(**kwargs)
+TypeError: initialize() got an unexpected keyword argument 'server_msg'
+INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
 INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
@@ -712,30 +369,70 @@ INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:tornado.access:200 GET / (10.0.2.2) 2.89ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.63ms
-INFO:tornado.access:200 GET / (10.0.2.2) 1.24ms
-WARNING:tornado.access:404 GET /favicon.ico (10.0.2.2) 39.30ms
-WARNING:tornado.access:404 GET /favicon.ico (10.0.2.2) 3.26ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.06ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.02ms
-INFO:tornado.access:304 GET / (10.0.2.2) 1.09ms
-INFO:tornado.access:304 GET / (10.0.2.2) 0.90ms
+ERROR:tornado.application:Uncaught exception GET / (10.0.2.2)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/', version='HTTP/1.1', remote_ip='10.0.2.2', headers={'Connection': 'keep-alive', 'Accept-Language': 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3', 'Accept-Encoding': 'gzip, deflate', 'Cookie': '__utma=111872281.140436359.1403642329.1403642329.1403642329.1; __utmz=111872281.1403642329.1.1.utmccn=(direct)|utmcsr=(direct)|utmcmd=(none); csrftoken=KuRpcQYtx8zywQ1O07VM0ZWtdy5oRbMD', 'Host': 'localhost:8888', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1288, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "<string>", line 3, in raise_exc_info
+  File "/usr/local/lib/python3.2/dist-packages/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1484, in future_complete
+    f.result()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/concurrent.py", line 109, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+  File "/usr/local/lib/python3.2/dist-packages/tornado/gen.py", line 160, in wrapper
+    result = func(*args, **kwargs)
+  File "/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py", line 29, in get
+    self.render("index.html", server=s, msg_irc = self.server_message )
+AttributeError: 'MainHandler' object has no attribute 'server_message'
+ERROR:tornado.access:500 GET / (10.0.2.2) 19.39ms
 INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
 INFO:root:Tried to load CFG
 CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:tornado.general:/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py modified; restarting server
-INFO:root:Tried to load CFG
-CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+ERROR:tornado.application:Uncaught exception GET / (10.0.2.2)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/', version='HTTP/1.1', remote_ip='10.0.2.2', headers={'Accept-Language': 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3', 'Accept-Encoding': 'gzip, deflate', 'Host': 'localhost:8888', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0', 'Connection': 'keep-alive', 'Cookie': '__utma=111872281.140436359.1403642329.1403642329.1403642329.1; __utmz=111872281.1403642329.1.1.utmccn=(direct)|utmcsr=(direct)|utmcmd=(none); csrftoken=KuRpcQYtx8zywQ1O07VM0ZWtdy5oRbMD', 'Cache-Control': 'max-age=0'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1288, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "<string>", line 3, in raise_exc_info
+  File "/usr/local/lib/python3.2/dist-packages/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 1484, in future_complete
+    f.result()
+  File "/usr/local/lib/python3.2/dist-packages/tornado/concurrent.py", line 109, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+  File "/usr/local/lib/python3.2/dist-packages/tornado/gen.py", line 160, in wrapper
+    result = func(*args, **kwargs)
+  File "/vagrant/python/cbircbot/minicbircbot/minicbircbot/bot/WebServer/Server.py", line 29, in get
+    self.render("index.html", server=s)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 665, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/web.py", line 772, in render_string
+    return t.generate(**namespace)
+  File "/usr/local/lib/python3.2/dist-packages/tornado/template.py", line 278, in generate
+    return execute()
+  File "index_html.generated.py", line 12, in _tt_execute
+    _tt_tmp = msg_panel  # index.html:76 (via base.html:17)
+NameError: global name 'msg_panel' is not defined
+ERROR:tornado.access:500 GET / (10.0.2.2) 74.62ms
+INFO:tornado.access:200 GET / (10.0.2.2) 52.23ms
+INFO:tornado.access:200 GET /static/css/template.css (10.0.2.2) 19.69ms
+INFO:tornado.access:304 GET / (10.0.2.2) 54.21ms
+INFO:tornado.access:304 GET /static/css/template.css (10.0.2.2) 12.12ms
 INFO:minicbircbot:Desconnecting Socket
 WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
 WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
