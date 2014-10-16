@@ -58,7 +58,7 @@ class PvtConsole(IrcBotInterface):
 
 		channel = irchandler.config.get("chans")
 
-		irchandler.ircSend("PART {0} :Screw You Guys, I'm Going Home.. - CARTMAN,Eric".format(channel))
+		irchandler.ircSend("PART {0} :Screw You Guys, I'm Going Home.. - CARTMAN,Eric!".format(channel))
 
 
 	def onDataSent(self, data, msghandler):
@@ -120,13 +120,16 @@ class PvtConsole(IrcBotInterface):
 
 		prefix, cmd, c = self.args(msghandler.message)
 
+		print("Cheguei Aqui1244545565656")
+
+		print (prefix,cmd,c)
 
 		if  c == 1 and msghandler.sender in self.owner:
+			print ("RODEUI")
 			chans = irc.config.get("chans")
 			#this doesnt work :( modules still the same  i just want to reload them runtime but nothing happens
 			#FIX ME
-			irc.initModules()
-			print(cons.TESTE)
+			irc.reloadModules()
 			irc.ircSendMessage(chans, "::Reloading Matrix Proudly Running in Win95:: ")
 
 
@@ -146,7 +149,7 @@ class PvtConsole(IrcBotInterface):
 		#avoid split spaces in the messages
 		channel = command[1]
 		msg =  str(" ".join(command[2:]))
-		irc.ircSendMessage(channel, msg)
+		irc.ircSendMessage(channel,  "SERVER " + msg)
 			
 		#print(prefix, msg)
 

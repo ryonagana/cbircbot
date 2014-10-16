@@ -6,6 +6,7 @@ import time
 import logging
 import re
 import importlib
+import imp
 
 import colorama
 from colorama import Fore, Back, Style
@@ -42,6 +43,8 @@ logger = logging.getLogger(__name__)
 
 class ircClient:
 
+	namespace = "minicbircbot.bot."
+
 	def __init__(self):
 		self.config = ConfigJson("config.json")
 		self.config.load()
@@ -58,6 +61,7 @@ class ircClient:
 
 		self.isRunning = False
 		self.isJoined = False
+		self.isConnected = False
 
 		self.server_message = []
 
@@ -111,19 +115,30 @@ class ircClient:
 		print (MODULES_LOADED)
 		print ("-----------------------------------------------------")
 
-
+	def reloadModules(self):
+		
+		print( Fore.RED  + "-------------------------------------------------")
+		print( Fore.RED  +  "MODULE RELOADING      (or die tryin)            ")
+		print( Fore.RED   + "------------------------------------------------")
+		for i in range(len(MODULES_LOADED)):
+			#MODULES_LOADED[i] = imp.rel
+			try:
+				imp.reload(MODULES_LOADED[i])
+			except Exception as e:
+				pass
+		
 
 	def instantiateModule(self, module_name):
 		"""  
 			when the module is in memory it tried to create a new instance of the module 
 			returns the module object - ircBotInterface child class
 		"""
-		namespace = "minicbircbot.bot."
+
 		inst = None
 		module = None
 
 		try:
-			inst =  __import__(namespace + module_name, fromlist=module_name) #importlib.import_module(namespace + module_name, module_name)
+			inst =  __import__(self.namespace + module_name, fromlist=module_name) #importlib.import_module(namespace + module_name, module_name)
 			return getattr(inst, module_name)
 		
 		except Exception as ex:
@@ -136,6 +151,7 @@ class ircClient:
 
 
 
+	
 
 
 
@@ -254,6 +270,7 @@ class ircClient:
 		msg = data.decode('utf8')
 
 		if msg.find('396') != -1:
+			self.isConnected = True
 			return True
 		return False
 

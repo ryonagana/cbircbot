@@ -15,10 +15,15 @@ logger = logging.getLogger(__name__)
 
 def init_bot():
 	colorama.init()
-	irc = ircClient()
-	irc.connect()
-	irc.auth()
+	
 
+
+	irc = ircClient()
+	
+	if not irc.isConnected:
+		irc.connect()
+		irc.auth()
+	
 
 	while irc.isRunning:
 
@@ -36,4 +41,4 @@ def init_bot():
 			irc.exit_gracefully()
 			logger.info("Successfully Closed")
 
-	
+
