@@ -28,6 +28,7 @@ class PvtConsole(IrcBotInterface):
 		self.register_command("!disconnect", self.disconnectBot, self.CMD_TYPE_PVT, "get of a channel")
 		self.register_command("!join", self.joinBot, self.CMD_TYPE_PVT, "enters in a channel")
 		self.register_command("!names", self.showNames, self.CMD_TYPE_PVT, "show names")
+		self.register_command("!console", self.openConsole, self.CMD_TYPE_BOTH, "Open Console")
 
 
 
@@ -81,6 +82,25 @@ class PvtConsole(IrcBotInterface):
 		#irc.ircSetMode(cmd[1], "o", cmd[2] )
 
 
+
+	def openConsole(self, handlers):
+		irc, msghandler = handlers
+		prefix, cmd, count_args = self.args(msghandler.message)
+
+
+		mod_names = [ mod for mod in MODULES_LOADED ]
+
+		motd = [
+			'Welcome {0} to the cbircbot main control'.format(msghandler.sender),
+			'type !help <module name>  to show all registered commands  in a certain module',
+			'Modules Registered: {0} '.format(  ' '.join(mod_names)),
+			'>>',
+		]
+
+
+		for m in range(len(motd)):
+			irc.ircSendMessageTo(msghandler.sender, motd[m])
+			time.sleep(1)
 
 
 
