@@ -10,15 +10,15 @@ class HelloWorld(IrcBotInterface):
 
 
 		self.owner = ["seunick"]
-		
+
 		self.module_name = "HelloWorld"
 
 		#registra o comando no modulo onde vai ser gerado o help automaticamente
 		#basta ir no PVT do bot e digitar !help HelloWorld
 		#e vai mostrar a lista de comandos registrados
 
-		
-		#comando !hello do tipo somente PVT 
+
+		#comando !hello do tipo somente PVT
 		self.register_command("!hello", self.doHelloWorld,  self.CMD_TYPE_BOTH, "my description")
 
 
@@ -32,12 +32,6 @@ class HelloWorld(IrcBotInterface):
 
 		#irc e a referencia a classe principal do irc
 		#msghandler retorna informações da pessoa que ativou o comando
-		chans = irc.config.get("chans") #pega os canais que voce definiu no config.json 
+		chans = irc.config.get("chans") #pega os canais que voce definiu no config.json
 
-		irc.ircSendMessage(chans, "hello world!")
-
-
-
-
-
-
+		irc.ircSendMessage(chans, "Hello World 1111111")

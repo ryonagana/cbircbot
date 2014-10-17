@@ -113,21 +113,25 @@ class ircClient:
 				pass
 
 
-		print ("Instance -------------------------------------------:")
+		print ("Instance ------------------------------------------:")
 		print (MODULES_LOADED)
 		print ("-----------------------------------------------------")
 
 	def reloadModules(self):
+		global MODULES_LOADED
 
 		print( Fore.RED  + "-------------------------------------------------")
 		print( Fore.RED  +  "MODULE RELOADING      (or die tryin)            ")
 		print( Fore.RED   + "------------------------------------------------")
-		for i in range(len(MODULES_LOADED)):
-			#MODULES_LOADED[i] = imp.rel
+		resetColors()
+
+		for module_name in MODULES_LOADED:
 			try:
-				imp.reload(MODULES_LOADED[i])
-			except Exception as e:
-					logger.critical("Exception Ocurred: {0}".format(str(ex) ))
+				imp.reload(self.namespace + module_name)
+				#imp.reload(MODULES_LOADED[module_name])
+			except Exception as ex:
+				logger.critical("Exception Ocurred: {0}".format(str(ex)))
+				pass
 
 
 	def instantiateModule(self, module_name):
@@ -140,6 +144,7 @@ class ircClient:
 		module = None
 
 		try:
+
 			inst =  __import__(self.namespace + module_name, fromlist=module_name) #importlib.import_module(namespace + module_name, module_name)
 			return getattr(inst, module_name)
 
@@ -149,7 +154,16 @@ class ircClient:
 			print(Fore.RED + "Please Check the Log")
 			logger.critical("Exception Occurred when tried  instantiate a module: {0} - {1}".format(module_name, str(ex)))
 			resetColors()
-			return inst
+			return None
+
+
+
+
+
+
+
+
+
 
 
 

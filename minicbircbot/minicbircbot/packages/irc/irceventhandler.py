@@ -13,8 +13,8 @@ abstract class to pass the same handler to all events
 
 class IrcEventhandler:
 	""" abstract class to pass all events with the same class signature  """
-	
-	
+
+
 
 	sender = ""
 	receiver = ""
@@ -28,7 +28,7 @@ class IrcEventhandler:
 		if "receiver" in kwargs:
 			self.receiver  = kwargs['receiver']
 		if "ident" in kwargs:
-			self.ident = kwargs['ident'] 
+			self.ident = kwargs['ident']
 		if "message" in kwargs:
 			self.message = kwargs['message']
 
@@ -62,7 +62,7 @@ class IrcEventhandler:
 		if "receiver" in kwargs:
 			event.receiver  = kwargs['receiver']
 		if "ident" in kwargs:
-			event.ident = kwargs['ident'] 
+			event.ident = kwargs['ident']
 		if "message" in kwargs:
 			event.message = kwargs['message']
 
@@ -73,7 +73,7 @@ class IrcEventhandler:
 
 class IrcMessageEvent(IrcEventhandler):
 
-	""" Event Handler for All Messages """	
+	""" Event Handler for All Messages """
 
 
 
@@ -84,7 +84,7 @@ class IrcMessageEvent(IrcEventhandler):
 
 
 class IrcPrivateMessageEvent(IrcMessageEvent):
-	""" Event Handler for Private Messages """	
+	""" Event Handler for Private Messages """
 	receiver = ""
 
 	def __init__(self):

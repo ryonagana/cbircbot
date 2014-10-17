@@ -15,21 +15,18 @@ logger = logging.getLogger(__name__)
 
 def init_bot():
 	colorama.init()
-	
+
 
 
 	irc = ircClient()
-	
+
 	if not irc.isConnected:
 		irc.connect()
 		irc.auth()
-	
+
 
 	while irc.isRunning:
 
-
-
-			
 		try:
 			data = irc.receiveData()
 			irc.isServerRunning(data)
@@ -40,5 +37,4 @@ def init_bot():
 			logger.info("Desconnecting Socket")
 			irc.exit_gracefully()
 			logger.info("Successfully Closed")
-
-
+			break

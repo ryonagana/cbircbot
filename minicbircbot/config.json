@@ -8,7 +8,7 @@
     "modules": [
         "TwitterBot", 
         "PvtConsole",
-        "WebServer"
+        "HelloWorld"
     ], 
     "nickname": "mr_raulzito", 
     "oauth_secret": "", 
