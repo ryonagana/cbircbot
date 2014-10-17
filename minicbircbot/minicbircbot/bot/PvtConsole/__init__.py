@@ -19,7 +19,7 @@ class PvtConsole(IrcBotInterface):
 		super().__init__(irc)
 
 		self.owner = ["vagrant", "ryonagana"]
-		
+
 		self.module_name = "PvtConsole"
 
 		self.register_command("!say", self.sayToChannel, self.CMD_TYPE_PVT, "say something in the channel")
@@ -32,11 +32,11 @@ class PvtConsole(IrcBotInterface):
 
 
 		self.data = ""
-
+		auauau
 
 	def onChannelJoined(self, irchandler, messagehandler):
 		super().onChannelJoined(irchandler, messagehandler)
-		
+
 
 		#example of greeting
 		irchandler.ircSendMessage(messagehandler.channel_joined, "Oi {0} Seja Bem Vindo ao {1}".format(messagehandler.sender, messagehandler.channel_joined ) )
@@ -45,11 +45,11 @@ class PvtConsole(IrcBotInterface):
 	def onChannelPart(self, irchandler, messagehandler):
 		super().onChannelPart(irchandler, messagehandler)
 		print("SAIU")
-		
+
 	def onReceivedPrivateMessage(self, irchandler, messagehandler):
 		super().onReceivedPrivateMessage(irchandler, messagehandler)
 
-		
+
 	def onReceivedChannelMessage(self, irchandler, messagehandler):
 		super().onReceivedChannelMessage(irchandler, messagehandler)
 
@@ -70,12 +70,12 @@ class PvtConsole(IrcBotInterface):
 	def giveOp(self, handlers):
 		irc, msghandler = handlers
 		prefix, cmd, count_args = self.getMessageArgs(msghandler.message)
-		
 
-		
+
+
 		if count_args >= 2:
 			irc.ircSetMode(cmd[1], "o", *cmd[2:])
-	
+
 		#if not msghandler.sender in self.owner:
 		#	irc.ircSendMessageTo(msghandler.sender, "[Denied]")
 
@@ -98,8 +98,8 @@ class PvtConsole(IrcBotInterface):
 			irc.ircSendMessageTo(msghandler.sender, "syntax is: !names #channel")
 			return
 
-		
-		
+
+
 		cmd_names = "NAMES {0}".format(cmd[1])
 		#print ("RUN: " + cmd)
 		irc.ircSend(cmd_names)
@@ -112,9 +112,9 @@ class PvtConsole(IrcBotInterface):
 
 
 
-		
+
 	def reloadModules(self, handlers):
-		
+
 
 		irc, msghandler = handlers
 
@@ -140,17 +140,17 @@ class PvtConsole(IrcBotInterface):
 		prefix, command, count = self.args(msghandler.message)
 
 
-		
+
 		if not msghandler.sender in self.owner:
 			print("SENDER: {0}".format(msghandler.sender) )
 			irc.ircSendMessageTo(msghandler.sender, "you are not my owner!")
 			return
-		
+
 		#avoid split spaces in the messages
 		channel = command[1]
 		msg =  str(" ".join(command[2:]))
 		irc.ircSendMessage(channel,  "SERVER " + msg)
-			
+
 		#print(prefix, msg)
 
 

@@ -70,10 +70,10 @@ class ircClient:
 
 		if self.config.get("console"):
 			self.Console = IrcConsoleCommands(self)
-		
+
 
 		#teste
-		#self.sock = socketserver.TCPServer( ("localhost", 9999), MainLoop) 
+		#self.sock = socketserver.TCPServer( ("localhost", 9999), MainLoop)
 
 	#def ServerMessages(self, data):
 
@@ -85,12 +85,12 @@ class ircClient:
 			MODULES_LOADED
 		"""
 		global MODULES_LOADED
-		
+
 		for mod in self.config.get("modules"):
 			#Who's bad?
 
 			#i'm so evil that i'm using eval
-			#the devil of programming 
+			#the devil of programming
 			# >=)
 			try:
 				module_loaded = self.instantiateModule(mod)
@@ -100,23 +100,25 @@ class ircClient:
 
 
 			except Exception as ex:
-				
+
 				print( Fore.RED  + "-------------------------------------------------")
-				print( Fore.RED  +  "MODULE \"{0}\" doesnt exists. and will be ignored".format(mod))
-				print( Fore.RED  + "Exception: {0} - Line {1}".format(ex))
+				print( Fore.RED  +  "Occurred an Exception in Module \"{0}\" and will be ignored".format(mod))
+				print( Fore.RED  + "Exception: {0}".format(ex))
+				print(Fore.RED 	 + "Please FIX it: bot/{0}/__init__.py  Check the Log".format(mod))
 				print(Fore.RED   + "-------------------------------------------------")
-				print(Fore.RED +  Style.BOLD + "Please Check the Log")
+				print(Fore.RED 	 + "Please Check the Log")
+
 				logger.critical("Exception Occurred when tried  to load module: {0}. Please Check {1}/__init__.py - {2}".format(mod, mod, str(ex)  ))
 				resetColors()
-				
-				continue
-			
+				pass
+
+
 		print ("Instance -------------------------------------------:")
 		print (MODULES_LOADED)
 		print ("-----------------------------------------------------")
 
 	def reloadModules(self):
-		
+
 		print( Fore.RED  + "-------------------------------------------------")
 		print( Fore.RED  +  "MODULE RELOADING      (or die tryin)            ")
 		print( Fore.RED   + "------------------------------------------------")
@@ -125,12 +127,12 @@ class ircClient:
 			try:
 				imp.reload(MODULES_LOADED[i])
 			except Exception as e:
-				pass
-		
+					logger.critical("Exception Ocurred: {0}".format(str(ex) ))
+
 
 	def instantiateModule(self, module_name):
-		"""  
-			when the module is in memory it tried to create a new instance of the module 
+		"""
+			when the module is in memory it tried to create a new instance of the module
 			returns the module object - ircBotInterface child class
 		"""
 
@@ -140,7 +142,7 @@ class ircClient:
 		try:
 			inst =  __import__(self.namespace + module_name, fromlist=module_name) #importlib.import_module(namespace + module_name, module_name)
 			return getattr(inst, module_name)
-		
+
 		except Exception as ex:
 			print(Fore.RED + "ERROR: Cannot Instantiate {0}".format(module))
 			print(Fore.RED + "Exception: {0}".format(str(ex)))
@@ -151,7 +153,7 @@ class ircClient:
 
 
 
-	
+
 
 
 
@@ -204,14 +206,14 @@ class ircClient:
 		#makes the mode repeat  e.g :  count = 3.   mode_str = "ooo"
 		mode_str = "+" + (mode * count)
 
-		print ("MODE {0} {1} {2} ".format(		
+		print ("MODE {0} {1} {2} ".format(
 								channel,
 								mode_str,
 								" ".join(parameter)
 		))
 
 		"""
-		self.ircSend("MODE {0} {1} {2} ".format(		
+		self.ircSend("MODE {0} {1} {2} ".format(
 								channel,
 								mode_str,
 								" ".join(parameter)
@@ -251,7 +253,7 @@ class ircClient:
 
 
 	def JoinChannels(self, channels):
-		""" join the bot in all channels in config.json  if just a simple string make a join, if channels is  a list 
+		""" join the bot in all channels in config.json  if just a simple string make a join, if channels is  a list
 			make a simple join loop - obs this function  can only being called when  end of MOTD is detected
 		"""
 
@@ -262,7 +264,7 @@ class ircClient:
 		elif type(channels) is str:
 			self.ircJoin(channels)
 
-			
+
 
 
 	def detectEndMOTD(self, data):
@@ -288,7 +290,7 @@ class ircClient:
 	def PingPong(self, message):
 		""" method when servers send a ping the bot responds with PONG """
 		#message already comes in utf8 no need to convert again
-		#is giving some  weird exceptions  
+		#is giving some  weird exceptions
 		msg = message.decode("utf-8")
 		if msg.find("PING") != -1:
 			print ("SERVER: PING!")
@@ -298,7 +300,7 @@ class ircClient:
 
 
 	def ircEventHandler(self, data):
-		""" this method is  the heart of the bot 
+		""" this method is  the heart of the bot
 			make all calling  trigger events repass data to parse
 			to trigger bots events
 		"""
@@ -308,7 +310,7 @@ class ircClient:
 			if not self.isJoined:
 				self.JoinChannels(self.config.get("chans"))
 				self.isJoined = True
-				
+
 				if self.config.get("console"):
 					self.Console.start()
 
@@ -319,9 +321,9 @@ class ircClient:
 
 	def isServerRunning(self, data):
 		""" check if mainloop still running """
-		if not self.isRunning:	
+		if not self.isRunning:
 			return False
-		
+
 
 		self.ircEventHandler(data)
 		return True
@@ -353,7 +355,7 @@ class ircClient:
 			wait one second to socket  finish and close createConnection
 
 		"""
-		
+
 
 		exit_handler = IrcEventhandler()
 		self.BotExitEvent(exit_handler)
@@ -372,7 +374,7 @@ class ircClient:
 			this method generates  the events for the bot and trigger them in all external modules
 		"""
 		 # decode the message to utf8, sanitize the string removing '\r\n' or the regex will fail so badly
-		server_msg = clean_str(message.decode("utf-8")) 
+		server_msg = clean_str(message.decode("utf-8"))
 
 
 		#before make a check we must have sure is a message
@@ -402,11 +404,11 @@ class ircClient:
 				if DEBUG_MODE:
 					print ('DATA DEBUG: ')
 					print(data)
-				
+
 
 				#if the receiver is a channel  trigger self.ReceivedMessageChannel, otherwise trigger self.ReceivedPrivateMessages
-				if data['receiver'].startswith("#"): 
-				
+				if data['receiver'].startswith("#"):
+
 					#means you are sending message directly to a channel
 					message_received = IrcMessageEvent.register(**data)
 					self.ReceivedMessageChannel(message_received)
@@ -414,7 +416,7 @@ class ircClient:
 					print (Fore.BLUE + "<" + Fore.WHITE + data['receiver'] + "> " + Fore.CYAN + data["message"])
 
 				else:
-					
+
 					#means you are sending message directly to someone
 					message_received = IrcPrivateMessageEvent.register(**data)
 					self.ReceivedPrivateMessages(message_received)
@@ -458,7 +460,7 @@ class ircClient:
 					'sender'   		 : is_part.groups()[0],
 					'ident'    		 : is_part.groups()[1],
 					'channel_part'   : is_part.groups()[2],
-					'quit_msg'		 : is_part.groups()[3], 
+					'quit_msg'		 : is_part.groups()[3],
 				}
 
 				part_event = IrcPartEvent(**data)
@@ -467,24 +469,24 @@ class ircClient:
 				resetColors()
 
 
-		
+
 		if( len(self.server_message) <= 10):
 			self.server_message.append(server_msg)
 		else:
 			self.server_msg = self.server_message[1:]
-			
+
 		print(server_msg)
-		
-				
+
+
 
 	#def  getModuleEvent(self)
 
-		
+
 
 	#send  event triggered to all modules loaded ReceivedMessageChannel
 	def ReceivedMessageChannel(self, msghandler):
-		
-		
+
+
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
 				MODULES_LOADED[mod].onReceivedChannelMessage(self,msghandler)
@@ -501,7 +503,7 @@ class ircClient:
 
 
 	def ReceivedJoinEvent(self, msghandler):
-		
+
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
 				MODULES_LOADED[mod].onChannelJoined(self,msghandler)
@@ -514,7 +516,7 @@ class ircClient:
 				MODULES_LOADED[mod].onChannelPart(self,msghandler)
 		pass
 
-	
+
 
 
 	def BotServerDataSent(self, data, msghandler):
@@ -532,19 +534,3 @@ class ircClient:
 		pass
 
 	#def getServerMessages(self, lines = 2, size = 4096 ):
-
-
-
-
-		
-
-
-
-
-
-
-
-
-
-
-
