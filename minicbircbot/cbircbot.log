@@ -357,3 +357,222 @@ WARNING:minicbircbot.packages.irc.ircclient:HelloWorld has not destroyModule(). 
 WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
 INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
 INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: AutoResponse - unindent does not match any outer indentation level (__init__.py, line 12)
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'NoneType' object is not callable
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: AutoResponse - unindent does not match any outer indentation level (__init__.py, line 12)
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'NoneType' object is not callable
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: AutoResponse - unexpected indent (__init__.py, line 26)
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'NoneType' object is not callable
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: AutoResponse - cannot import name Configparser
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'NoneType' object is not callable
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - __init__() takes exactly 1 positional argument (2 given)
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'module' object has no attribute 'Configparser'
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'module' object has no attribute 'Configparser'
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'str' does not support the buffer interface
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:AutoResponse has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'str' does not support the buffer interface
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'str' does not support the buffer interface
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:AutoResponse has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'str' does not support the buffer interface
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'str' does not support the buffer interface
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - global name 'configparse' is not defined
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'module' object has no attribute 'ConfigParse'
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: AutoResponse. Please Check AutoResponse/__init__.py - 'str' does not support the buffer interface
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:AutoResponse has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:AutoResponse has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.bot.TwitterBot:TwitterAPI: EXCEPTION: Missing authentication parameter.
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: reload() argument must be module
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: reload() argument must be module
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: reload() argument must be module
+INFO:minicbircbot:Desconnecting Socket
+WARNING:minicbircbot.packages.irc.ircclient:AutoResponse has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:TwitterBot has not destroyModule(). ignoring. Please see the log
+INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
+INFO:minicbircbot:Successfully Closed

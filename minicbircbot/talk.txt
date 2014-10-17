@@ -1,0 +1,5 @@
+[TALK]
+hi = hello
+how r* = i am fine thanks!
+asl = 18/f/usa
+
