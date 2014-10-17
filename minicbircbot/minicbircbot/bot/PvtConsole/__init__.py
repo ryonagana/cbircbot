@@ -32,7 +32,6 @@ class PvtConsole(IrcBotInterface):
 
 
 		self.data = ""
-		auauau
 
 	def onChannelJoined(self, irchandler, messagehandler):
 		super().onChannelJoined(irchandler, messagehandler)
