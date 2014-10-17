@@ -36,5 +36,3 @@ class AutoResponse(IrcBotInterface):
 
 	def onReceivedChannelMessage(self, irchandler, messagehandler):
 		super().onReceivedChannelMessage(irchandler, messagehandler)
-
-		print(messagehandler.sender)
