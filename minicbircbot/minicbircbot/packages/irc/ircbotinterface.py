@@ -93,7 +93,6 @@ class IrcBotInterface:
 				help = "Module: {0} ==============".format(self.module_name)
 				irc.ircSendMessageTo(msghandler.sender, help)
 
-				print ("USAGE CALLED")
 
 				for c in self.reg_command:
 					if c.find("help") == -1:
@@ -256,7 +255,6 @@ class IrcBotInterface:
 		pass
 
 	def onDataSent(self, data, irchandler):
-		print ("INTERFACE")
 		print (data)
 
 

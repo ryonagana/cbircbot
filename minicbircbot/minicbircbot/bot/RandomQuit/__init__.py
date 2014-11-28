@@ -40,7 +40,6 @@ class RandomQuit(IrcBotInterface):
 		#self.phrases = [ l.strip()  for l in fp.readlines()]
 		for l in fp.readlines():
 			if not l.startswith("#"):
-				print("---" + l)
 				self.phrases.append(l)
 
 		self.linecount = len(self.phrases)
