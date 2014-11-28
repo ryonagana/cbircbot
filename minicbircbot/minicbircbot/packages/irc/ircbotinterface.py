@@ -75,6 +75,15 @@ class IrcBotInterface:
 		prefix, cmd, count_args = self.getMessageArgs(msghandler.message)
 
 		
+		if(count_args == 0 and msghandler.sender in self.owner):
+			irc.ircSendMessageTo(msghandler.sender, "==Installed Modules==")
+			for nome in MODULES_LOADED:
+				msg = "\t\t" + nome
+				irc.ircSendMessageTo(msghandler.sender, msg)
+				time.sleep(1)
+
+			irc.ircSendMessageTo(msghandler.sender, "== END Installed Moduuules==")
+			return
 
 
 		if count_args == 1:

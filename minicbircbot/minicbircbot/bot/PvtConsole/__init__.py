@@ -25,7 +25,7 @@ class PvtConsole(IrcBotInterface):
 		self.register_command("!say", self.sayToChannel, self.CMD_TYPE_PVT, "say something in the channel")
 		self.register_command("!reload", self.reloadModules, self.CMD_TYPE_PVT, "reload all  external modules")
 		self.register_command("!op", self.giveOp, self.CMD_TYPE_BOTH, "give op")
-		self.register_command("!disconnect", self.disconnectBot, self.CMD_TYPE_PVT, "get of a channel")
+		self.register_command("!part", self.disconnectBot, self.CMD_TYPE_PVT, "get of a channel")
 		self.register_command("!join", self.joinBot, self.CMD_TYPE_PVT, "enters in a channel")
 		self.register_command("!names", self.showNames, self.CMD_TYPE_PVT, "show names")
 		self.register_command("!console", self.openConsole, self.CMD_TYPE_BOTH, "Open Console")
@@ -56,9 +56,9 @@ class PvtConsole(IrcBotInterface):
 	def onExit(self, irchandler, messagehandler):
 		super().onExit(irchandler,messagehandler)
 
-		channel = irchandler.config.get("chans")
+		#channel = irchandler.config.get("chans")
 
-		irchandler.ircSend("PART {0} :Screw You Guys, I'm Going Home.. - CARTMAN,Eric!".format(channel))
+		#irchandler.ircSend("PART {0} :Screw You Guys, I'm Going Home.. - CARTMAN,Eric!".format(channel))
 
 
 	def onDataSent(self, data, msghandler):

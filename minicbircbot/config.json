@@ -1,18 +1,12 @@
 {
-    "address": "irc.falai.org",
-    "chans": "#python",
-    "console": false,
-    "consumer_key": "",
-    "consumer_secret": "",
-    "identd": "HUE",
+    "identd": "HUE", 
+    "console": false, 
+    "address": "irc.falai.org", 
+    "nickname": "mrTest", 
     "modules": [
-        "TwitterBot",
-        "PvtConsole",
-        "AutoResponse"
-    ],
-    "nickname": "MrM00n",
-    "oauth_secret": "",
-    "oauth_token": "",
-    "port": 6667
-
+	"PvtConsole",
+	"RandomQuit"
+		], 
+    "port": 6667, 
+    "chans": "#python"
 }
