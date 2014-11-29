@@ -18,4 +18,8 @@ Modules Included:
 Just Choose your module  changing  config.json
 
 
+How to Run
+========
+>./bot
+
 
