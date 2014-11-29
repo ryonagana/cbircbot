@@ -6,6 +6,7 @@ import time
 import logging
 import re
 import importlib
+from importlib.abc import Loader
 import imp
 
 import colorama
@@ -86,6 +87,8 @@ class ircClient:
 		"""
 		global MODULES_LOADED
 
+
+
 		for mod in self.config.get("modules"):
 			#Who's bad?
 
@@ -95,6 +98,8 @@ class ircClient:
 			try:
 				module_loaded = self.instantiateModule(mod)
 				MODULES_LOADED[mod] = module_loaded(self)
+
+
 
 
 
@@ -110,28 +115,20 @@ class ircClient:
 
 				logger.critical("Exception Occurred when tried  to load module: {0}. Please Check {1}/__init__.py - {2}".format(mod, mod, str(ex)  ))
 				resetColors()
-				pass
+
+
+		if DEBUG_MODE:
+			with(open("modules.txt",'w')) as fp:
+				for m in sys.modules:
+					module_name = "{0}\n".format(m)
+					fp.write(module_name)
+		pass
 
 
 		print ("Instance ------------------------------------------:")
 		print (MODULES_LOADED)
 		print ("-----------------------------------------------------")
 
-	def reloadModules(self):
-		global MODULES_LOADED
-
-		print( Fore.RED  + "-------------------------------------------------")
-		print( Fore.RED  +  "MODULE RELOADING      (or die tryin)            ")
-		print( Fore.RED   + "------------------------------------------------")
-		resetColors()
-
-		for module_name in MODULES_LOADED:
-			try:
-				imp.reload(self.namespace + module_name)
-				#imp.reload(MODULES_LOADED[module_name])
-			except Exception as ex:
-				logger.critical("Exception Ocurred: {0}".format(str(ex)))
-				pass
 
 
 	def instantiateModule(self, module_name):
@@ -148,6 +145,9 @@ class ircClient:
 			inst =  __import__(self.namespace + module_name, fromlist=module_name) #importlib.import_module(namespace + module_name, module_name)
 			return getattr(inst, module_name)
 
+			if DEBUG_MODE:
+				print("Loaded: {0}.{1}".format(self.namespace,module_name))
+
 		except Exception as ex:
 			print(Fore.RED + "ERROR: Cannot Instantiate {0}".format(module))
 			print(Fore.RED + "Exception: {0}".format(str(ex)))
@@ -158,17 +158,34 @@ class ircClient:
 
 
 
+	def reloadModules(self):
+		global MODULES_LOADED
 
+		print( Fore.RED  + "-------------------------------------------------")
+		print( Fore.RED  +  "MODULE RELOADING      (or die tryin)            ")
+		print( Fore.RED   + "------------------------------------------------")
+		resetColors()
 
+		for module_name in MODULES_LOADED:
+			module_instance = MODULES_LOADED[module_name]
+			try:
+				print("Trying to Reload: {0}".format( self.namespace + module_name))
+			
 
+				if DEBUG_MODE:
+					with(open("external_modules.log","w")) as fp:
+						fp.write(self.namespace + module_name)
 
-
-
-
-
-
-
-
+				module = "{0}.{1}".format(self.namespace, module_name)
+				imp.reload(minicbircbot.bot)
+				
+				#imp.reload(MODULES_LOADED[module_name])
+			except Exception as ex:
+				msg = "Exception Ocurred: {0}".format(str(ex))
+				logger.critical(msg)
+				print (msg)
+			
+			pass
 
 
 	def auth(self):
@@ -400,7 +417,7 @@ class ircClient:
 			self.BotServerDataSent(server_msg, None)
 
 
-		if server_msg.find("PRIVMSG") != -1:  #is a message?
+		if server_msg.find("PRIVMSG") != -1:  #is this a message?
 
 			is_message  = re.search("^:(.+[aA-zZ0-0])!(.*) PRIVMSG (.+?) :(.+[aA-zZ0-9])$", server_msg) # strip all contents useful for me
 

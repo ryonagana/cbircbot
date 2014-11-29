@@ -139,17 +139,14 @@ class PvtConsole(IrcBotInterface):
 
 		prefix, cmd, c = self.args(msghandler.message)
 
-		print("Cheguei Aqui1244545565656")
-
 		print (prefix,cmd,c)
 
 		if  c == 0 and msghandler.sender in self.owner:
-			print ("RODEUI")
 			chans = irc.config.get("chans")
 			#this doesnt work :( modules still the same  i just want to reload them runtime but nothing happens
 			#FIX ME
 			irc.reloadModules()
-			irc.ircSendMessage(chans, "::Reloading Matrix Proudly Running in Win95:: ")
+			irc.ircSendMessage(chans, "::Reloading Matrix Proudly Running in Win95 HUE:: ")
 
 
 

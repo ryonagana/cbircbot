@@ -8,6 +8,7 @@ import minicbircbot.utils
 
 
 
+
 if __name__ == "__main__":
 
 	minicbircbot.utils.load_extra_paths()

@@ -27,7 +27,7 @@ class RandomQuit(IrcBotInterface):
 				f.write("#File Generated Automatically\n")
 				f.write("Screw You Guys, I'm Going Home!. CARTMAN, Eric\n")
 				f.close()
-			self._loadfile(self.filename)
+				self._loadfile(self.filename)
 		else:
 			self._loadfile(self.filename)
 
