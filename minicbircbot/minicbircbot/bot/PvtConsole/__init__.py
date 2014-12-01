@@ -2,6 +2,7 @@ import time
 import sys
 import os
 import importlib
+import imp
 
 
 import minicbircbot.bot.PvtConsole.cons
@@ -22,6 +23,8 @@ class PvtConsole(IrcBotInterface):
 
 		self.module_name = "PvtConsole"
 
+		self.namespace = "minicbircbot.bot."
+
 		self.register_command("!say", self.sayToChannel, self.CMD_TYPE_PVT, "say something in the channel")
 		self.register_command("!reload", self.reloadModules, self.CMD_TYPE_PVT, "reload all  external modules")
 		self.register_command("!op", self.giveOp, self.CMD_TYPE_BOTH, "give op")
@@ -29,6 +32,7 @@ class PvtConsole(IrcBotInterface):
 		self.register_command("!join", self.joinBot, self.CMD_TYPE_PVT, "enters in a channel")
 		self.register_command("!names", self.showNames, self.CMD_TYPE_PVT, "show names")
 		self.register_command("!console", self.openConsole, self.CMD_TYPE_BOTH, "Open Console")
+		self.register_command("!load_module", self.loadModules_cmd, self.CMD_TYPE_BOTH, "Open Console")
 
 
 
@@ -61,16 +65,36 @@ class PvtConsole(IrcBotInterface):
 		#irchandler.ircSend("PART {0} :Screw You Guys, I'm Going Home.. - CARTMAN,Eric!".format(channel))
 
 
+
 	def onDataSent(self, data, msghandler):
 		super().onDataSent(self, data)
 		self.data = data
 
 
 
-	def giveOp(self, handlers):
+	def loadModules_cmd(self, handlers):
 		irc, msghandler = handlers
 		prefix, cmd, count_args = self.getMessageArgs(msghandler.message)
 
+		if(count_args == 1):
+			try:
+				if not imp.find_module(self.namespace+cmd[1]):
+					irc.ircSendMessageTo(msghandler.sender, "Module {0} Not found".format(cmd[1]))
+				else:
+					global MODULES_LOADED
+					module_instance = irc.instantiateModule(mod)
+					module_name = cmd[1]
+					MODULES_LOADED[module_name]  = module_instance(irc)
+					irc.ircSendMessageTo(msghandler.sender, "Module {0} Load With Sucess".format(cmd[1]))
+	
+			except ImportError as import_error:
+					irc.ircSendMessageTo(msghandler.sender, "Module {0} Not found".format(cmd[1]))
+		
+
+
+	def giveOp(self, handlers):
+		irc, msghandler = handlers
+		prefix, cmd, count_args = self.getMessageArgs(msghandler.message)
 
 
 		if count_args >= 2:
