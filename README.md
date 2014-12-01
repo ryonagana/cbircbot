@@ -22,4 +22,11 @@ How to Run
 ========
 >./bot
 
+PS:  All Modules has his own dependencies, but bot core only uses colorama as depencies
+
+
+* TwitterBot Module Depends TwitterApi
+* WebServer Modules has Depends on Tornado
+
+
 
