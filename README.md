@@ -22,11 +22,12 @@ How to Run
 ========
 >./bot
 
-PS:  All Modules has his own dependencies, but bot core only uses colorama as depencies
+PS:  All Modules has his own dependencies
+cbIRCBot Core only uses colorama to make errors and warnings more visible
 
 
 * TwitterBot Module Depends TwitterApi
-* WebServer Modules has Depends on Tornado
+* WebServer Modules Depends Tornado
 
 
 
