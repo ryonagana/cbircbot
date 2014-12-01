@@ -516,6 +516,9 @@ class ircClient:
 
 	#send  event triggered to all modules loaded ReceivedMessageChannel
 	def ReceivedMessageChannel(self, msghandler):
+		"""
+		Event When someone send any message to all  channels when the bot is connected
+		"""
 
 
 		for mod in MODULES_LOADED:
@@ -526,6 +529,9 @@ class ircClient:
 
 	#send  event triggered to all modules loaded ReceivedPrivateMessages
 	def ReceivedPrivateMessages(self, msghandler):
+		"""
+			This event is triggered when someone send any message to the bot via PVT
+		"""
 
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
@@ -534,6 +540,9 @@ class ircClient:
 
 
 	def ReceivedJoinEvent(self, msghandler):
+		"""
+			ReceivedJoinEvent is triggered when anyone join the channel
+		"""
 
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
@@ -542,6 +551,9 @@ class ircClient:
 
 
 	def ReceivedPartEvent(self, msghandler):
+		"""
+			ReceivedPartEvent is triggered when anyone part the channel
+		"""
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
 				MODULES_LOADED[mod].onChannelPart(self,msghandler)
@@ -551,13 +563,22 @@ class ircClient:
 
 
 	def BotServerDataSent(self, data, msghandler):
+		"""
+		BotServerDataSent is triggered when server sends  a full buffer of data 
+		"""
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
 				MODULES_LOADED[mod].onDataSent(data, msghandler)
 		pass
 
 
+	#TODO - change event name and fix al calling  reflections in other modules
 	def BotExitEvent(self, msghandler):
+		"""
+			BotExitEvent is triggered when  you trigger any bot quitting service
+			like  ^C or  when abruptly finish the bot process
+			everty time when  exit_gracefully is called
+		"""
 
 		for mod in MODULES_LOADED:
 			if MODULES_LOADED[mod]:
