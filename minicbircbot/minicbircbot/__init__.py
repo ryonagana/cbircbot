@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from minicbircbot.packages.irc import ircClient
+from minicbircbot.utils import resetColors
 
 
 import logging
@@ -12,6 +13,18 @@ from colorama import Fore, Back, Style
 logging.basicConfig(filename='cbircbot.log', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
+def motd():
+	msg = ""
+	try:
+		with(open("motd.txt","r")) as f:
+			for c in f.read():
+				msg += c
+	except:
+		pass
+	
+	print(Fore.YELLOW + msg)
+	resetColors()
 
 def init_bot():
 	colorama.init()
