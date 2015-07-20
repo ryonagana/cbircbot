@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+import os
+import sys
 from minicbircbot.packages.irc import ircClient
 from minicbircbot.utils import resetColors
 
@@ -26,7 +28,10 @@ def motd():
 	print(Fore.YELLOW + msg)
 	resetColors()
 
+
 def init_bot():
+
+
 	colorama.init()
 
 
