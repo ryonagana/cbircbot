@@ -1,209 +1,8 @@
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
 INFO:root:Tried to load CFG
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
 INFO:minicbircbot:Desconnecting Socket
 WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:root:Tried to load CFG
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: 'module' object has no attribute 'load_module'
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: load_module() takes exactly 2 arguments (1 given)
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: load_module() takes exactly 2 arguments (1 given)
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: reload() argument must be module
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: reload() argument must be module
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: reload() argument must be module
-CRITICAL:minicbircbot.packages.irc.ircclient:Exception Ocurred: reload() argument must be module
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
-INFO:root:Tried to load CFG
-INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
-INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
 INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
 INFO:minicbircbot:Successfully Closed
 INFO:root:Tried to load CFG
@@ -218,48 +17,71 @@ INFO:minicbircbot.packages.irc.ircclient:Auth Sent
 INFO:root:Tried to load CFG
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
 INFO:root:Tried to load CFG
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: Weather. Please Check Weather/__init__.py - 'module' object has no attribute 'urlencode'
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: Weather. Please Check Weather/__init__.py - 'Weather' object has no attribute 'CMD_MESSAGE'
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
 INFO:root:Tried to load CFG
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
 INFO:root:Tried to load CFG
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
 INFO:root:Tried to load CFG
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
 INFO:root:Tried to load CFG
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
-INFO:minicbircbot:Desconnecting Socket
-WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
-WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
-INFO:minicbircbot.packages.irc.ircclient:Socket Closed With Success!
-INFO:minicbircbot:Successfully Closed
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent

@@ -1,12 +1,13 @@
 {
     "identd": "HUE", 
     "console": false, 
-    "address": "irc.falai.org", 
-    "nickname": "mrTest", 
+    "address": "irc.freenode.net", 
+    "nickname": "ffdicffi", 
     "modules": [
-	"PvtConsole",
-	"RandomQuit"
+				"PvtConsole",
+				"RandomQuit",
+				"Weather"
 		], 
     "port": 6667, 
-    "chans": "#python"
+    "chans": "#cbteste"
 }

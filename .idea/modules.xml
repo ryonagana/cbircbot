@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://D:/Xampp/htdocs/testes/python/aq2br/aq2br/.idea/aq2br.iml" filepath="D:/Xampp/htdocs/testes/python/aq2br/aq2br/.idea/aq2br.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../cbircbot/.idea/cbircbot.iml" filepath="$PROJECT_DIR$/../cbircbot/.idea/cbircbot.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cbircbotproj.iml" filepath="$PROJECT_DIR$/.idea/cbircbotproj.iml" />
       <module fileurl="file://$USER_HOME$/PycharmProjects/favicon/.idea/favicon.iml" filepath="$USER_HOME$/PycharmProjects/favicon/.idea/favicon.iml" />
       <module fileurl="file://D:/Xampp/htdocs/testes/python/projcb/.idea/projcb.iml" filepath="D:/Xampp/htdocs/testes/python/projcb/.idea/projcb.iml" />
