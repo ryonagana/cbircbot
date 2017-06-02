@@ -38,8 +38,15 @@ logger = logging.getLogger(__name__)
 class ircClient:
     namespace = "minicbircbot.bot."
     
-    def __init__(self):
-        self.config = ConfigJson("config.json")
+    def __init__(self, *args, **kwargs):
+        
+        self.use_envvars = False
+        
+        for key, value in kwargs.items():
+            if key == 'use_env':
+                self.use_envvars = kwargs['use_env']
+
+        self.config = ConfigJson("config.json", use_env=self.use_envvars)
         self.config.load()
         self.initModules()
         
@@ -113,8 +120,9 @@ class ircClient:
                     fp.write(module_name)
         pass
         
-        print("Instance ------------------------------------------:")
-        print(MODULES_LOADED)
+        print(" MODULES Running  ------------------------------------------:")
+        for k in MODULES_LOADED:
+            print(k)
         print("-----------------------------------------------------")
     
     def instantiateModule(self, module_name):
