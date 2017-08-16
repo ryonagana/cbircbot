@@ -304,9 +304,7 @@ class ircClient:
         # is giving some  weird exceptions
         msg = message.decode("utf-8")
         if msg.find("PING") != -1:
-            print("SERVER: PING!")
             self.ircSend("PONG {0}".format(message.split()[1]))
-            print("CLIENT: PONG!")
     
     def ircEventHandler(self, data):
         """ this method is  the heart of the bot
@@ -413,6 +411,7 @@ class ircClient:
                     self.ReceivedMessageChannel(message_received)
                     
                     print(Fore.BLUE + "<" + Fore.WHITE + data['receiver'] + "> " + Fore.CYAN + data["message"])
+                    resetColors();
                 
                 else:
                     
@@ -467,7 +466,7 @@ class ircClient:
         else:
             self.server_msg = self.server_message[1:]
         
-        print(server_msg)
+        
         
         # def  getModuleEvent(self)
         

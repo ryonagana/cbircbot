@@ -37,8 +37,7 @@ class  Weather ( IrcBotInterface ):
             
             self.yql_url = self.baseurl + urlencode({'q': self.yql_query.format(local=place)}) + "&format=json"
             print(place)
-            print(self.yql_url)
-          
+
             chan_to_send = irc.config.get("chans")
             
             result = urlopen(self.yql_url).read().decode('utf-8')
