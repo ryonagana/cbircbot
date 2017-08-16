@@ -18,6 +18,8 @@ class  Weather ( IrcBotInterface ):
 
         self.register_command(",weather", self.show_weather, self.CMD_TYPE_MESSAGE, "Weather Yahoo API")
     
+    
+    """ convert fahrenheit to celsius and returns as strings"""
     def f_to_c(self, temp):
         return str( round((temp - 32) * 5.0/9.0, 1)) + 'C'
     
@@ -30,10 +32,12 @@ class  Weather ( IrcBotInterface ):
         if count_args > 0 and cmd[1]:
             
             #in case a city has space in their name
-            place = cmd[1].split(' ')
-            place = " ".join(place)
+            
+            place = " ".join(cmd[1:])
             
             self.yql_url = self.baseurl + urlencode({'q': self.yql_query.format(local=place)}) + "&format=json"
+            print(place)
+            print(self.yql_url)
           
             chan_to_send = irc.config.get("chans")
             

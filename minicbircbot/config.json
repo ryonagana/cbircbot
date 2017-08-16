@@ -9,5 +9,5 @@
 				"Weather"
 		], 
     "port": 6667, 
-    "chans": "##php-br"
+    "chans": "##cbtest"
 }
