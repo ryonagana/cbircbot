@@ -78,7 +78,7 @@ def init_bot():
             irc.isServerRunning(data)
             #print (data)
                 
-        except (KeyboardInterrupt):
+        except KeyboardInterrupt:
             print(Fore.YELLOW + "Waiting 2 seconds")
             print(Fore.RED + "Closing Sockets")
             logger.info("Desconnecting Socket")

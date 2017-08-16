@@ -2,12 +2,12 @@
     "identd": "HUE", 
     "console": false, 
     "address": "irc.freenode.net", 
-    "nickname": "ffdicffi", 
+    "nickname": "cruzikmello", 
     "modules": [
 				"PvtConsole",
 				"RandomQuit",
 				"Weather"
 		], 
     "port": 6667, 
-    "chans": "#cbteste"
+    "chans": "##php-br"
 }
