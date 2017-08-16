@@ -23,6 +23,19 @@ if __name__ == "__main__":
         check_root()
         minicbircbot.utils.load_extra_paths()
         #minicbircbot.motd()
+        
+        #check if config.json exists
+        try:
+            with open('config.json', 'r') as f:
+                pass
+        except:
+            print('config file not found. please create a new one\n\n')
+            print('====================  END ========================')
+            sys.exit(0)
+            
+            
+            
+        
         minicbircbot.init_bot()
     except Exception as m:
         print('An Error Ocurred while trying to run the bot. :' + m)
