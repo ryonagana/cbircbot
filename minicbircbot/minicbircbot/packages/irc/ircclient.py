@@ -41,13 +41,45 @@ class ircClient:
     def __init__(self, *args, **kwargs):
         
         self.use_envvars = False
+        self.use_params = False
+        cfg = {}
         
         for key, value in kwargs.items():
             if key == 'use_env':
                 self.use_envvars = kwargs['use_env']
+            if key == 'params':
+                self.use_params = kwargs['params']
+               
+               #processing params from shell/cmd
+                params = kwargs['params']
+                cfg = {
+    
+                    'address': params['address'],
+                    'port': int(params['port']),
+                    'chans': params['channel'],
+                    'nickname': params['nickname'],
+                    'identd': params['identd'],
+                    'console': False,
+                    'modules': params['modules']
+                }
+                if not params['modules']:
+                    params['modules'] = '*'
+                    
+                cfg['modules'] = cfg['modules'].split(';')
+                
+                
 
         self.config = ConfigJson("config.json", use_env=self.use_envvars)
+        
+        if self.use_param:
+            self.config.setDefaultOpts()
+            pass
+        
+      
+        
+        
         self.config.load()
+        
         self.initModules()
         
         if DEBUG_MODE:

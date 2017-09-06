@@ -74,7 +74,7 @@ class ConfigJson(object):
                     cfg = json.load(f)
 
                     """
-                    dropping support for multiple channels, if you want to run in another channel create anoter instance
+                    dropping support for multiple channels, if you want to run in another channel create another instance
                     with different config.json
                     """
                     if type(cfg['chans']) is list and len(cfg['chans']) > 0:
