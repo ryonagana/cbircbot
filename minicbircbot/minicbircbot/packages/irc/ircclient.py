@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 import sys
 import time
@@ -71,7 +70,7 @@ class ircClient:
 
         self.config = ConfigJson("config.json", use_env=self.use_envvars)
         
-        if self.use_param:
+        if self.use_params:
             self.config.setDefaultOpts()
             pass
         

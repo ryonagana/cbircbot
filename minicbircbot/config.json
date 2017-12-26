@@ -6,7 +6,8 @@
     "modules": [
 				"PvtConsole",
 				"RandomQuit",
-				"Weather"
+				"Weather",
+				"Essentials"
 		], 
     "port": 6667, 
     "chans": "##cbtest"
