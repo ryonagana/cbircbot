@@ -110,7 +110,6 @@ def init_bot():
         except KeyboardInterrupt:
             print(Fore.YELLOW + "Waiting 2 seconds")
             print(Fore.RED + "Closing Sockets")
-            logger.info("Desconnecting Socket")
             irc.exit_gracefully()
             logger.info("Successfully Closed")
             break

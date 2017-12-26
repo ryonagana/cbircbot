@@ -18,7 +18,7 @@ class Essentials(IrcBotInterface):
     def doAuth(self, handler):
         irc, msghandler = handler
         prefix, command, count = self.args(msghandler.message)
-        password = os.environ.getenv('CBIRCBOT_PASSWD')
+        password = os.getenv('CBIRCBOT_PASSWD')
         chan = irc.config.get("chans")
         
         if not password:

@@ -320,7 +320,7 @@ class ircClient:
         return False
     
     def receiveData(self):
-        """ method to receive 4 bytes """
+        """ method to receive 4 kbytes """
         data = self.ircsocket.recv(4096);
         return data
     
