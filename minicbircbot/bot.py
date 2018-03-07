@@ -20,7 +20,7 @@ def check_root():
 
 if __name__ == "__main__":
     try:
-        check_root()
+        #check_root()
         minicbircbot.utils.load_extra_paths()
         #minicbircbot.motd()
         
