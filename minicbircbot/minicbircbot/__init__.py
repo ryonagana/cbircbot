@@ -5,7 +5,7 @@ import sys
 import getopt
 from minicbircbot.packages.irc import ircClient
 from minicbircbot.utils import resetColors
-
+import time
 import logging
 import colorama
 from colorama import Fore, Back, Style
@@ -105,6 +105,7 @@ def init_bot():
         try:
             data = irc.receiveData()
             irc.isServerRunning(data)
+            time.sleep(0.2)
             # print (data)
         
         except KeyboardInterrupt:
