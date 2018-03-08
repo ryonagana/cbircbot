@@ -2,6 +2,9 @@ cbIRCBOT 1.1
 ========
 
 Simple Bot Written in Python. 
+
+Atention: this is a ToyBot, if you need a real bot please use Willie
+
 you can create your own funcionalities creating new modules
 
 Dependencies:
