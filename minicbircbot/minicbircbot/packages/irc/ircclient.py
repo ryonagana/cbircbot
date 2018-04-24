@@ -131,7 +131,7 @@ class ircClient:
             except Exception as ex:
                 
                 print(Fore.RED + "-------------------------------------------------")
-                print(Fore.RED + "Occurred an Exception in Module \"{0}\" and will be ignored".format(mod))
+                print(Fore.RED + "Occurred an Exception in Module \"{0}\" and will not be loaded in the bot until you fix this module!".format(mod))
                 print(Fore.RED + "Exception: {0}".format(ex))
                 print(Fore.RED + "Please FIX it: bot/{0}/__init__.py  Check the Log".format(mod))
                 print(Fore.RED + "-------------------------------------------------")
@@ -171,8 +171,8 @@ class ircClient:
                               fromlist=module_name)  # importlib.import_module(namespace + module_name, module_name)
             return getattr(inst, module_name)
             
-            if DEBUG_MODE:
-                print("Loaded: {0}.{1}".format(self.namespace, module_name))
+            #if DEBUG_MODE:
+            #    print("Loaded: {0}.{1}".format(self.namespace, module_name))
         
         except Exception as ex:
             print(Fore.RED + "ERROR: Cannot Instantiate {0}".format(module))
@@ -430,9 +430,9 @@ class ircClient:
                     'message': is_message.groups()[3],  # message
                 }
                 
-                if DEBUG_MODE:
-                    print('DATA DEBUG: ')
-                    print(data)
+                #if DEBUG_MODE:
+                #    print('DATA DEBUG: ')
+                #   print(data)
                     
                     # if the receiver is a channel  trigger self.ReceivedMessageChannel, otherwise trigger self.ReceivedPrivateMessages
                 if data['receiver'].startswith("#"):
@@ -521,10 +521,26 @@ class ircClient:
         """
             This event is triggered when someone send any message to the bot via PVT
         """
+		
+        message = msghandler.message.split(' ')
+        count = len(message)
+		
         
+       
+        if "!help" in message[0] and count == 1:
+            self.ircSendMessageTo(msghandler.sender, " == Modules Installed ===")
+            for mod in MODULES_LOADED:
+                msg = MODULES_LOADED[mod].module_name
+                self.ircSendMessageTo(msghandler.sender, msg)
+                time.sleep(3)
+            self.ircSendMessageTo(msghandler.sender, " == Modules END ===")
+            return
+			
+		
         for mod in MODULES_LOADED:
             if MODULES_LOADED[mod]:
                 MODULES_LOADED[mod].onReceivedPrivateMessage(self, msghandler)
+        
         pass
     
     def ReceivedJoinEvent(self, msghandler):
