@@ -352,6 +352,9 @@ class ircClient:
                 if self.config.get("console"):
                     self.Console.start()
         
+        if not self.isJoined:
+            print(data)
+		
         self.parseServerData(data)
     
     def isServerRunning(self, data):
