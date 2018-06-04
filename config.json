@@ -11,5 +11,5 @@
                 "YoutubeDetails"
 		], 
     "port": 6667, 
-    "chans": "##javascript-br"
+    "chans": "#javascript-br"
 }

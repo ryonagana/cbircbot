@@ -77,7 +77,7 @@ class YoutubeDetails(IrcBotInterface):
             url = url[0]
 
             req = urllib.request.urlopen(url).read().decode('utf8')
-            soup = BeautifulSoup(req)
+            soup = BeautifulSoup(req, "html.parser")
 
             send_msg = "Title: \"{0}\" ".format(soup.title.string)
 

@@ -472,3 +472,44 @@ CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  inst
 CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: YoutubeDetails. Please Check YoutubeDetails/__init__.py - 'NoneType' object is not callable
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+WARNING:minicbircbot.packages.irc.ircclient:YoutubeDetails has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:Weather has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:Essentials has not destroyModule(). ignoring. Please see the log
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:Weather has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:YoutubeDetails has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:Essentials has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+WARNING:minicbircbot.packages.irc.ircclient:YoutubeDetails has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:Weather has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:Essentials has not destroyModule(). ignoring. Please see the log
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+WARNING:minicbircbot.packages.irc.ircclient:PvtConsole has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:YoutubeDetails has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:Essentials has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:RandomQuit has not destroyModule(). ignoring. Please see the log
+WARNING:minicbircbot.packages.irc.ircclient:Weather has not destroyModule(). ignoring. Please see the log
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent

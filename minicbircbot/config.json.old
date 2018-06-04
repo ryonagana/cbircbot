@@ -2,13 +2,13 @@
     "identd": "HUE", 
     "console": false, 
     "address": "irc.freenode.net", 
-    "nickname": "cruziktest",
+    "nickname": "cruzikmello", 
     "modules": [
 				"PvtConsole",
 				"RandomQuit",
 				"Weather",
 				"Essentials",
-                "YoutubeDetails"
+				"YoutubeDetails"
 		], 
     "port": 6667, 
     "chans": "##javascript-br"
