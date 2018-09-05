@@ -8,8 +8,9 @@
 				"RandomQuit",
 				"Weather",
 				"Essentials",
-                "YoutubeDetails"
+                "YoutubeDetails",
+                "IRCAuth"
 		], 
     "port": 6667, 
-    "chans": "##javascript-br"
+    "chans": "##testecb"
 }
