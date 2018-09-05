@@ -2,7 +2,7 @@
     "identd": "HUE", 
     "console": false, 
     "address": "irc.freenode.net", 
-    "nickname": "marcelopakalolo",
+    "nickname": "cruziktest",
     "modules": [
 				"PvtConsole",
 				"RandomQuit",

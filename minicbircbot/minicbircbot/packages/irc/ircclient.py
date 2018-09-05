@@ -108,7 +108,7 @@ class ircClient:
 
     #set new nickname
     def setNick(self, old_name, new_name):
-        self.ircSend(":{0} NICK {1}".format(old_name. new_name))
+        self.ircSend(":{0} NICK {1}".format(old_name,new_name))
 
     def initModules(self):
         """ init all modules you wrote in config.json

@@ -16,24 +16,28 @@ class IRCAuth(IrcBotInterface):
         prefix, cmd, count_args = self.getMessageArgs(msghandler.message)  
         chan = irc.config.get("chans")
 
+
+
         if(count_args > 0):
-            irc.ircSendMessageTo(msghandler.sender, "No args are allowed here!")
+            irc.ircSendMessage(chan, "No args are allowed here!")
             return
 
         username = os.getenv('CBIRCBOT_USER')
         passwd = os.getenv('CBIRCBOT_PASSWD')
 
+    
+
 
         if not username or not passwd:
-            irc.ircSendMessageTo(msghandler.sender, "username and passwd not set, sorry!")
+            irc.ircSendMessage(chan, "username and passwd not set, sorry!")
             return
 
         
-        if username.tolower() != msghandler.sender.tolower():
-            irc.setNick(msghandler.sender, username)
-
+        
+            
+        irc.setNick(msghandler.sender, username)
         irc.ircSendMessage(chan, "for this day and forward you will refer me by the name {0}, nheehehehe".format(username))
-        irc.ircSendMessageTo("Nickserv", "identify {0}", passwd)
+        irc.ircSendMessageTo("Nickserv", "identify {0}".format(passwd))
 
 
 
