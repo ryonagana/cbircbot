@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/cbircbotproj.iml" filepath="$PROJECT_DIR$/.idea/cbircbotproj.iml" />
       <module fileurl="file://$USER_HOME$/PycharmProjects/favicon/.idea/favicon.iml" filepath="$USER_HOME$/PycharmProjects/favicon/.idea/favicon.iml" />
-      <module fileurl="file://D:/Xampp/htdocs/testes/python/projcb/.idea/projcb.iml" filepath="D:/Xampp/htdocs/testes/python/projcb/.idea/projcb.iml" />
     </modules>
   </component>
 </project>

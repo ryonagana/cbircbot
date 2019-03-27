@@ -5,11 +5,12 @@
     "nickname": "cocoman12",
     "modules": [
 				"PvtConsole",
+                "IRCAuth",
 				"RandomQuit",
-				"Essentials",
                 "YoutubeDetails",
-                "IRCAuth"
+
 		], 
     "port": 6667, 
-    "chans": "##teste-cb"
+    "chans": "##teste-cb",
+    "owners": ["archdark"]
 }

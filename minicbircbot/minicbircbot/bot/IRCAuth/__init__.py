@@ -6,10 +6,8 @@ class IRCAuth(IrcBotInterface):
     def __init__(self, irc = None):
         super().__init__(irc)
 
-
-        self.owner = ["archdark", "ryonagana"]
         self.module_name = "IRCAuth"
-        self.register_command("!authnick", self.do_auth_nick,  self.CMD_TYPE_BOTH, "my description")
+        self.register_command("!auth", self.do_auth_nick,  self.CMD_TYPE_BOTH, "my description")
     
     def do_auth_nick(self, handlers):
         irc, msghandler = handlers

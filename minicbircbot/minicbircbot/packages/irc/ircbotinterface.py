@@ -48,6 +48,8 @@ class IrcBotInterface:
         self.permissions = self.BOT_RUN_ALL # permissions
         self.reg_command = {}
         self.irc = None
+        
+        self.owners = irc.config.get('owners')
 
         if irc:
             self.irc = irc
