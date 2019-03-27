@@ -190,7 +190,7 @@ class PvtConsole(IrcBotInterface):
         #avoid split spaces in the messages
 
         channel = irc.config.get("chans")
-        msg = str(" " .join(command[2:]))
+        msg = str(" " .join(command[1:]))
         print("[{0}] requested you to say [{1}] in the channel [{2}]".format(msghandler.sender, msg, channel))
         irc.ircSendMessage(channel, msg)
 
