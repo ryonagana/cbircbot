@@ -181,17 +181,19 @@ class PvtConsole(IrcBotInterface):
 
 
 
+
+
         if not msghandler.sender in self.owner:
             print("SENDER: {0}".format(msghandler.sender) )
             irc.ircSendMessageTo(msghandler.sender, "you are not my owner!")
             return
 
         #avoid split spaces in the messages
-        channel = command[1]
-        msg =  str(" ".join(command[2:]))
-        irc.ircSendMessage(channel, msg)
 
-        #print(prefix, msg)
+        channel = irc.config.get("chans")
+        msg = str(" " .join(command[2:]))
+        print("[{0}] requested you to say [{1}] in the channel [{2}]".format(msghandler.sender, msg, channel))
+        irc.ircSendMessage(channel, msg)
 
 
     def disconnectBot(self, handlers):

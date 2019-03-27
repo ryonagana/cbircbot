@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a873da2-6f0b-4ba1-9d76-2371dfc1eac3" name="remove all  debug prints" comment="">
-      <change afterPath="$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircidentify.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minicbircbot/cbircbot.log" beforeDir="false" afterPath="$PROJECT_DIR$/minicbircbot/cbircbot.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minicbircbot/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/minicbircbot/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minicbircbot/minicbircbot/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/minicbircbot/minicbircbot/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minicbircbot/minicbircbot/bot/PvtConsole/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/minicbircbot/minicbircbot/bot/PvtConsole/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minicbircbot/minicbircbot/bot/YoutubeDetails/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/minicbircbot/minicbircbot/bot/YoutubeDetails/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircclient.py" beforeDir="false" afterPath="$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircclient.py" afterDir="false" />
     </list>
     <list id="44909944-da7c-4625-8bc7-e07bc48c0cb3" name="Default" comment="" />
@@ -35,21 +34,30 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/bot/TwitterBot/__init__.py">
+        <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/bot/Weather/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="39" />
+            <state relative-caret-position="313">
+              <caret line="40" column="27" lean-forward="true" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/bot/YoutubeDetails/__init__.py">
+        <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircbotinterface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="69" column="70" selection-start-line="69" selection-start-column="70" selection-end-line="69" selection-end-column="70" />
+            <state relative-caret-position="538">
+              <caret line="213" column="56" selection-start-line="213" selection-start-column="56" selection-end-line="213" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircclient.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="333" column="28" lean-forward="true" selection-start-line="333" selection-start-column="28" selection-end-line="333" selection-end-column="28" />
               <folding>
-                <element signature="e#2#71#0" expanded="true" />
+                <element signature="e#13#22#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,8 +66,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minicbircbot/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+            <state relative-caret-position="246">
+              <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircconsole.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="538">
+              <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -67,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
+            <state relative-caret-position="322">
+              <caret line="109" column="28" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
               <folding>
                 <element signature="e#47#56#0" expanded="true" />
               </folding>
@@ -77,22 +94,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircclient.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="380" column="47" lean-forward="true" selection-start-line="380" selection-start-column="47" selection-end-line="380" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/bot/PvtConsole/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2040">
-              <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+            <state relative-caret-position="345">
+              <caret line="195" column="40" selection-start-line="195" selection-start-column="40" selection-end-line="195" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -100,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircidentify.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="300">
+              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -112,7 +117,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/irceventhandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
+            <state relative-caret-position="525">
               <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
             </state>
           </provider>
@@ -121,20 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minicbircbot/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/bot/AutoResponse/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="68" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -161,6 +154,11 @@
       <find>print</find>
       <find>motd</find>
       <find>joined</find>
+      <find>tries</find>
+      <find>HEAD</find>
+      <find>isIdentified</find>
+      <find>loop</find>
+      <find>receiveData</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,13 +217,13 @@
         <option value="$PROJECT_DIR$/minicbircbot/minicbircbot/bot/Weather/__init__.py" />
         <option value="$PROJECT_DIR$/minicbircbot/minicbircbot/packages/config/config_json.py" />
         <option value="$PROJECT_DIR$/minicbircbot/minicbircbot/bot/Essentials/__init__.py" />
-        <option value="$PROJECT_DIR$/minicbircbot/config.json" />
         <option value="$PROJECT_DIR$/minicbircbot/bot.py" />
+        <option value="$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircidentify.py" />
+        <option value="$PROJECT_DIR$/minicbircbot/minicbircbot/bot/YoutubeDetails/__init__.py" />
+        <option value="$PROJECT_DIR$/minicbircbot/config.json" />
+        <option value="$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircclient.py" />
         <option value="$PROJECT_DIR$/minicbircbot/minicbircbot/__init__.py" />
         <option value="$PROJECT_DIR$/minicbircbot/minicbircbot/bot/PvtConsole/__init__.py" />
-        <option value="$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircidentify.py" />
-        <option value="$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircclient.py" />
-        <option value="$PROJECT_DIR$/minicbircbot/minicbircbot/bot/YoutubeDetails/__init__.py" />
       </list>
     </option>
   </component>
@@ -285,7 +283,7 @@
               <item name="minicbircbot" type="462c0819:PsiDirectoryNode" />
               <item name="minicbircbot" type="462c0819:PsiDirectoryNode" />
               <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="YoutubeDetails" type="462c0819:PsiDirectoryNode" />
+              <item name="Weather" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cbircbotproj" type="b2602c69:ProjectViewProjectNode" />
@@ -757,13 +755,6 @@
     <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircconsole.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/bot/WebServer/Server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-288" />
@@ -807,48 +798,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/bot/Weather/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircbotinterface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3135">
-          <caret line="213" column="56" selection-start-line="213" selection-start-column="56" selection-end-line="213" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/bot/TwitterBot/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minicbircbot/bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
-          <folding>
-            <element signature="e#47#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minicbircbot/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -858,30 +811,6 @@
           <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="68" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/irceventhandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/bot/PvtConsole/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2040">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircidentify.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -896,13 +825,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/minicbircbot/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircbotinterface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="213" column="56" selection-start-line="213" selection-start-column="56" selection-end-line="213" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircconsole.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/irceventhandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircidentify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minicbircbot/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/packages/irc/ircclient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="380" column="47" lean-forward="true" selection-start-line="380" selection-start-column="47" selection-end-line="380" selection-end-column="47" />
+        <state relative-caret-position="278">
+          <caret line="333" column="28" lean-forward="true" selection-start-line="333" selection-start-column="28" selection-end-line="333" selection-end-column="28" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#13#22#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="109" column="28" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+          <folding>
+            <element signature="e#47#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/bot/Weather/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="40" column="27" lean-forward="true" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minicbircbot/minicbircbot/bot/PvtConsole/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="195" column="40" selection-start-line="195" selection-start-column="40" selection-end-line="195" selection-end-column="40" />
         </state>
       </provider>
     </entry>

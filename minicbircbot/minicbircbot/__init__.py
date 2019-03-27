@@ -107,7 +107,7 @@ def init_bot():
             data = irc.receiveData()
             irc.isServerRunning(data)
             time.sleep(0.2)
-            # print (data)
+            print (str(data) + '\r\n')
         
         except KeyboardInterrupt:
             print(Fore.YELLOW + "Waiting 2 seconds")

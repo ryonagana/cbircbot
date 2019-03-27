@@ -11,5 +11,5 @@
                 "IRCAuth"
 		], 
     "port": 6667, 
-    "chans": "##testecb"
+    "chans": "##teste-cb"
 }
