@@ -1,0 +1,21 @@
+ MODULES Running  ------------------------------------------:
+-----------------------------------------------------
+Traceback (most recent call last):
+  File "bot.py", line 39, in <module>
+    minicbircbot.init_bot()
+  File "/home/c/cyberkiller/cbircbot/minicbircbot/minicbircbot/__init__.py", line 72, in init_bot
+    irc.auth()
+  File "/home/c/cyberkiller/cbircbot/minicbircbot/minicbircbot/packages/irc/ircclient.py", line 185, in auth
+    self.ircSend("NICK {0}".format(self.config.get("nickname")))
+  File "/home/c/cyberkiller/cbircbot/minicbircbot/minicbircbot/packages/irc/ircclient.py", line 198, in ircSend
+    self.ircsocket.send(format(message))
+  File "/home/c/cyberkiller/cbircbot/minicbircbot/minicbircbot/packages/sockets/sockethandler.py", line 33, in send
+    self.sock.send( str.encode(message))
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "bot.py", line 41, in <module>
+    print('An Error Ocurred while trying to run the bot. :' + m)
+TypeError: Can't convert 'BrokenPipeError' object to str implicitly

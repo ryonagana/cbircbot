@@ -1,0 +1,15 @@
+{
+    "identd": "HUE", 
+    "console": false, 
+    "address": "irc.freenode.net", 
+    "nickname": "cruziktest",
+    "modules": [
+				"PvtConsole",
+				"RandomQuit",
+				"Weather",
+				"Essentials",
+                "YoutubeDetails"
+		], 
+    "port": 6667, 
+    "chans": "#javascript-br"
+}

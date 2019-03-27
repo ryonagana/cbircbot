@@ -54,11 +54,11 @@ class IrcBotInterface:
 
 
 
-        self.CMD_TYPE_MESSAGE	= 2
-        self.CMD_TYPE_PVT		= 4
-        self.CMD_TYPE_BOTH		= 6
-        self.CMD_TYPE_JOIN		= 8
-        self.CMD_TYPE_PART		= 10
+        self.CMD_TYPE_MESSAGE   = 2
+        self.CMD_TYPE_PVT       = 4
+        self.CMD_TYPE_BOTH      = 6
+        self.CMD_TYPE_JOIN      = 8
+        self.CMD_TYPE_PART      = 10
 
         self.generateHelp()
 
@@ -73,9 +73,10 @@ class IrcBotInterface:
     def module_usage(self, handlers):
         irc, msghandler = handlers
         prefix, cmd, count_args = self.getMessageArgs(msghandler.message)
-
         
-        if(count_args == 0 and msghandler.sender in self.owner):
+        
+        """
+            if(count_args == 0 and msghandler.sender in self.owner):
             irc.ircSendMessageTo(msghandler.sender, "==Installed Modules==")
             for nome in MODULES_LOADED:
                 msg = "\t\t" + nome
@@ -85,7 +86,8 @@ class IrcBotInterface:
             irc.ircSendMessageTo(msghandler.sender, "== END Installed Modules==")
             return
 
-
+        """
+        
         if count_args == 1:
             if cmd[1].find(self.module_name) != -1  and msghandler.sender in self.owner:
 
@@ -99,7 +101,7 @@ class IrcBotInterface:
                         help_module = self.reg_command[c]
                     
                         print (help_module.prefix + c + " - " +  help_module.cmd_description)
-                        m = "\t\t{0}{1} - {2}".format(help_module.prefix, c, help_module.cmd_description)
+                        m = "\t{0}{1} - {2}".format(help_module.prefix, c, help_module.cmd_description)
                         irc.ircSendMessageTo(msghandler.sender, m)
                         time.sleep(3) #avoid flood freenode has a  huge protection against flood
 
@@ -154,10 +156,10 @@ class IrcBotInterface:
 
             gather = {
 
-                'prefix' 			: prefix,
-                'func_callback' 	: func_callback,
-                'access'			: access,
-                'cmd_description'	: description
+                'prefix'            : prefix,
+                'func_callback'     : func_callback,
+                'access'            : access,
+                'cmd_description'   : description
 
             }
 
@@ -192,7 +194,10 @@ class IrcBotInterface:
         access = self.getCommandAccess(command[0])
 
         
-
+        if(command[0] == 'help' and prefix == '!'):
+            self.exec_cmd('help', (irchandler, messagehandler))
+            return
+            
         if access == self.CMD_TYPE_PVT or access == self.CMD_TYPE_BOTH:
             self.exec_cmd(command[0], (irchandler, messagehandler))
 
@@ -255,7 +260,7 @@ class IrcBotInterface:
         pass
 
     def onDataSent(self, data, irchandler):
-        print (data)
+        pass
 
 
 

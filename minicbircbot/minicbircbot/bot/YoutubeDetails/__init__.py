@@ -70,16 +70,14 @@ class YoutubeDetails(IrcBotInterface):
         url = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', msg)
 
         if not url:
-            print("URL NAO ENCONTRADA")
             return False
 
-        print(url)
         try:
 
             url = url[0]
 
             req = urllib.request.urlopen(url).read().decode('utf8')
-            soup = BeautifulSoup(req)
+            soup = BeautifulSoup(req, "html.parser")
 
             send_msg = "Title: \"{0}\" ".format(soup.title.string)
 

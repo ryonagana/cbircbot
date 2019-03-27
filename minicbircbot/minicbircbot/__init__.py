@@ -47,7 +47,7 @@ def usage():
 def init_bot():
     global USE_ENVVARS
     args_param = {}
-    
+    data = None
     try:
         opts, args = getopt.getopt(sys.argv[1:], "hevi:a:n:m:p:c:",
                                    ['help', "env-vars", 'version', 'identd=', 'address=',
@@ -99,6 +99,7 @@ def init_bot():
     if not irc.isConnected:
         irc.connect()
         irc.auth()
+   
     
     while irc.isRunning:
         
