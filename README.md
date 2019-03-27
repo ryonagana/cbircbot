@@ -58,4 +58,4 @@ cbIRCBot Core only uses colorama to make errors and warnings more visible
 * YoutubeDetails depends on BeautifulSoup4
 
 
-If you dont want to use dependencias just disable the module in config.json
+If you dont want to deal with dependencies just disable the module in config.json
