@@ -25,6 +25,30 @@ How to Run
 ========
 >./bot
 
+Please Don't Run as Root. Ever
+
+Added Identify to Server
+========
+
+
+
+How To: (UNIX / LINUX / MAC)
+========
+>export CBIRCBOT_PASSWD=yourpassword
+
+Windows 
+========
+>set CBIRCBOT_PASSWD=yourpassword
+>
+>setx  CBIRCBOT_PASSWD=yourpassword
+
+
+
+
+you must set an environment variable to store the password, its the safest simple solution
+to not store any password on this project
+
+
 PS:  All Modules has his own dependencies
 cbIRCBot Core only uses colorama to make errors and warnings more visible
 
