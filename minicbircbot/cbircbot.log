@@ -250,3 +250,27 @@ INFO:minicbircbot:Successfully Closed
 INFO:root:Tried to load CFG
 INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
 INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:Config Key: owners doesnt exists. if required. please add them manully
+INFO:root:Tried to load CFG
+WARNING:minicbircbot.packages.config.config_json:Config Key: owners doesnt exists. if required. please add them manully
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: Essentials - No module named 'minicbircbot.bot.Essentials'
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: Essentials. Please Check Essentials/__init__.py - 'NoneType' object is not callable
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: Essentials - No module named 'minicbircbot.bot.Essentials'
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: Essentials. Please Check Essentials/__init__.py - 'NoneType' object is not callable
+INFO:root:Tried to load CFG
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  instantiate a module: Essentials - No module named 'minicbircbot.bot.Essentials'
+CRITICAL:minicbircbot.packages.irc.ircclient:Exception Occurred when tried  to load module: Essentials. Please Check Essentials/__init__.py - 'NoneType' object is not callable
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent
+INFO:root:Tried to load CFG
+INFO:minicbircbot.packages.irc.ircclient:Connected Successfully!
+INFO:minicbircbot.packages.irc.ircclient:Auth Sent

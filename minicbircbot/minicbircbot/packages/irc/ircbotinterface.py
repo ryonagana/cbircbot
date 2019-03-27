@@ -49,7 +49,8 @@ class IrcBotInterface:
         self.reg_command = {}
         self.irc = None
         
-        self.owners = irc.config.get('owners')
+        for owner in irc.config.get('owners'):
+            self.owner.append(owner)
 
         if irc:
             self.irc = irc

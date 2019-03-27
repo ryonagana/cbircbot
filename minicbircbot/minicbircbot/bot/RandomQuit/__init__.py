@@ -9,7 +9,6 @@ class RandomQuit(IrcBotInterface):
     def __init__(self, irc=None):
         super().__init__(irc)
         
-        self.owner = ["ryonagana", "vagrant"]
         self.module_name = "RandomQuit"
         self.filename = "quit.txt"
         

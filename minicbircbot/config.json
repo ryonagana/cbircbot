@@ -1,16 +1,16 @@
 {
-    "identd": "HUE", 
-    "console": false, 
+    "identd": "HUE",
+    "console": false,
     "address": "irc.freenode.net",
-    "nickname": "cocoman12",
+    "nickname": "cruziktest",
     "modules": [
 				"PvtConsole",
-                "IRCAuth",
 				"RandomQuit",
                 "YoutubeDetails",
-
-		], 
-    "port": 6667, 
+                "IRCAuth"
+		],
+    "port": 6667,
     "chans": "##teste-cb",
-    "owners": ["archdark"]
+    "owners": ["archdark"],
+    "auth": false
 }

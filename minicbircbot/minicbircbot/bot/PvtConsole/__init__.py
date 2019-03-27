@@ -19,7 +19,6 @@ class PvtConsole(IrcBotInterface):
     def __init__(self, irc = None):
         super().__init__(irc)
 
-        self.owner = ["vagrant", "ryonagana", 'archdark']
 
         self.module_name = "PvtConsole"
 

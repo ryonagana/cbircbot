@@ -11,9 +11,6 @@ class YoutubeDetails(IrcBotInterface):
     def __init__(self, irc = None):
         super().__init__(irc)
 
-
-        self.owner = ["ryongana"]
-
         self.module_name = "YoutubeDetails"
 
     def get_youtube_title(self,irc,msghandler,  *args, **kwargs):

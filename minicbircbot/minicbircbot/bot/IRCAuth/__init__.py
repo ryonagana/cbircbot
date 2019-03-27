@@ -31,11 +31,7 @@ class IRCAuth(IrcBotInterface):
             return
 
         
-        
-            
-        irc.setNick(msghandler.sender, username)
-        irc.ircSendMessage(chan, "for this day and forward you will refer me by the name {0}, nheehehehe".format(username))
-        irc.ircSendMessageTo("Nickserv", "identify {0}".format(passwd))
+        irc.identify.identify_nickname(self)
 
 
 

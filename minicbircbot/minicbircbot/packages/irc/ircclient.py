@@ -154,7 +154,7 @@ class ircClient:
                     module_name = "{0}\n".format(m)
                     fp.write(module_name)
         pass
-        
+        print("OWNERS : {0}".format(",".join([str(x) for x in self.config.get('owners')])))
         print(" MODULES Running  ------------------------------------------:")
         for k in MODULES_LOADED:
             print(k)
@@ -358,7 +358,7 @@ class ircClient:
                   so i made some delay to identify before join
                   """
 
-                while not self.isIdentified or tries > 0:
+                while not (self.isIdentified or tries > 0) and self.config.get('auth'):
                     self.isIdentified = self.identify.identify_nickname()
                     time.sleep(1)
                     tries -= 1
