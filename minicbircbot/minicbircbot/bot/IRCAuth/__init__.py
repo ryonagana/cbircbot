@@ -20,18 +20,15 @@ class IRCAuth(IrcBotInterface):
             irc.ircSendMessage(chan, "No args are allowed here!")
             return
 
-        username = os.getenv('CBIRCBOT_USER')
-        passwd = os.getenv('CBIRCBOT_PASSWD')
-
-    
-
-
-        if not username or not passwd:
-            irc.ircSendMessage(chan, "username and passwd not set, sorry!")
+        try:
+            passwd = os.getenv('CBIRCBOT_PASSWD')
+        except KeyError:
+            print("envvar 'CBIRCBOT_PASSWD not found ignoring..")
+            irc.ircSendMessageTo(msghandler.sender, "Impossible to Auth due invalid configuration. sorry")
             return
-
+    
         
-        irc.identify.identify_nickname(self)
+        irc.identify.identify_nickname()
 
 
 
