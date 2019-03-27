@@ -3,4 +3,4 @@ __pycache__/
 minicbircbot/config.json
 minicbircbot/*.log
 *.log
-.idea
+.idea/*
