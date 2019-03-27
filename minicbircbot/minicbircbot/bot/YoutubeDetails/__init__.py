@@ -53,7 +53,7 @@ class YoutubeDetails(IrcBotInterface):
                 req = urllib.request.urlopen(url_final).read().decode('utf8')
                 data = json.loads(req)
 
-                msg = ' Type: \"{0}\" Title: \"{1}\" Author: \"{2}\" '.format(data['type'], data['title'],
+                msg = 'Type: \"{0}\" Title: \"{1}\" Author: \"{2}\" '.format(data['type'], data['title'],
                                                                               data['author_name'])
 
                 self.irc.ircSendMessage(msghandler.receiver, msg)

@@ -2,13 +2,12 @@
     "identd": "HUE", 
     "console": false, 
     "address": "irc.freenode.net", 
-    "nickname": "cruziktest",
+    "nickname": "cocoman12",
     "modules": [
 				"PvtConsole",
 				"RandomQuit",
-				"Weather",
 				"Essentials",
-                "YoutubeDetails"
+                                "YoutubeDetails"
 		], 
     "port": 6667, 
     "chans": "##teste-cb"

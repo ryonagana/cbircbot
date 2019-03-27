@@ -29,6 +29,7 @@ from minicbircbot.packages.sockets.sockethandler import IrcSocket
 from minicbircbot.utils import format, clean_str, DEBUG_MODE, MODULES_LOADED, resetColors
 from minicbircbot.packages.irc.irceventhandler import IrcEventhandler, IrcMessageEvent, IrcPrivateMessageEvent, \
     IrcJoinEvent, IrcPartEvent
+from minicbircbot.packages.irc.ircidentify import IrcIdentify
 import minicbircbot.bot
 
 logger = logging.getLogger(__name__)
@@ -65,6 +66,9 @@ class ircClient:
                     params['modules'] = '*'
                     
                 cfg['modules'] = cfg['modules'].split(';')
+
+        self.isIdentified = False
+        self.identify = IrcIdentify(self)
                 
                 
 
@@ -316,6 +320,7 @@ class ircClient:
         
         if msg.find(':End of /MOTD') != -1 or msg.find('/MOTD') != -1 :
             self.isConnected = True
+
             return True
         return False
     
@@ -342,15 +347,33 @@ class ircClient:
             make all calling  trigger events repass data to parse
             to trigger bots events
         """
+
+        tries = 5
         
         self.PingPong(data)
         if self.detectEndMOTD(data):
+
+            if not self.isIdentified:
+                """ if some channel force identify you cant join them 
+                  so i made some delay to identify before join
+                  """
+
+                while not self.isIdentified or tries > 0:
+                    self.isIdentified = self.identify.identify_nickname()
+                    time.sleep(1)
+                    tries -= 1
+                    print("Trying to Identify Try Number: {0}".format(tries))
+
+
+
             if not self.isJoined:
+
+
                 self.JoinChannels(self.config.get("chans"))
                 self.isJoined = True
-                
-                if self.config.get("console"):
-                    self.Console.start()
+
+            if self.config.get("console"):
+                self.Console.start()
         
         self.parseServerData(data)
     
