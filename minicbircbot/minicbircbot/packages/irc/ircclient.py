@@ -179,8 +179,9 @@ class ircClient:
                 print("Loaded: {0}.{1}".format(self.namespace, module_name))
         
         except Exception as ex:
+            exc_info = sys.exc_info()
             print(Fore.RED + "ERROR: Cannot Instantiate {0}".format(module))
-            print(Fore.RED + "Exception: {0}".format(str(ex)))
+            print(Fore.RED + "Exception: {0} - Line Number {1} - Frame: {2}".format(str(ex), str(exc_info[2].tb_lineno),tr(exc_info[2].tb_frame)  ))
             print(Fore.RED + "Please Check the Log")
             logger.critical(
                 "Exception Occurred when tried  instantiate a module: {0} - {1}".format(module_name, str(ex)))
