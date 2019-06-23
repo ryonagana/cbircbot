@@ -18,7 +18,11 @@ Modules Included:
 
 >WebServer   (remote control via browser) IN DEVELOPMENT
 
+
+**Weather** - Weather plugin is disabled as default due  Yahoo dropping their weather API
+
 Just Choose your module  changing  config.json
+
 
 
 How to Run
