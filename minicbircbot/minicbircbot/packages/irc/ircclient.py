@@ -71,9 +71,7 @@ class ircClient:
 
         self.isIdentified = False
         self.identify = IrcIdentify(self)
-        self.allow_auth =  self.config.get('auth')
-
-
+        self.allow_auth =  self.config.get('auth')       
                 
 
        
@@ -356,20 +354,28 @@ class ircClient:
         tries = 5
         
         self.PingPong(data)
-        if self.detectEndMOTD(data):
 
+
+
+        if self.detectEndMOTD(data):
             if not self.isIdentified:
                 """ if some channel force identify you cant join them 
                   so i made some delay to identify before join
                   """
 
-                while not (self.isIdentified and tries > 0) and self.config.get('auth'):
+                while tries > 0 and not self.isIdentified:
                     self.isIdentified = self.identify.identify_nickname()
-                    time.sleep(1)
+                    time.sleep(2)
                     tries -= 1
-                    print("Trying to Identify Try Number: {0}".format(tries))
 
+                    if not self.identify.detectIdentify(msg=data):
+                        print("Trying to Identify Try Number: {0}\n".format(tries))
+                    else:
+                        print("IDENTIFY SUCCESS!!\n")
 
+            if self.identify.detectIdentify(msg=data) and not self.isConnected :
+                print("\n\nnickname identify success\n\n")
+                self.isIdentified = True
 
             if not self.isJoined:
 

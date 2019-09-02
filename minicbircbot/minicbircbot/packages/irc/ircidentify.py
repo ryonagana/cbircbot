@@ -5,8 +5,21 @@ class IrcIdentify:
     def __init__(self, parent = None):
         self.parent = parent
 
+    def detectIdentify(self, *args, **kwargs):
+        nickname = self.parent.config.get('nickname')
+        msg_detect = 'NOTICE {nick} :You are now identified for'.format(nick=nickname)
 
-    def identify_nickname(self):
+        msg = kwargs['msg']
+        msg = msg.decode('utf8')
+
+        print(msg + '\r\n\n')
+
+        if msg.find(msg_detect) != -1:
+            return True
+        
+        return False
+
+    def identify_nickname(self, *args, **kwargs):
 
         try:
             os.environ['CBIRCBOT_PASSWD']
