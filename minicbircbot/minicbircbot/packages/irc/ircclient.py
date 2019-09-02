@@ -43,6 +43,8 @@ class ircClient:
         self.use_envvars = False
         self.use_params = False
         cfg = {}
+
+        self.config = ConfigJson("config.json", use_env=self.use_envvars)
         
         for key, value in kwargs.items():
             if key == 'use_env':
@@ -69,10 +71,12 @@ class ircClient:
 
         self.isIdentified = False
         self.identify = IrcIdentify(self)
-                
+        self.allow_auth =  self.config.get('auth')
+
+
                 
 
-        self.config = ConfigJson("config.json", use_env=self.use_envvars)
+       
         
         if self.use_params:
             self.config.setDefaultOpts()
@@ -359,7 +363,7 @@ class ircClient:
                   so i made some delay to identify before join
                   """
 
-                while not (self.isIdentified or tries > 0) and self.config.get('auth'):
+                while not (self.isIdentified and tries > 0) and self.config.get('auth'):
                     self.isIdentified = self.identify.identify_nickname()
                     time.sleep(1)
                     tries -= 1
