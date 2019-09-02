@@ -11,5 +11,7 @@
                 "YoutubeDetails"
 		], 
     "port": 6667, 
-    "chans": "##teste-cb"
+    "chans": "##teste-cb",
+    "owners": ["ryonagana"],
+    "auth": true
 }
