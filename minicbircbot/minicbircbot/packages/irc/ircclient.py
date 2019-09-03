@@ -10,6 +10,8 @@ import imp
 import colorama
 from colorama import Fore, Back, Style
 
+import asyncio
+
 """
 This Class has all irc handlers  and is intended  to create methods for IRC only
 
@@ -357,6 +359,8 @@ class ircClient:
 
 
 
+
+
         if self.detectEndMOTD(data):
             if not self.isIdentified:
                 """ if some channel force identify you cant join them 
@@ -385,8 +389,8 @@ class ircClient:
 
             if self.config.get("console"):
                 self.Console.start()
+
         
-        self.parseServerData(data)
     
     def isServerRunning(self, data):
         """ check if mainloop still running """
@@ -433,117 +437,126 @@ class ircClient:
         self.ircsocket.force_close()
         logger.info("Socket Closed With Success!")
     
-    def parseServerData(self, message):
+    async def parseServerData(self, message):
         """
             this method generates  the events for the bot and trigger them in all external modules
         """
-        # decode the message to utf8, sanitize the string removing '\r\n' or the regex will fail so badly
-        server_msg = clean_str(message.decode("utf-8"))
-        
-        # before make a check we must have sure is a message
-        # PRIVMSG stand for 2 kinds of message, send to other person, or  regular message in the channel
-        # the difference is the receiver
-        
-        
-        if server_msg:
-            self.BotServerDataSent(server_msg, None)
-        
-        if server_msg.find("PRIVMSG") != -1:  # is this a message?
+        try:
+            # decode the message to utf8, sanitize the string removing '\r\n' or the regex will fail so badly
+            server_msg = clean_str(message.decode("utf-8"))
+
+            task = None
             
-            is_message = re.search("^:(.+[aA-zZ0-0])!(.*) PRIVMSG (.+?) :(.+[aA-zZ0-9])$",
-                                   server_msg)  # strip all contents useful for me
+            # before make a check we must have sure is a message
+            # PRIVMSG stand for 2 kinds of message, send to other person, or  regular message in the channel
+            # the difference is the receiver
             
-            if is_message:  # regex is successfull
+            
+            if server_msg:
+                self.BotServerDataSent(server_msg, None)
+            
+            if server_msg.find("PRIVMSG") != -1:  # is this a message?
                 
+                is_message = re.search("^:(.+[aA-zZ0-0])!(.*) PRIVMSG (.+?) :(.+[aA-zZ0-9])$",
+                                    server_msg)  # strip all contents useful for me
                 
-                data = {
+                if is_message:  # regex is successfull
                     
-                    'sender': is_message.groups()[0],  # sender's nickname
-                    'ident': is_message.groups()[1],  # ident
-                    'receiver': is_message.groups()[2],  # channel or receiver's nickname
-                    'message': is_message.groups()[3],  # message
-                }
+                    
+                    data = {
+                        
+                        'sender': is_message.groups()[0],  # sender's nickname
+                        'ident': is_message.groups()[1],  # ident
+                        'receiver': is_message.groups()[2],  # channel or receiver's nickname
+                        'message': is_message.groups()[3],  # message
+                    }
+                    
+                    if DEBUG_MODE:
+                        print('DATA DEBUG: ')
+                        print(data)
+                        
+                        # if the receiver is a channel  trigger self.ReceivedMessageChannel, otherwise trigger self.ReceivedPrivateMessages
+                    if data['receiver'].startswith("#"):
+                        
+                        # means you are sending message directly to a channel
+                        message_received = IrcMessageEvent.register(**data)
+                        
+                        task = asyncio.create_task(self.ReceivedMessageChannel(message_received))
+                        await task
+                        
+                        print(Fore.BLUE + "<" + Fore.WHITE + data['receiver'] + "> " + Fore.CYAN + data["message"])
+                        resetColors();
+                    
+                    else:
+                        
+                        # means you are sending message directly to someone
+                        message_received = IrcPrivateMessageEvent.register(**data)
+
+                        #self.ReceivedPrivateMessages(message_received)
+                        await self.ReceivedPrivateMessages(message_received)
+
+                        print(Fore.BLUE + "<" + Fore.WHITE + data['sender'] + ": " + data["receiver"] + "> " + Fore.CYAN +
+                            data["message"])
+                        resetColors()
+            
+            if server_msg.find("JOIN") != -1:  # join event?
                 
-                if DEBUG_MODE:
-                    print('DATA DEBUG: ')
-                    print(data)
-                    
-                    # if the receiver is a channel  trigger self.ReceivedMessageChannel, otherwise trigger self.ReceivedPrivateMessages
-                if data['receiver'].startswith("#"):
-                    
-                    # means you are sending message directly to a channel
-                    message_received = IrcMessageEvent.register(**data)
-                    self.ReceivedMessageChannel(message_received)
-                    
-                    print(Fore.BLUE + "<" + Fore.WHITE + data['receiver'] + "> " + Fore.CYAN + data["message"])
-                    resetColors();
+                # message example
+                #:ryonagana!vagrant@gsu.dbo.107.177.IP JOIN :#python
+                is_join = re.search(":(.+[aA-zZ0-0])!(.*) JOIN :(.+?)$", server_msg)
                 
-                else:
+                if is_join:
+                    data = {
+                        
+                        'sender': is_join.groups()[0],
+                        'ident': is_join.groups()[1],
+                        'channel_joined': is_join.groups()[2],
+                    }
                     
-                    # means you are sending message directly to someone
-                    message_received = IrcPrivateMessageEvent.register(**data)
-                    self.ReceivedPrivateMessages(message_received)
+                    join_event = IrcJoinEvent(**data)
+
+                    await self.ReceivedJoinEvent(join_event)
                     
-                    print(Fore.BLUE + "<" + Fore.WHITE + data['sender'] + ": " + data["receiver"] + "> " + Fore.CYAN +
-                          data["message"])
+                    
+                    print(Fore.YELLOW + "{0} Joined {1}".format(join_event.sender, join_event.channel_joined))
                     resetColors()
-        
-        if server_msg.find("JOIN") != -1:  # join event?
             
-            # message example
-            #:ryonagana!vagrant@gsu.dbo.107.177.IP JOIN :#python
-            is_join = re.search(":(.+[aA-zZ0-0])!(.*) JOIN :(.+?)$", server_msg)
-            
-            if is_join:
-                data = {
+            if server_msg.find("PART") != -1:  # join event?
+                
+                is_part = re.search(":(.+[aA-zZ0-0])!(.*) PART (.+?) :\"(.+[aA-zZ0-9])\"$", server_msg)
+                
+                if is_part:
+                    data = {
+                        
+                        'sender': is_part.groups()[0],
+                        'ident': is_part.groups()[1],
+                        'channel_part': is_part.groups()[2],
+                        'quit_msg': is_part.groups()[3],
+                    }
                     
-                    'sender': is_join.groups()[0],
-                    'ident': is_join.groups()[1],
-                    'channel_joined': is_join.groups()[2],
-                }
-                
-                join_event = IrcJoinEvent(**data)
-                self.ReceivedJoinEvent(join_event)
-                
-                print(Fore.YELLOW + "{0} Joined {1}".format(join_event.sender, join_event.channel_joined))
-                resetColors()
-        
-        if server_msg.find("PART") != -1:  # join event?
-            
-            is_part = re.search(":(.+[aA-zZ0-0])!(.*) PART (.+?) :\"(.+[aA-zZ0-9])\"$", server_msg)
-            
-            if is_part:
-                data = {
+                    part_event = IrcPartEvent(**data)
+
+                    await self.ReceivedPartEvent(part_event)
                     
-                    'sender': is_part.groups()[0],
-                    'ident': is_part.groups()[1],
-                    'channel_part': is_part.groups()[2],
-                    'quit_msg': is_part.groups()[3],
-                }
-                
-                part_event = IrcPartEvent(**data)
-                self.ReceivedPartEvent(part_event)
-                print(Fore.YELLOW + "{0} Part {1}".format(join_event.sender, join_event.channel_joined))
-                resetColors()
+                    print(Fore.YELLOW + "{0} Part {1}".format(join_event.sender, join_event.channel_joined))
+                    resetColors()
+            
+            if (len(self.server_message) <= 10):
+                self.server_message.append(server_msg)
+            else:
+                self.server_msg = self.server_message[1:]
+        except ValueError:
+            print("Error Task\n");
+            
+            
         
-        if (len(self.server_message) <= 10):
-            self.server_message.append(server_msg)
-        else:
-            self.server_msg = self.server_message[1:]
-        
-        
-        
-        # def  getModuleEvent(self)
-        
-        
-        
-        # send  event triggered to all modules loaded ReceivedMessageChannel
+# send  event triggered to all modules loaded ReceivedMessageChannel
     
-    def ReceivedMessageChannel(self, msghandler):
+    async def ReceivedMessageChannel(self, msghandler):
         """
         Event When someone send any message to all  channels when the bot is connected
         """
-        
+        print('MESSAGE SENT\n\n')
         for mod in MODULES_LOADED:
             if MODULES_LOADED[mod]:
                 MODULES_LOADED[mod].onReceivedChannelMessage(self, msghandler)
@@ -551,11 +564,11 @@ class ircClient:
         
         # send  event triggered to all modules loaded ReceivedPrivateMessages
     
-    def ReceivedPrivateMessages(self, msghandler):
+    async def ReceivedPrivateMessages(self, msghandler):
         """
             This event is triggered when someone send any message to the bot via PVT
         """
-        
+        print('PVT SENT\n\n')
         for mod in MODULES_LOADED:
             if MODULES_LOADED[mod]:
                 MODULES_LOADED[mod].onReceivedPrivateMessage(self, msghandler)

@@ -8,6 +8,7 @@ from minicbircbot.utils import resetColors
 import time
 import logging
 import colorama
+import asyncio
 from colorama import Fore, Back, Style
 
 # logging
@@ -100,18 +101,27 @@ def init_bot():
         irc.connect()
         irc.auth()
    
-    
+
+
+
+    loop = asyncio.get_event_loop()
+
+
     while irc.isRunning:
         
         try:
+
             data = irc.receiveData()
-            irc.isServerRunning(data)
+            irc.ircEventHandler(data)
             time.sleep(0.2)
-            print (data)
+            loop.run_until_complete(irc.parseServerData(data))
+            data = data.decode('utf-8')
+            print(data)
         
         except KeyboardInterrupt:
             print(Fore.YELLOW + "Waiting 2 seconds")
             print(Fore.RED + "Closing Sockets")
             irc.exit_gracefully()
             logger.info("Successfully Closed")
+            loop.stop()
             break
