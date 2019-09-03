@@ -6,10 +6,17 @@ import importlib
 import minicbircbot
 import minicbircbot.utils
 
+try:
+    import colorama
+except ImportError:
+    print("Colorama not Found.. Quitting..")
+    sys.exit(0)
+
+
 
 def check_root():
     try:
-        if (os.getuid() == 0 or os.geteuid() == 0 or os.seteuid(0)):
+        if os.getuid() == 0 or os.geteuid() == 0:
             print("Dont Run as Root! privileges")
             sys.exit(0)
         return True
@@ -19,8 +26,11 @@ def check_root():
 
 
 if __name__ == "__main__":
+    import platform
     try:
-        #check_root()
+        if(platform.platform().startswith('Linux')):
+            check_root()
+        
         minicbircbot.utils.load_extra_paths()
         #minicbircbot.motd()
         
