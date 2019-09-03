@@ -1,4 +1,4 @@
-cbIRCBOT 1.1
+cbIRCBOT 1.1.2
 ========
 
 Simple Bot using Python. 
@@ -23,6 +23,8 @@ Modules Included:
 Just Choose your module  changing  config.json
 
 
+**Don't forget to rename CONFIG.JSON.SKEL  to CONFIG.JSON**
+
 
 How to Run
 ========
@@ -32,10 +34,11 @@ Please Don't Run as Root. Ever
 
 Added Identify to Server
 ========
+You can Identify your  nickname  you need to set in config.json  auth: true
+and set  env var  CBIRCBOT_PASSWD=yourpassword
 
 
-
-How To: (UNIX / LINUX / MAC)
+How To Identify: (UNIX / LINUX / MAC)
 ========
 >export CBIRCBOT_PASSWD=yourpassword
 
