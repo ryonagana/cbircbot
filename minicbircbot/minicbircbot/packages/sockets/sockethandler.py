@@ -18,7 +18,7 @@ class IrcSocket:
         self.host = host
         self.port = int(port)
 
-        self.sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 
     def createConnection(self):
@@ -36,7 +36,7 @@ class IrcSocket:
     def recv(self, size):
 
         if type(size) == int:
-            data =	self.sock.recv(size)
+            data = self.sock.recv(size)
             return data
         else:
             raise Exception("Error")
